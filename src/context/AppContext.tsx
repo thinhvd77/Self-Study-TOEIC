@@ -3,13 +3,15 @@ import { UserProgress, TestResult, VocabularyProgress, GrammarProgress } from '.
 
 const STORAGE_KEY = 'toeic-progress'
 
-const initialProgress: UserProgress = {
-  currentWeek: 1,
-  startDate: new Date().toISOString().split('T')[0],
-  completedTasks: [],
-  testHistory: [],
-  vocabularyProgress: [],
-  grammarProgress: [],
+function makeInitialProgress(): UserProgress {
+  return {
+    currentWeek: 1,
+    startDate: new Date().toISOString().split('T')[0],
+    completedTasks: [],
+    testHistory: [],
+    vocabularyProgress: [],
+    grammarProgress: [],
+  }
 }
 
 type Action =
@@ -68,12 +70,12 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | null>(null)
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [progress, dispatch] = useReducer(reducer, initialProgress, () => {
+  const [progress, dispatch] = useReducer(reducer, null, () => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY)
-      return stored ? (JSON.parse(stored) as UserProgress) : initialProgress
+      return stored ? (JSON.parse(stored) as UserProgress) : makeInitialProgress()
     } catch {
-      return initialProgress
+      return makeInitialProgress()
     }
   })
 

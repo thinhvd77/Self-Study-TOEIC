@@ -44,7 +44,8 @@ export function getPartAccuracy(
     if (answer.correct) result[part].correct++
   }
 
-  for (const part in result) {
+  for (const partKey in result) {
+    const part = Number(partKey)
     const data = result[part]
     data.percentage = Math.round((data.correct / data.total) * 100)
   }
