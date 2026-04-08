@@ -3,13 +3,10 @@ import { AppProvider } from './context/AppContext'
 import { Layout } from './components/Layout'
 import PracticePage from './pages/Practice'
 import VocabularyPage from './pages/Vocabulary'
+import GrammarPage from './pages/Grammar'
 
 function DashboardPage() {
   return <div>Dashboard - Coming soon</div>
-}
-
-function GrammarPage() {
-  return <div>Grammar - Coming soon</div>
 }
 
 function App() {
