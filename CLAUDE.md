@@ -49,16 +49,16 @@ src/
 │   ├── Flashcard.tsx           # Flip flashcard component
 │   ├── ProgressBar.tsx         # Progress indicator
 │   └── QuestionNav.tsx         # Question navigation panel
-├── pages/                      # NOT YET CREATED (stubs in App.tsx — Tasks 6-9)
-│   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas
-│   ├── Practice/index.tsx      # Part selection
-│   ├── Practice/PracticeSession.tsx  # Active test session
-│   ├── Practice/PracticeResult.tsx   # Score + review answers
-│   ├── Vocabulary/index.tsx    # Topic list
-│   ├── Vocabulary/FlashcardSession.tsx  # Flashcard study
-│   ├── Vocabulary/VocabQuiz.tsx       # Vocabulary quiz
-│   ├── Grammar/index.tsx       # Lesson list
-│   └── Grammar/LessonView.tsx  # Lesson content + exercises
+├── pages/
+│   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas (Task 8 - Coming soon)
+│   ├── Practice/index.tsx      # Part selection (Task 6 ✅)
+│   ├── Practice/PracticeSession.tsx  # Active test session (Task 6 ✅)
+│   ├── Practice/PracticeResult.tsx   # Score + review answers (Task 6 ✅)
+│   ├── Vocabulary/index.tsx    # Topic list (Task 7 - Coming soon)
+│   ├── Vocabulary/FlashcardSession.tsx  # Flashcard study (Task 7 - Coming soon)
+│   ├── Vocabulary/VocabQuiz.tsx       # Vocabulary quiz (Task 7 - Coming soon)
+│   ├── Grammar/index.tsx       # Lesson list (Task 9 - Coming soon)
+│   └── Grammar/LessonView.tsx  # Lesson content + exercises (Task 9 - Coming soon)
 ├── utils/scoring.ts            # TOEIC scoring helpers
 ├── App.tsx                     # Router setup
 └── main.tsx                    # Entry point
@@ -149,3 +149,10 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 **Task 5: Layout & Shared Components** ✅ Complete
 - All components in `src/components/` created and integrated
 - `src/App.tsx` now uses `AppProvider` + `Layout` with nested routes
+
+**Task 6: Practice Page - Part Selection & Quiz Session** ✅ Complete (commit: `c831846`)
+- Created `src/pages/Practice/index.tsx` with part selection UI (Part 5 enabled, 6&7 disabled)
+- Created `src/pages/Practice/PracticeSession.tsx` with timer, bookmarks, question navigation, auto-submit on time-up
+- Created `src/pages/Practice/PracticeResult.tsx` with score display and ProgressBar
+- Updated `src/App.tsx` to import real PracticePage component
+- **Implementation detail**: Used `useRef` for `answers` and `submitted` state in PracticeSession to prevent stale closure bugs in timer callback
