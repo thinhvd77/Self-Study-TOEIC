@@ -11,12 +11,13 @@ const allTopics = [
   { id: 'business', label: 'Business', words: businessVocabulary },
 ]
 
+const allWords = allTopics.flatMap((t) => t.words)
+
 function TopicSelection() {
   const navigate = useNavigate()
   const { progress } = useAppContext()
 
-  const allWords = allTopics.flatMap((t) => t.words)
-  const learnedCount = progress.vocabularyProgress.length
+  const learnedCount = progress.vocabularyProgress.filter((v) => v.correctCount > 0).length
   const dueForReview = getWordsToReview(progress.vocabularyProgress)
 
   return (
@@ -98,7 +99,7 @@ export default function VocabularyPage() {
       <Route index element={<TopicSelection />} />
       <Route path="flashcard" element={<FlashcardSession getWords={getWordsByTopic} />} />
       <Route path="quiz" element={<VocabQuiz getWords={getWordsByTopic} />} />
-      <Route path="review" element={<FlashcardSession getWords={() => []} isReview />} />
+      <Route path="review" element={<FlashcardSession getWords={() => []} allWords={allWords} isReview />} />
     </Routes>
   )
 }

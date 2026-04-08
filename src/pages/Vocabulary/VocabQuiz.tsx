@@ -37,7 +37,7 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const topic = searchParams.get('topic') || ''
-  const words = getWords(topic)
+  const words = useMemo(() => getWords(topic), [getWords, topic])
 
   const questions = useMemo(() => generateQuizQuestions(words), [words])
 
@@ -134,7 +134,8 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
         ) : (
           <button
             onClick={() => setCurrentIndex(currentIndex + 1)}
-            className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300"
+            disabled={isSubmitted}
+            className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 disabled:opacity-50"
           >
             Câu sau
           </button>

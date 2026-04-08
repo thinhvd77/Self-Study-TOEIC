@@ -9,9 +9,10 @@ import { businessVocabulary } from '../../data/vocabulary/business'
 interface FlashcardSessionProps {
   getWords: (topicId: string) => VocabularyWord[]
   isReview?: boolean
+  allWords?: VocabularyWord[]
 }
 
-export function FlashcardSession({ getWords, isReview }: FlashcardSessionProps) {
+export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }: FlashcardSessionProps) {
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
   const { progress, dispatch } = useAppContext()
@@ -21,9 +22,9 @@ export function FlashcardSession({ getWords, isReview }: FlashcardSessionProps) 
   let words: VocabularyWord[]
   if (isReview) {
     const dueProgress = getWordsToReview(progress.vocabularyProgress)
-    const allWords = businessVocabulary
+    const reviewPool = allWordsProp ?? businessVocabulary
     words = dueProgress
-      .map((p) => allWords.find((w) => w.id === p.wordId))
+      .map((p) => reviewPool.find((w) => w.id === p.wordId))
       .filter((w): w is VocabularyWord => w !== undefined)
   } else {
     words = getWords(topic)
