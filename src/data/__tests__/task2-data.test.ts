@@ -18,8 +18,8 @@ describe('Task 2 sample data', () => {
     expect(part5Questions[7].id).toBe('p5-008')
   })
 
-  it('provides 10 business vocabulary words', () => {
-    expect(businessVocabulary).toHaveLength(10)
+  it('provides 50 business vocabulary words', () => {
+    expect(businessVocabulary).toHaveLength(50)
     expect(businessVocabulary[0].topic).toBe('business')
   })
 
