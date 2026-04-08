@@ -91,6 +91,7 @@ All types defined in `src/types/index.ts`.
 - **Grammar lesson content**: Stored as Markdown in `src/data/grammar/*.ts` (e.g., `##` headers, `**bold**`, `-` lists). Render with `react-markdown`, not raw `dangerouslySetInnerHTML` with `.replace(/\n/g, '<br/>')`.
 - **Progress/percentage clamping**: Wrap computed progress values with `Math.min(100, Math.max(0, ...))` to handle edge cases where corrupted localStorage or invalid state produces negative or > 100 values.
 - **Derived stats memoization**: Wrap all derived stats calculations (vocab counts, grammar counts, test counts, chart data transformations) in `useMemo` with specific array dependencies to prevent recomputation on every context update. Example: `useMemo(() => progress.vocabularyProgress.filter(...).length, [progress.vocabularyProgress])`.
+- **VocabQuiz render guards**: `VocabQuiz.tsx` returns results view when `isSubmitted && currentIndex === questions.length` (line 70) before accessing `questions[currentIndex]` (line 90). The early return safely guards against out-of-bounds access — don't remove this guard as it protects the subsequent render logic.
 
 ## Practice Modes
 
@@ -115,6 +116,7 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Test setup: `src/test/setup.ts` imports `@testing-library/jest-dom`
 - Vitest config: jsdom environment, globals enabled
 - TDD workflow: Create test first, verify fails with `npx vitest run src/path/to/test.ts`, implement, verify passes
+- `npm test` runs 31 tests: useLocalStorage 4, useTimer 4, useSpacedRepetition 5, scoring 3, data verification 15
 
 ## Verification Criteria
 
@@ -125,6 +127,7 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 5. Dashboard: roadmap shows current week, chart renders with data
 6. LocalStorage: progress survives page reload
 7. Responsive: works on desktop and mobile
+8. Build: `npm run build` produces ~670 kB bundle (expected with Recharts + react-markdown); chunk size warning is not actionable
 
 ## Implementation Status
 
@@ -181,3 +184,10 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Updated `src/App.tsx` to import real DashboardPage component, removed inline stub
 - **Quality improvements**: (1) Vocab learned count filters by `correctCount > 0` per Task 7 guideline; (2) `phaseProgress` clamped to [0, 100] to handle corrupted localStorage; (3) All expensive derived stats (`totalVocabLearned`, `grammarCompleted`, `chartData`, `weakestPart`) wrapped in `useMemo` with specific dependencies to prevent unnecessary recomputation on every context update
 - **Code review pattern**: Two-stage review (spec compliance → code quality) caught real issues: raw array length for vocab count and missing memoization for expensive calculations
+
+**Task 10: End-to-End Verification & Polish** ✅ Complete
+- Ran full test suite: 31/31 tests pass (5 test files)
+- Ran production build: succeeds with no errors (~670 kB bundle with Recharts + react-markdown)
+- Verified git status: clean working tree, all changes committed
+- No issues found requiring fixes
+- **Verification note**: Bundle size ~670 kB is expected and not a concern for this single-user local app
