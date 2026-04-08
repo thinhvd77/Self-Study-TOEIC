@@ -1,24 +1,36 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { AppProvider } from './context/AppContext'
+import { Layout } from './components/Layout'
+
+function DashboardPage() {
+  return <div>Dashboard - Coming soon</div>
+}
+
+function PracticePage() {
+  return <div>Practice - Coming soon</div>
+}
+
+function VocabularyPage() {
+  return <div>Vocabulary - Coming soon</div>
+}
+
+function GrammarPage() {
+  return <div>Grammar - Coming soon</div>
+}
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-gray-50">
-        <nav className="bg-white shadow p-4 flex gap-4">
-          <Link to="/" className="font-bold text-blue-600">Dashboard</Link>
-          <Link to="/practice" className="text-gray-700 hover:text-blue-600">Practice</Link>
-          <Link to="/vocabulary" className="text-gray-700 hover:text-blue-600">Vocabulary</Link>
-          <Link to="/grammar" className="text-gray-700 hover:text-blue-600">Grammar</Link>
-        </nav>
-        <main className="p-6">
-          <Routes>
-            <Route path="/" element={<div>Dashboard</div>} />
-            <Route path="/practice/*" element={<div>Practice</div>} />
-            <Route path="/vocabulary/*" element={<div>Vocabulary</div>} />
-            <Route path="/grammar/*" element={<div>Grammar</div>} />
-          </Routes>
-        </main>
-      </div>
+      <AppProvider>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<DashboardPage />} />
+            <Route path="/practice/*" element={<PracticePage />} />
+            <Route path="/vocabulary/*" element={<VocabularyPage />} />
+            <Route path="/grammar/*" element={<GrammarPage />} />
+          </Route>
+        </Routes>
+      </AppProvider>
     </BrowserRouter>
   )
 }
