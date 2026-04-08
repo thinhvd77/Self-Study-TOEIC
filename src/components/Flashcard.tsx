@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { VocabularyWord } from '../types'
 
 interface FlashcardProps {
@@ -8,6 +8,10 @@ interface FlashcardProps {
 
 export function Flashcard({ word, onRate }: FlashcardProps) {
   const [isFlipped, setIsFlipped] = useState(false)
+
+  useEffect(() => {
+    setIsFlipped(false)
+  }, [word.id])
 
   return (
     <div className="max-w-lg mx-auto">

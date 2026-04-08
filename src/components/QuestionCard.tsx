@@ -73,7 +73,7 @@ export function QuestionCard({
               disabled={isReviewMode}
               className={className}
             >
-              <span className="font-bold mr-3">{OPTION_LABELS[index]}.</span>
+              <span className="font-bold mr-3">{OPTION_LABELS[index] ?? String(index + 1)}.</span>
               {option}
             </button>
           )

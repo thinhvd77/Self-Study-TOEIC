@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 interface AudioPlayerProps {
   src: string
@@ -9,14 +9,25 @@ export function AudioPlayer({ src }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false)
   const [speed, setSpeed] = useState(1)
 
+  useEffect(() => {
+    setIsPlaying(false)
+    if (audioRef.current) {
+      audioRef.current.load()
+    }
+  }, [src])
+
   const togglePlay = () => {
     if (!audioRef.current) return
     if (isPlaying) {
       audioRef.current.pause()
+      setIsPlaying(false)
     } else {
-      audioRef.current.play()
+      audioRef.current.play().then(() => {
+        setIsPlaying(true)
+      }).catch(() => {
+        setIsPlaying(false)
+      })
     }
-    setIsPlaying(!isPlaying)
   }
 
   const changeSpeed = () => {

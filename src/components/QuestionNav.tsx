@@ -29,8 +29,10 @@ export function QuestionNav({
           }
 
           return (
-            <button key={i} onClick={() => onNavigate(i)} className={className}>
-              {bookmarks.has(i) && <span className="text-yellow-500 text-xs">★</span>}
+            <button key={i} onClick={() => onNavigate(i)} className={`${className} relative`}>
+              {bookmarks.has(i) && (
+                <span className="absolute top-0 right-0 text-yellow-500 text-xs leading-none">★</span>
+              )}
               {i + 1}
             </button>
           )
