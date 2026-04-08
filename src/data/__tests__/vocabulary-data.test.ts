@@ -74,7 +74,7 @@ describe('Vocabulary data uniqueness', () => {
     allVocabulary.forEach(({ name, data }) => {
       const words = data.map((w) => w.word.toLowerCase())
       const uniqueWords = new Set(words)
-      expect(uniqueWords.size).toBe(words.length, `Duplicate word found in ${name}`)
+      expect(uniqueWords.size).toBe(words.length)
     })
   })
 })

@@ -2,13 +2,27 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { FlashcardSession } from './FlashcardSession'
 import { VocabQuiz } from './VocabQuiz'
 import { businessVocabulary } from '../../data/vocabulary/business'
+import { officeVocabulary } from '../../data/vocabulary/office'
+import { financeVocabulary } from '../../data/vocabulary/finance'
+import { travelVocabulary } from '../../data/vocabulary/travel'
+import { healthVocabulary } from '../../data/vocabulary/health'
+import { technologyVocabulary } from '../../data/vocabulary/technology'
+import { hrVocabulary } from '../../data/vocabulary/hr'
+import { manufacturingVocabulary } from '../../data/vocabulary/manufacturing'
 import { useAppContext } from '../../context/AppContext'
 import { getWordsToReview } from '../../hooks/useSpacedRepetition'
 import { VocabularyWord } from '../../types'
 import { ProgressBar } from '../../components/ProgressBar'
 
 const allTopics = [
-  { id: 'business', label: 'Business', words: businessVocabulary },
+  { id: 'business', label: 'Kinh doanh', words: businessVocabulary },
+  { id: 'office', label: 'Văn phòng', words: officeVocabulary },
+  { id: 'finance', label: 'Tài chính', words: financeVocabulary },
+  { id: 'travel', label: 'Du lịch', words: travelVocabulary },
+  { id: 'health', label: 'Y tế', words: healthVocabulary },
+  { id: 'technology', label: 'Công nghệ', words: technologyVocabulary },
+  { id: 'hr', label: 'Nhân sự', words: hrVocabulary },
+  { id: 'manufacturing', label: 'Sản xuất', words: manufacturingVocabulary },
 ]
 
 const allWords = allTopics.flatMap((t) => t.words)
