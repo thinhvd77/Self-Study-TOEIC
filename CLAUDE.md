@@ -138,3 +138,9 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Added domain types in `src/types/index.ts`
 - Added sample data in `src/data/tests/part5.ts`, `src/data/vocabulary/business.ts`, `src/data/grammar/parts-of-speech.ts`, and `src/data/roadmap.ts`
 - Added data verification tests in `src/data/__tests__/task2-data.test.ts`
+
+**Task 3: Custom Hooks** ✅ Complete (branch: `task-1-implementation`)
+- Added `src/hooks/useLocalStorage.ts`, `src/hooks/useTimer.ts`, and `src/hooks/useSpacedRepetition.ts`
+- Added hook tests in `src/hooks/__tests__/useLocalStorage.test.ts`, `src/hooks/__tests__/useTimer.test.ts`, and `src/hooks/__tests__/useSpacedRepetition.test.ts`
+- Implemented timer pause/resume/reset + `initialSeconds` resync behavior in `useTimer`
+- Implemented spaced repetition utilities with interval mapping `[1, 1, 2, 4, 7, 14]`, level cap at 5, and day-granularity due checks
