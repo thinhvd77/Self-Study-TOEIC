@@ -17,10 +17,20 @@ App luyện thi TOEIC cá nhân, trình độ hiện tại dưới 400, mục ti
 
 ## Commands
 
-- `npm run dev` - Start dev server (port 5173)
-- `npm run build` - Production build
-- `npx vitest run` - Run all tests
-- `npx vitest run src/path/to/test.ts` - Run specific test
+```bash
+npm run dev          # Start dev server (port 5173)
+npm run build        # Production build (verified ✓)
+npm test             # Run all tests (verified ✓)
+npx vitest run src/path/to/test.ts  # Run specific test
+```
+
+## Development Worktree
+
+Active feature branch work happens in an isolated git worktree:
+- Location: `~/.config/superpowers/worktrees/Self-Study-TOEIC/task-1`
+- Branch: `task-1-implementation`
+
+To switch work back to main repo after merging, use `git worktree remove`.
 
 ## Architecture
 
@@ -114,3 +124,12 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 5. Dashboard: roadmap shows current week, chart renders with data
 6. LocalStorage: progress survives page reload
 7. Responsive: works on desktop and mobile
+
+## Implementation Status
+
+**Task 1: Project Setup** ✅ Complete (branch: `task-1-implementation`)
+- Vite + React 18 + TypeScript scaffold
+- Tailwind CSS v4 via `@tailwindcss/vite`
+- React Router v6 with placeholder routes
+- Vitest + Testing Library configured
+- All deps aligned, npm audit clean
