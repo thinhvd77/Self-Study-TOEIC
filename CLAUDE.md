@@ -133,3 +133,8 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - React Router v6 with placeholder routes
 - Vitest + Testing Library configured
 - All deps aligned, npm audit clean
+
+**Task 2: Types & Sample Data** ✅ Complete (commit: `ca61522`)
+- Added domain types in `src/types/index.ts`
+- Added sample data in `src/data/tests/part5.ts`, `src/data/vocabulary/business.ts`, `src/data/grammar/parts-of-speech.ts`, and `src/data/roadmap.ts`
+- Added data verification tests in `src/data/__tests__/task2-data.test.ts`
