@@ -1,13 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AppProvider } from './context/AppContext'
 import { Layout } from './components/Layout'
+import PracticePage from './pages/Practice'
 
 function DashboardPage() {
   return <div>Dashboard - Coming soon</div>
-}
-
-function PracticePage() {
-  return <div>Practice - Coming soon</div>
 }
 
 function VocabularyPage() {
