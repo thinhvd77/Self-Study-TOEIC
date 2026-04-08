@@ -50,7 +50,7 @@ src/
 │   ├── ProgressBar.tsx         # Progress indicator
 │   └── QuestionNav.tsx         # Question navigation panel
 ├── pages/
-│   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas (Task 9 - Coming soon)
+│   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas (Task 9 ✅)
 │   ├── Practice/index.tsx      # Part selection (Task 6 ✅)
 │   ├── Practice/PracticeSession.tsx  # Active test session (Task 6 ✅)
 │   ├── Practice/PracticeResult.tsx   # Score + review answers (Task 6 ✅)
@@ -89,6 +89,8 @@ All types defined in `src/types/index.ts`.
 - **TypeScript gotchas**: When iterating `Record<number, ...>` with `for...in`, cast key to number: `for (const k in obj) { const num = Number(k); ... }`. Avoid `new Date()` at module level for timestamp state — use factory function `() => ({ date: new Date().toISOString().split('T')[0] })`
 - **React/useMemo gotcha**: Direct function calls in render body create new references each render (e.g., `getWords(topic)` returns `[]`). Always wrap derived state in `useMemo` if it's a dependency for other memos. Failure silently invalidates downstream memos and can corrupt quiz state (e.g., re-shuffled options don't match stored answers).
 - **Grammar lesson content**: Stored as Markdown in `src/data/grammar/*.ts` (e.g., `##` headers, `**bold**`, `-` lists). Render with `react-markdown`, not raw `dangerouslySetInnerHTML` with `.replace(/\n/g, '<br/>')`.
+- **Progress/percentage clamping**: Wrap computed progress values with `Math.min(100, Math.max(0, ...))` to handle edge cases where corrupted localStorage or invalid state produces negative or > 100 values.
+- **Derived stats memoization**: Wrap all derived stats calculations (vocab counts, grammar counts, test counts, chart data transformations) in `useMemo` with specific array dependencies to prevent recomputation on every context update. Example: `useMemo(() => progress.vocabularyProgress.filter(...).length, [progress.vocabularyProgress])`.
 
 ## Practice Modes
 
@@ -173,3 +175,9 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Created `src/pages/Grammar/LessonView.tsx` with Markdown lesson content, examples, exercise mode with per-question navigation, submit, results, and `UPDATE_GRAMMAR_PROGRESS` dispatch
 - Updated `src/App.tsx` to import real GrammarPage component, replaced inline stub
 - **Key learning**: Grammar lesson content is Markdown-formatted; code review caught that initial `dangerouslySetInnerHTML` with only `\n → <br/>` broke Markdown rendering. Fixed by adding `react-markdown` dependency.
+
+**Task 9: Dashboard Page - Roadmap, Stats & Charts** ✅ Complete (commit: `39682cb`)
+- Created `src/pages/Dashboard/index.tsx` with roadmap tracker (current phase/week, phase progress bar, current week tasks with ✓/○ checkmarks), stats grid (vocab learned, grammar completed, tests done, vocab retention %), score chart (Recharts LineChart), and weakness analysis (lowest-accuracy Part)
+- Updated `src/App.tsx` to import real DashboardPage component, removed inline stub
+- **Quality improvements**: (1) Vocab learned count filters by `correctCount > 0` per Task 7 guideline; (2) `phaseProgress` clamped to [0, 100] to handle corrupted localStorage; (3) All expensive derived stats (`totalVocabLearned`, `grammarCompleted`, `chartData`, `weakestPart`) wrapped in `useMemo` with specific dependencies to prevent unnecessary recomputation on every context update
+- **Code review pattern**: Two-stage review (spec compliance → code quality) caught real issues: raw array length for vocab count and missing memoization for expensive calculations
