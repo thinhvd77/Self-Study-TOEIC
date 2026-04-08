@@ -24,6 +24,8 @@ npm test             # Run all tests (verified ✓)
 npx vitest run src/path/to/test.ts  # Run specific test
 ```
 
+Commits: Use `feat: ` for features, `fix: ` for bug fixes, `chore: ` for setup/tooling
+
 ## Development Worktree
 
 Active feature branch work happens in an isolated git worktree:
@@ -89,8 +91,10 @@ All types defined in `src/types/index.ts`.
 - **State**: React Context + useReducer, no Redux. Single `AppContext` manages all user progress.
 - **Data**: Static TS files in `src/data/`, imported directly. No API calls.
 - **Persistence**: All progress auto-saved to LocalStorage via AppContext on state changes.
+- **useReducer + localStorage**: Use lazy initializer `(state, action) => useReducer(reducer, null, () => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback() } catch { return fallback() } })` to load/persist
 - **Routing**: 4 main routes: `/` (Dashboard), `/practice` (Practice), `/vocabulary` (Vocabulary), `/grammar` (Grammar).
 - **Spaced Repetition**: SM-2 algorithm in `useSpacedRepetition`. Vocab rated as "Chưa biết" (quality 1) / "Hơi biết" (3) / "Biết rồi" (5).
+- **TypeScript gotchas**: When iterating `Record<number, ...>` with `for...in`, cast key to number: `for (const k in obj) { const num = Number(k); ... }`. Avoid `new Date()` at module level for timestamp state — use factory function `() => ({ date: new Date().toISOString().split('T')[0] })`
 
 ## Practice Modes
 
@@ -114,6 +118,7 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Use `vi.fn()`, `vi.useFakeTimers()` for mocking
 - Test setup: `src/test/setup.ts` imports `@testing-library/jest-dom`
 - Vitest config: jsdom environment, globals enabled
+- TDD workflow: Create test first, verify fails with `npx vitest run src/path/to/test.ts`, implement, verify passes
 
 ## Verification Criteria
 
