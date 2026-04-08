@@ -26,14 +26,6 @@ npx vitest run src/path/to/test.ts  # Run specific test
 
 Commits: Use `feat: ` for features, `fix: ` for bug fixes, `chore: ` for setup/tooling
 
-## Development Worktree
-
-Active feature branch work happens in an isolated git worktree:
-- Location: `~/.config/superpowers/worktrees/Self-Study-TOEIC/task-1`
-- Branch: `task-1-implementation`
-
-To switch work back to main repo after merging, use `git worktree remove`.
-
 ## Architecture
 
 ```
@@ -57,7 +49,7 @@ src/
 │   ├── Flashcard.tsx           # Flip flashcard component
 │   ├── ProgressBar.tsx         # Progress indicator
 │   └── QuestionNav.tsx         # Question navigation panel
-├── pages/
+├── pages/                      # NOT YET CREATED (stubs in App.tsx — Tasks 6-9)
 │   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas
 │   ├── Practice/index.tsx      # Part selection
 │   ├── Practice/PracticeSession.tsx  # Active test session
@@ -91,7 +83,7 @@ All types defined in `src/types/index.ts`.
 - **State**: React Context + useReducer, no Redux. Single `AppContext` manages all user progress.
 - **Data**: Static TS files in `src/data/`, imported directly. No API calls.
 - **Persistence**: All progress auto-saved to LocalStorage via AppContext on state changes.
-- **useReducer + localStorage**: Use lazy initializer `(state, action) => useReducer(reducer, null, () => { try { return JSON.parse(localStorage.getItem(key)) ?? fallback() } catch { return fallback() } })` to load/persist
+- **useReducer + localStorage**: Load from localStorage in the lazy initializer (3rd arg to `useReducer`), persist via `useEffect`. See `AppContext.tsx` for reference pattern.
 - **Routing**: 4 main routes: `/` (Dashboard), `/practice` (Practice), `/vocabulary` (Vocabulary), `/grammar` (Grammar).
 - **Spaced Repetition**: SM-2 algorithm in `useSpacedRepetition`. Vocab rated as "Chưa biết" (quality 1) / "Hơi biết" (3) / "Biết rồi" (5).
 - **TypeScript gotchas**: When iterating `Record<number, ...>` with `for...in`, cast key to number: `for (const k in obj) { const num = Number(k); ... }`. Avoid `new Date()` at module level for timestamp state — use factory function `() => ({ date: new Date().toISOString().split('T')[0] })`
@@ -149,3 +141,11 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Added hook tests in `src/hooks/__tests__/useLocalStorage.test.ts`, `src/hooks/__tests__/useTimer.test.ts`, and `src/hooks/__tests__/useSpacedRepetition.test.ts`
 - Implemented timer pause/resume/reset + `initialSeconds` resync behavior in `useTimer`
 - Implemented spaced repetition utilities with interval mapping `[1, 1, 2, 4, 7, 14]`, level cap at 5, and day-granularity due checks
+
+**Task 4: App Context & Scoring Utility** ✅ Complete
+- `src/context/AppContext.tsx`: React Context + useReducer, localStorage key `toeic-progress`
+- `src/utils/scoring.ts`: `calculateToeicScore` (proportional, max 495 per section), `getPartAccuracy`
+
+**Task 5: Layout & Shared Components** ✅ Complete
+- All components in `src/components/` created and integrated
+- `src/App.tsx` now uses `AppProvider` + `Layout` with nested routes
