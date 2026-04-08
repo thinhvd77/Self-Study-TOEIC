@@ -7,7 +7,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/əˈdʒɛn.də/",
     "meaning": "Một kế hoạch được tổ chức tạm thời cho các vấn đề cần được chú ý.",
     "partOfSpeech": "noun",
-    "example": "The team used \"agenda\" during the weekly meeting.",
+    "example": "The meeting agenda includes quarterly results and next year's strategy.",
     "synonyms": [
       "docket",
       "schedule",
@@ -48,7 +48,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/dɪˈpɑːtm(ə)nt/",
     "meaning": "Một bộ phận, phần hoặc phân khu.",
     "partOfSpeech": "noun",
-    "example": "The team used \"department\" during the weekly meeting.",
+    "example": "The HR department is responsible for employee recruitment and training.",
     "synonyms": [
       "province",
       "specialty",
@@ -62,7 +62,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈdɒkjʊmənt/",
     "meaning": "Một tài liệu gốc hoặc chính thức được sử dụng làm cơ sở, bằng chứng hoặc hỗ trợ cho bất kỳ điều gì khác, bao gồm bất kỳ văn bản, sách hoặc công cụ nào khác truyền đạt thông tin liên quan đến bằng chứng hoặc hỗ trợ đó.",
     "partOfSpeech": "noun",
-    "example": "The team used \"document\" during the weekly meeting.",
+    "example": "Please review the document and provide your comments by Friday.",
     "topic": "office"
   },
   {
@@ -73,10 +73,14 @@ export const officeVocabulary: VocabularyWord[] = [
     "partOfSpeech": "noun",
     "example": "After you hand in your essays, I will give both grades and feedback.",
     "synonyms": [
-      "Larsen effect",
-      "audio feedback",
-      "howlback",
-      "howlround"
+      "response",
+      "input",
+      "comments",
+      "evaluation"
+    ],
+    "antonyms": [
+      "silence",
+      "disregard"
     ],
     "topic": "office"
   },
@@ -112,7 +116,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/pɹəˈpəʊzəl/",
     "meaning": "Một cái gì đó được đề xuất, hoặc được cung cấp để xem xét hoặc chấp nhận",
     "partOfSpeech": "noun",
-    "example": "The team used \"proposal\" during the weekly meeting.",
+    "example": "The sales team submitted a proposal for the new marketing campaign.",
     "synonyms": [
       "overture",
       "proffer",
@@ -126,7 +130,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈskɛ.dʒu.əl/",
     "meaning": "Một tờ giấy; một ghi chú ngắn.",
     "partOfSpeech": "noun",
-    "example": "The team used \"schedule\" during the weekly meeting.",
+    "example": "Check the schedule to see when the conference room is available.",
     "synonyms": [
       "catalog",
       "list",
@@ -141,7 +145,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈsuːpɚˌvaɪzɚ/",
     "meaning": "Một người có nhiệm vụ chính thức là giám sát công việc của một người hoặc một nhóm, hoặc các hoạt động và hoạt động khác.",
     "partOfSpeech": "noun",
-    "example": "The team used \"supervisor\" during the weekly meeting.",
+    "example": "Please submit your time sheet to your supervisor for approval.",
     "topic": "office"
   },
   {
@@ -150,7 +154,7 @@ export const officeVocabulary: VocabularyWord[] = [
     "ipa": "/workload/",
     "meaning": "Số lượng công việc được giao cho một người lao động cụ thể, thường là trong một khoảng thời gian nhất định",
     "partOfSpeech": "noun",
-    "example": "The team used \"workload\" during the weekly meeting.",
+    "example": "The manager redistributed the workload to balance the team's responsibilities.",
     "topic": "office"
   },
   {

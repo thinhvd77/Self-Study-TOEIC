@@ -19,7 +19,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈbʌdʒ.ɪt/",
     "meaning": "Số tiền hoặc nguồn lực dành cho một tổ chức, hoạt động hoặc khung thời gian cụ thể.",
     "partOfSpeech": "noun",
-    "example": "The team used \"budget\" during the weekly meeting.",
+    "example": "The marketing department exceeded its quarterly budget by 15%.",
     "topic": "finance"
   },
   {
@@ -28,13 +28,15 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈkæp.ɪ.təl/",
     "meaning": "Hàng hóa lâu bền đã được sản xuất có sẵn để sử dụng như một yếu tố sản xuất, chẳng hạn như xẻng hơi (thiết bị) và các tòa nhà văn phòng (kết cấu).",
     "partOfSpeech": "noun",
-    "example": "The team used \"capital\" during the weekly meeting.",
+    "example": "The startup raised $5 million in capital from venture investors.",
     "synonyms": [
-      "caps",
-      "majuscule"
+      "funding",
+      "investment",
+      "assets"
     ],
     "antonyms": [
-      "minuscule"
+      "debt",
+      "liability"
     ],
     "topic": "finance"
   },
@@ -44,7 +46,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/dɛt/",
     "meaning": "Một hành động, trạng thái tâm trí hoặc đối tượng mà một người có nghĩa vụ thực hiện cho một người khác, nhận nuôi một người khác hoặc trao cho một người khác.",
     "partOfSpeech": "noun",
-    "example": "The team used \"debt\" during the weekly meeting.",
+    "example": "The company is working to reduce its long-term debt before the merger.",
     "topic": "finance"
   },
   {
@@ -68,7 +70,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈɪnˌvɔɪs/",
     "meaning": "Một hóa đơn; một tài liệu thương mại do người bán phát hành cho người mua cho biết các sản phẩm, số lượng và giá cả đã thỏa thuận cho các sản phẩm hoặc dịch vụ mà người bán đã cung cấp cho người mua. Hóa đơn chỉ ra rằng, trừ khi được thanh toán trước, người mua phải thanh toán cho người bán, theo các điều khoản đã thỏa thuận.",
     "partOfSpeech": "noun",
-    "example": "The team used \"invoice\" during the weekly meeting.",
+    "example": "Please send the invoice to the accounting department for processing.",
     "synonyms": [
       "shipment"
     ],
@@ -80,7 +82,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/laɪəˈbɪlɪti/",
     "meaning": "Nghĩa vụ, nợ hoặc trách nhiệm đối với ai đó.",
     "partOfSpeech": "noun",
-    "example": "The team used \"liability\" during the weekly meeting.",
+    "example": "The company's total liabilities exceeded its assets last quarter.",
     "antonyms": [
       "asset"
     ],
@@ -92,7 +94,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈmɑːdʒɪn/",
     "meaning": "Cạnh của tờ giấy, thường để trống khi in nhưng đôi khi được sử dụng để chú thích, v.v.",
     "partOfSpeech": "noun",
-    "example": "The team used \"margin\" during the weekly meeting.",
+    "example": "The profit margin improved after we reduced operating costs.",
     "topic": "finance"
   },
   {
@@ -101,7 +103,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈɹɛvənjuː/",
     "meaning": "Thu nhập được trả lại bởi một khoản đầu tư.",
     "partOfSpeech": "noun",
-    "example": "The team used \"revenue\" during the weekly meeting.",
+    "example": "Annual revenue grew by 20% compared to the previous fiscal year.",
     "synonyms": [
       "net sales",
       "turnover"
@@ -114,7 +116,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/ˈsælɚi/",
     "meaning": "Một số tiền cố định được trả cho người lao động, thường được tính trên cơ sở hàng tháng hoặc hàng năm, không phải hàng giờ, dưới dạng tiền lương. Ngụ ý một mức độ chuyên nghiệp và/hoặc tự chủ.",
     "partOfSpeech": "noun",
-    "example": "The team used \"salary\" during the weekly meeting.",
+    "example": "Employees will receive a 5% salary increase starting next month.",
     "topic": "finance"
   },
   {
@@ -123,7 +125,7 @@ export const financeVocabulary: VocabularyWord[] = [
     "ipa": "/tæks/",
     "meaning": "Tiền được trả cho chính phủ ngoài hàng hóa và dịch vụ dành riêng cho giao dịch.",
     "partOfSpeech": "noun",
-    "example": "The team used \"tax\" during the weekly meeting.",
+    "example": "Corporate tax rates vary significantly across different countries.",
     "synonyms": [
       "assessment",
       "contribution",
