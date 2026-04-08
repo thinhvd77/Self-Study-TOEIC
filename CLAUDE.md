@@ -54,9 +54,9 @@ src/
 │   ├── Practice/index.tsx      # Part selection (Task 6 ✅)
 │   ├── Practice/PracticeSession.tsx  # Active test session (Task 6 ✅)
 │   ├── Practice/PracticeResult.tsx   # Score + review answers (Task 6 ✅)
-│   ├── Vocabulary/index.tsx    # Topic list (Task 7 - Coming soon)
-│   ├── Vocabulary/FlashcardSession.tsx  # Flashcard study (Task 7 - Coming soon)
-│   ├── Vocabulary/VocabQuiz.tsx       # Vocabulary quiz (Task 7 - Coming soon)
+│   ├── Vocabulary/index.tsx    # Topic list with stats & topic selection (Task 7 ✅)
+│   ├── Vocabulary/FlashcardSession.tsx  # Flashcard study with SM-2 spaced repetition (Task 7 ✅)
+│   ├── Vocabulary/VocabQuiz.tsx       # Vocabulary quiz with auto-generated questions (Task 7 ✅)
 │   ├── Grammar/index.tsx       # Lesson list (Task 9 - Coming soon)
 │   └── Grammar/LessonView.tsx  # Lesson content + exercises (Task 9 - Coming soon)
 ├── utils/scoring.ts            # TOEIC scoring helpers
@@ -87,6 +87,7 @@ All types defined in `src/types/index.ts`.
 - **Routing**: 4 main routes: `/` (Dashboard), `/practice` (Practice), `/vocabulary` (Vocabulary), `/grammar` (Grammar).
 - **Spaced Repetition**: SM-2 algorithm in `useSpacedRepetition`. Vocab rated as "Chưa biết" (quality 1) / "Hơi biết" (3) / "Biết rồi" (5).
 - **TypeScript gotchas**: When iterating `Record<number, ...>` with `for...in`, cast key to number: `for (const k in obj) { const num = Number(k); ... }`. Avoid `new Date()` at module level for timestamp state — use factory function `() => ({ date: new Date().toISOString().split('T')[0] })`
+- **React/useMemo gotcha**: Direct function calls in render body create new references each render (e.g., `getWords(topic)` returns `[]`). Always wrap derived state in `useMemo` if it's a dependency for other memos. Failure silently invalidates downstream memos and can corrupt quiz state (e.g., re-shuffled options don't match stored answers).
 
 ## Practice Modes
 
@@ -156,3 +157,12 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Created `src/pages/Practice/PracticeResult.tsx` with score display and ProgressBar
 - Updated `src/App.tsx` to import real PracticePage component
 - **Implementation detail**: Used `useRef` for `answers` and `submitted` state in PracticeSession to prevent stale closure bugs in timer callback
+
+**Task 7: Vocabulary Page - Flashcard & Quiz** ✅ Complete (commit: `0421f2a`)
+- Created `src/pages/Vocabulary/index.tsx` with topic selection, stats (learned/due-for-review/retention%), progress bar, "Ôn tập hôm nay" button
+- Created `src/pages/Vocabulary/FlashcardSession.tsx` with Flashcard flip UI, SM-2 spaced repetition dispatch, review session support
+- Created `src/pages/Vocabulary/VocabQuiz.tsx` with auto-generated multiple-choice, forward/back navigation, submit & results
+- Updated `src/App.tsx` to import real VocabularyPage component
+- **Architectural pattern**: Vocabulary topics are designed to scale — `allTopics` array in index.tsx aggregates all topics; pass `allWords` prop to `FlashcardSession` for review mode to support future topics (business, office, finance, etc.)
+- **React patterns**: Use `useMemo` for derived state that depends on function results (e.g., `words` from `getWords(topic)`) to prevent dependency invalidation and re-shuffling; disable interactive buttons after submission to prevent unexpected navigation
+- **Quality checks**: learnedCount should filter by `correctCount > 0`, not raw array length, to avoid inflating stats with words rated "Chưa biết"
