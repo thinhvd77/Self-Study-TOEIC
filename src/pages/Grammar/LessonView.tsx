@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import ReactMarkdown from 'react-markdown'
 import { GrammarLesson, GrammarProgress } from '../../types'
 import { useAppContext } from '../../context/AppContext'
 import { QuestionCard } from '../../components/QuestionCard'
@@ -71,10 +72,9 @@ export function LessonView({ lessons }: LessonViewProps) {
             Bài {lesson.order}: {lesson.title}
           </h2>
 
-          <div
-            className="prose prose-sm max-w-none mt-6 text-gray-700 leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: lesson.content.replace(/\n/g, '<br/>') }}
-          />
+          <div className="mt-6 text-gray-700 leading-relaxed space-y-3">
+            <ReactMarkdown>{lesson.content}</ReactMarkdown>
+          </div>
 
           {lesson.examples.length > 0 && (
             <div className="mt-6">
