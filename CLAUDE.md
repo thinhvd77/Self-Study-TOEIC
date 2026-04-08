@@ -50,15 +50,15 @@ src/
 │   ├── ProgressBar.tsx         # Progress indicator
 │   └── QuestionNav.tsx         # Question navigation panel
 ├── pages/
-│   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas (Task 8 - Coming soon)
+│   ├── Dashboard/index.tsx     # Roadmap, score chart, stats, weak areas (Task 9 - Coming soon)
 │   ├── Practice/index.tsx      # Part selection (Task 6 ✅)
 │   ├── Practice/PracticeSession.tsx  # Active test session (Task 6 ✅)
 │   ├── Practice/PracticeResult.tsx   # Score + review answers (Task 6 ✅)
 │   ├── Vocabulary/index.tsx    # Topic list with stats & topic selection (Task 7 ✅)
 │   ├── Vocabulary/FlashcardSession.tsx  # Flashcard study with SM-2 spaced repetition (Task 7 ✅)
 │   ├── Vocabulary/VocabQuiz.tsx       # Vocabulary quiz with auto-generated questions (Task 7 ✅)
-│   ├── Grammar/index.tsx       # Lesson list (Task 9 - Coming soon)
-│   └── Grammar/LessonView.tsx  # Lesson content + exercises (Task 9 - Coming soon)
+│   ├── Grammar/index.tsx       # Lesson list (Task 8 ✅)
+│   └── Grammar/LessonView.tsx  # Lesson content + exercises (Task 8 ✅)
 ├── utils/scoring.ts            # TOEIC scoring helpers
 ├── App.tsx                     # Router setup
 └── main.tsx                    # Entry point
@@ -88,6 +88,7 @@ All types defined in `src/types/index.ts`.
 - **Spaced Repetition**: SM-2 algorithm in `useSpacedRepetition`. Vocab rated as "Chưa biết" (quality 1) / "Hơi biết" (3) / "Biết rồi" (5).
 - **TypeScript gotchas**: When iterating `Record<number, ...>` with `for...in`, cast key to number: `for (const k in obj) { const num = Number(k); ... }`. Avoid `new Date()` at module level for timestamp state — use factory function `() => ({ date: new Date().toISOString().split('T')[0] })`
 - **React/useMemo gotcha**: Direct function calls in render body create new references each render (e.g., `getWords(topic)` returns `[]`). Always wrap derived state in `useMemo` if it's a dependency for other memos. Failure silently invalidates downstream memos and can corrupt quiz state (e.g., re-shuffled options don't match stored answers).
+- **Grammar lesson content**: Stored as Markdown in `src/data/grammar/*.ts` (e.g., `##` headers, `**bold**`, `-` lists). Render with `react-markdown`, not raw `dangerouslySetInnerHTML` with `.replace(/\n/g, '<br/>')`.
 
 ## Practice Modes
 
@@ -166,3 +167,9 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - **Architectural pattern**: Vocabulary topics are designed to scale — `allTopics` array in index.tsx aggregates all topics; pass `allWords` prop to `FlashcardSession` for review mode to support future topics (business, office, finance, etc.)
 - **React patterns**: Use `useMemo` for derived state that depends on function results (e.g., `words` from `getWords(topic)`) to prevent dependency invalidation and re-shuffling; disable interactive buttons after submission to prevent unexpected navigation
 - **Quality checks**: learnedCount should filter by `correctCount > 0`, not raw array length, to avoid inflating stats with words rated "Chưa biết"
+
+**Task 8: Grammar Page - Lessons & Exercises** ✅ Complete (commits: `d820d42`, `f488545`)
+- Created `src/pages/Grammar/index.tsx` with lesson list, progress bar, per-lesson score display, and navigation
+- Created `src/pages/Grammar/LessonView.tsx` with Markdown lesson content, examples, exercise mode with per-question navigation, submit, results, and `UPDATE_GRAMMAR_PROGRESS` dispatch
+- Updated `src/App.tsx` to import real GrammarPage component, replaced inline stub
+- **Key learning**: Grammar lesson content is Markdown-formatted; code review caught that initial `dangerouslySetInnerHTML` with only `\n → <br/>` broke Markdown rendering. Fixed by adding `react-markdown` dependency.
