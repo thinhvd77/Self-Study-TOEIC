@@ -34,15 +34,15 @@ export const officeVocabulary: VocabularyWord[] =   [
     },
     {
       "id": "v-off-003",
-      "word": "milestone",
-      "ipa": "/ˈmaɪl.stoʊn/",
-      "meaning": "mốc tiến độ quan trọng của dự án",
+      "word": "timeline",
+      "ipa": "/ˈtaɪm.laɪn/",
+      "meaning": "mốc thời gian cho tiến độ dự án",
       "partOfSpeech": "noun",
-      "example": "The manager set a new milestone for the project report.",
+      "example": "The manager set a new timeline for the project report.",
       "topic": "office",
       "synonyms": [
-        "checkpoint",
-        "target date"
+        "schedule",
+        "plan"
       ]
     },
     {
@@ -795,11 +795,11 @@ export const officeVocabulary: VocabularyWord[] =   [
     },
     {
       "id": "v-off-061",
-      "word": "workstation",
-      "ipa": "/ˈwɜːrk.steɪ.ʃən/",
-      "meaning": "khu vực bàn làm việc của nhân viên",
+      "word": "workspace",
+      "ipa": "/ˈwɜːrk.speɪs/",
+      "meaning": "không gian làm việc cá nhân",
       "partOfSpeech": "noun",
-      "example": "Each employee keeps the workstation tidy for the manager.",
+      "example": "Each employee keeps the workspace tidy for the manager.",
       "synonyms": [
         "desk",
         "work area"
