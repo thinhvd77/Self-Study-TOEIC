@@ -535,5 +535,511 @@ export const officeVocabulary: VocabularyWord[] = [
     "example": "You can reach me at extension 2345.",
     "synonyms": ["line number"],
     "topic": "office"
+  },
+  {
+    "id": "v-off-051",
+    "word": "absent",
+    "ipa": "/ˈæb.sənt/",
+    "meaning": "vắng mặt, không có mặt",
+    "partOfSpeech": "adjective",
+    "example": "Three employees were absent from today's training session.",
+    "synonyms": ["missing", "unavailable"],
+    "antonyms": ["present", "attending"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-052",
+    "word": "access",
+    "ipa": "/ˈæk.ses/",
+    "meaning": "truy cập, quyền sử dụng",
+    "partOfSpeech": "noun",
+    "example": "Only authorized staff have access to the server room.",
+    "synonyms": ["entry", "permission"],
+    "antonyms": ["denial", "restriction"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-053",
+    "word": "acknowledge",
+    "ipa": "/əkˈnɒl.ɪdʒ/",
+    "meaning": "xác nhận, thừa nhận đã nhận",
+    "partOfSpeech": "verb",
+    "example": "Please acknowledge receipt of this email by replying.",
+    "synonyms": ["confirm", "recognize"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-054",
+    "word": "adjacent",
+    "ipa": "/əˈdʒeɪ.sənt/",
+    "meaning": "liền kề, kế bên",
+    "partOfSpeech": "adjective",
+    "example": "The conference room is adjacent to the manager's office.",
+    "synonyms": ["neighboring", "nearby"],
+    "antonyms": ["distant", "remote"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-055",
+    "word": "administer",
+    "ipa": "/ədˈmɪn.ɪ.stər/",
+    "meaning": "quản lý, điều hành",
+    "partOfSpeech": "verb",
+    "example": "She was asked to administer the new employee onboarding program.",
+    "synonyms": ["manage", "oversee", "supervise"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-056",
+    "word": "arrange",
+    "ipa": "/əˈreɪndʒ/",
+    "meaning": "sắp xếp, bố trí",
+    "partOfSpeech": "verb",
+    "example": "Can you arrange a meeting with the client for Thursday?",
+    "synonyms": ["organize", "coordinate", "set up"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-057",
+    "word": "assign",
+    "ipa": "/əˈsaɪn/",
+    "meaning": "phân công, giao việc",
+    "partOfSpeech": "verb",
+    "example": "The project manager will assign tasks to each team member.",
+    "synonyms": ["allocate", "delegate", "designate"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-058",
+    "word": "calculate",
+    "ipa": "/ˈkæl.kjʊ.leɪt/",
+    "meaning": "tính toán",
+    "partOfSpeech": "verb",
+    "example": "Please calculate the total expenses for last quarter.",
+    "synonyms": ["compute", "figure out", "work out"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-059",
+    "word": "calendar",
+    "ipa": "/ˈkæl.ɪn.dər/",
+    "meaning": "lịch, lịch làm việc",
+    "partOfSpeech": "noun",
+    "example": "Check your calendar before scheduling any new meetings.",
+    "synonyms": ["planner", "schedule"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-060",
+    "word": "cancel",
+    "ipa": "/ˈkæn.səl/",
+    "meaning": "hủy bỏ, thủ tiêu",
+    "partOfSpeech": "verb",
+    "example": "We had to cancel the client meeting due to the storm.",
+    "synonyms": ["call off", "abort"],
+    "antonyms": ["confirm", "schedule"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-061",
+    "word": "clarify",
+    "ipa": "/ˈklær.ɪ.faɪ/",
+    "meaning": "làm rõ, giải thích rõ ràng hơn",
+    "partOfSpeech": "verb",
+    "example": "Could you clarify the instructions in the third section?",
+    "synonyms": ["explain", "elaborate", "clear up"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-062",
+    "word": "collaborate",
+    "ipa": "/kəˈlæb.ə.reɪt/",
+    "meaning": "hợp tác, cùng làm việc",
+    "partOfSpeech": "verb",
+    "example": "The two departments will collaborate on this new project.",
+    "synonyms": ["cooperate", "work together", "partner"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-063",
+    "word": "compile",
+    "ipa": "/kəmˈpaɪl/",
+    "meaning": "tổng hợp, biên soạn",
+    "partOfSpeech": "verb",
+    "example": "Please compile a list of all current suppliers by Monday.",
+    "synonyms": ["gather", "collect", "assemble"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-064",
+    "word": "confirm",
+    "ipa": "/kənˈfɜːrm/",
+    "meaning": "xác nhận",
+    "partOfSpeech": "verb",
+    "example": "Please confirm your attendance by replying to this email.",
+    "synonyms": ["verify", "validate", "acknowledge"],
+    "antonyms": ["deny", "cancel"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-065",
+    "word": "coordinate",
+    "ipa": "/koʊˈɔːr.dɪ.neɪt/",
+    "meaning": "phối hợp, điều phối",
+    "partOfSpeech": "verb",
+    "example": "She will coordinate the logistics for the company retreat.",
+    "synonyms": ["organize", "manage", "arrange"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-066",
+    "word": "cubicle",
+    "ipa": "/ˈkjuː.bɪ.kəl/",
+    "meaning": "buồng làm việc nhỏ, ngăn văn phòng",
+    "partOfSpeech": "noun",
+    "example": "Each employee has their own cubicle with a computer.",
+    "synonyms": ["workstation", "booth"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-067",
+    "word": "delegate",
+    "ipa": "/ˈdel.ɪ.ɡeɪt/",
+    "meaning": "ủy quyền, giao phó nhiệm vụ",
+    "partOfSpeech": "verb",
+    "example": "A good manager knows how to delegate tasks effectively.",
+    "synonyms": ["assign", "transfer", "entrust"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-068",
+    "word": "deliver",
+    "ipa": "/dɪˈlɪv.ər/",
+    "meaning": "giao hàng, giao nộp",
+    "partOfSpeech": "verb",
+    "example": "The courier will deliver the documents by noon.",
+    "synonyms": ["hand over", "submit", "dispatch"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-069",
+    "word": "designate",
+    "ipa": "/ˈdez.ɪɡ.neɪt/",
+    "meaning": "chỉ định, đề cử",
+    "partOfSpeech": "verb",
+    "example": "She was designated as the team lead for the project.",
+    "synonyms": ["appoint", "assign", "nominate"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-070",
+    "word": "duplicate",
+    "ipa": "/ˈdjuː.plɪ.kɪt/",
+    "meaning": "bản sao, bản trùng lặp",
+    "partOfSpeech": "noun",
+    "example": "Keep a duplicate of every signed contract in the filing cabinet.",
+    "synonyms": ["copy", "replica", "facsimile"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-071",
+    "word": "edit",
+    "ipa": "/ˈed.ɪt/",
+    "meaning": "chỉnh sửa, biên tập",
+    "partOfSpeech": "verb",
+    "example": "Please edit the report before sending it to the client.",
+    "synonyms": ["revise", "correct", "proofread"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-072",
+    "word": "enclose",
+    "ipa": "/ɪnˈkloʊz/",
+    "meaning": "đính kèm, gửi kèm theo",
+    "partOfSpeech": "verb",
+    "example": "I have enclosed a copy of the invoice with this letter.",
+    "synonyms": ["attach", "include", "append"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-073",
+    "word": "evaluate",
+    "ipa": "/ɪˈvæl.juː.eɪt/",
+    "meaning": "đánh giá, thẩm định",
+    "partOfSpeech": "verb",
+    "example": "Managers evaluate employee performance every six months.",
+    "synonyms": ["assess", "appraise", "review"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-074",
+    "word": "finalize",
+    "ipa": "/ˈfaɪ.nə.laɪz/",
+    "meaning": "hoàn thiện, kết thúc",
+    "partOfSpeech": "verb",
+    "example": "We need to finalize the budget before the end of the week.",
+    "synonyms": ["complete", "conclude", "settle"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-075",
+    "word": "follow up",
+    "ipa": "/ˈfɒl.oʊ ʌp/",
+    "meaning": "theo dõi, kiểm tra tiến độ",
+    "partOfSpeech": "verb",
+    "example": "I'll follow up with the supplier to check on the delivery status.",
+    "synonyms": ["check in", "monitor", "pursue"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-076",
+    "word": "format",
+    "ipa": "/ˈfɔːr.mæt/",
+    "meaning": "định dạng, trình bày",
+    "partOfSpeech": "noun",
+    "example": "Please follow the standard format when writing business letters.",
+    "synonyms": ["layout", "structure", "style"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-077",
+    "word": "generate",
+    "ipa": "/ˈdʒen.ər.eɪt/",
+    "meaning": "tạo ra, sinh ra",
+    "partOfSpeech": "verb",
+    "example": "The system will generate a report automatically every Monday.",
+    "synonyms": ["produce", "create", "yield"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-078",
+    "word": "handle",
+    "ipa": "/ˈhæn.dəl/",
+    "meaning": "xử lý, giải quyết",
+    "partOfSpeech": "verb",
+    "example": "She handles all customer complaints professionally.",
+    "synonyms": ["manage", "deal with", "address"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-079",
+    "word": "headquarters",
+    "ipa": "/ˈhed.kwɔːr.tərz/",
+    "meaning": "trụ sở chính",
+    "partOfSpeech": "noun",
+    "example": "The company's headquarters is located in Ho Chi Minh City.",
+    "synonyms": ["head office", "main office", "central office"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-080",
+    "word": "implement",
+    "ipa": "/ˈɪm.plɪ.ment/",
+    "meaning": "thực hiện, triển khai",
+    "partOfSpeech": "verb",
+    "example": "The new policy will be implemented starting next month.",
+    "synonyms": ["execute", "apply", "carry out"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-081",
+    "word": "inbox",
+    "ipa": "/ˈɪn.bɒks/",
+    "meaning": "hộp thư đến",
+    "partOfSpeech": "noun",
+    "example": "There are fifty unread emails in my inbox this morning.",
+    "antonyms": ["outbox"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-082",
+    "word": "initiate",
+    "ipa": "/ɪˈnɪʃ.i.eɪt/",
+    "meaning": "khởi đầu, bắt đầu",
+    "partOfSpeech": "verb",
+    "example": "Who will initiate the discussion at tomorrow's meeting?",
+    "synonyms": ["begin", "start", "launch"],
+    "antonyms": ["conclude", "terminate"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-083",
+    "word": "input",
+    "ipa": "/ˈɪn.pʊt/",
+    "meaning": "dữ liệu đầu vào, ý kiến đóng góp",
+    "partOfSpeech": "noun",
+    "example": "We need your input before we make a final decision.",
+    "synonyms": ["contribution", "feedback", "data"],
+    "antonyms": ["output"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-084",
+    "word": "keyboard",
+    "ipa": "/ˈkiː.bɔːrd/",
+    "meaning": "bàn phím",
+    "partOfSpeech": "noun",
+    "example": "The ergonomic keyboard helps reduce wrist strain during long work hours.",
+    "topic": "office"
+  },
+  {
+    "id": "v-off-085",
+    "word": "label",
+    "ipa": "/ˈleɪ.bəl/",
+    "meaning": "nhãn dán, gắn nhãn",
+    "partOfSpeech": "noun",
+    "example": "Attach a label to each folder before placing it in the cabinet.",
+    "synonyms": ["tag", "sticker", "marker"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-086",
+    "word": "letterhead",
+    "ipa": "/ˈlet.ər.hed/",
+    "meaning": "tiêu đề thư công ty",
+    "partOfSpeech": "noun",
+    "example": "All official letters must be printed on company letterhead.",
+    "synonyms": ["official stationery", "headed paper"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-087",
+    "word": "minutes",
+    "ipa": "/ˈmɪn.ɪts/",
+    "meaning": "biên bản cuộc họp",
+    "partOfSpeech": "noun",
+    "example": "The secretary took minutes during the board meeting.",
+    "synonyms": ["notes", "record", "transcript"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-088",
+    "word": "monitor",
+    "ipa": "/ˈmɒn.ɪ.tər/",
+    "meaning": "theo dõi, giám sát",
+    "partOfSpeech": "verb",
+    "example": "The supervisor will monitor the team's progress weekly.",
+    "synonyms": ["track", "oversee", "watch"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-089",
+    "word": "notify",
+    "ipa": "/ˈnoʊ.tɪ.faɪ/",
+    "meaning": "thông báo, báo tin",
+    "partOfSpeech": "verb",
+    "example": "Please notify HR if you plan to take any leave next week.",
+    "synonyms": ["inform", "alert", "advise"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-090",
+    "word": "organize",
+    "ipa": "/ˈɔːr.ɡə.naɪz/",
+    "meaning": "tổ chức, sắp xếp",
+    "partOfSpeech": "verb",
+    "example": "She organized all the files into clearly labeled folders.",
+    "synonyms": ["arrange", "sort", "structure"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-091",
+    "word": "outline",
+    "ipa": "/ˈaʊt.laɪn/",
+    "meaning": "phác thảo, đề cương",
+    "partOfSpeech": "noun",
+    "example": "Please send me an outline of the report before you write the full version.",
+    "synonyms": ["summary", "framework", "sketch"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-092",
+    "word": "participate",
+    "ipa": "/pɑːrˈtɪs.ɪ.peɪt/",
+    "meaning": "tham gia, tham dự",
+    "partOfSpeech": "verb",
+    "example": "All staff are encouraged to participate in the workshop.",
+    "synonyms": ["attend", "join", "take part"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-093",
+    "word": "prioritize",
+    "ipa": "/praɪˈɒr.ɪ.taɪz/",
+    "meaning": "ưu tiên, xếp thứ tự ưu tiên",
+    "partOfSpeech": "verb",
+    "example": "You need to prioritize your tasks to meet the deadline.",
+    "synonyms": ["rank", "order", "focus on"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-094",
+    "word": "proofread",
+    "ipa": "/ˈpruːf.riːd/",
+    "meaning": "đọc soát lỗi, kiểm tra lỗi văn bản",
+    "partOfSpeech": "verb",
+    "example": "Always proofread your emails before sending them to clients.",
+    "synonyms": ["check", "review", "edit"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-095",
+    "word": "record",
+    "ipa": "/rɪˈkɔːrd/",
+    "meaning": "ghi lại, lưu hồ sơ",
+    "partOfSpeech": "verb",
+    "example": "Please record the key decisions made during the meeting.",
+    "synonyms": ["document", "log", "note"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-096",
+    "word": "refer",
+    "ipa": "/rɪˈfɜːr/",
+    "meaning": "đề cập, chuyển đến",
+    "partOfSpeech": "verb",
+    "example": "Please refer to the attached document for details.",
+    "synonyms": ["direct", "point to", "mention"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-097",
+    "word": "reserve",
+    "ipa": "/rɪˈzɜːrv/",
+    "meaning": "đặt trước, đặt chỗ",
+    "partOfSpeech": "verb",
+    "example": "I need to reserve the conference room for Friday afternoon.",
+    "synonyms": ["book", "set aside", "hold"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-098",
+    "word": "sort",
+    "ipa": "/sɔːrt/",
+    "meaning": "phân loại, sắp xếp",
+    "partOfSpeech": "verb",
+    "example": "Please sort these documents by date before filing them.",
+    "synonyms": ["classify", "organize", "arrange"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-099",
+    "word": "submit",
+    "ipa": "/səbˈmɪt/",
+    "meaning": "nộp, gửi lên",
+    "partOfSpeech": "verb",
+    "example": "All expense reports must be submitted by the 5th of each month.",
+    "synonyms": ["hand in", "file", "present"],
+    "topic": "office"
+  },
+  {
+    "id": "v-off-100",
+    "word": "verify",
+    "ipa": "/ˈver.ɪ.faɪ/",
+    "meaning": "xác minh, kiểm tra",
+    "partOfSpeech": "verb",
+    "example": "Please verify the accuracy of all figures before sending the report.",
+    "synonyms": ["confirm", "check", "validate"],
+    "topic": "office"
   }
 ]

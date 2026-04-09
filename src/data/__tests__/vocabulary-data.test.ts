@@ -21,13 +21,13 @@ const allVocabulary: { name: string; data: VocabularyWord[]; prefix: string; top
 ]
 
 describe('Vocabulary data completeness', () => {
-  it.each(allVocabulary)('$name has exactly 50 words', ({ data }) => {
-    expect(data).toHaveLength(50)
+  it.each(allVocabulary)('$name has exactly 100 words', ({ data }) => {
+    expect(data).toHaveLength(100)
   })
 
-  it('has 400 total words across all topics', () => {
+  it('has 800 total words across all topics', () => {
     const total = allVocabulary.reduce((sum, v) => sum + v.data.length, 0)
-    expect(total).toBe(400)
+    expect(total).toBe(800)
   })
 })
 
@@ -55,8 +55,8 @@ describe('Vocabulary data structure', () => {
     })
   })
 
-  it.each(allVocabulary)('$name words have sequential IDs from 001 to 050', ({ data, prefix }) => {
-    for (let i = 0; i < 50; i++) {
+  it.each(allVocabulary)('$name words have sequential IDs from 001 to 100', ({ data, prefix }) => {
+    for (let i = 0; i < 100; i++) {
       const expectedId = `${prefix}${String(i + 1).padStart(3, '0')}`
       expect(data[i].id).toBe(expectedId)
     }

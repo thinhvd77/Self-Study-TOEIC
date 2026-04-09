@@ -487,5 +487,483 @@ export const financeVocabulary: VocabularyWord[] = [
     "partOfSpeech": "noun",
     "example": "Budget allocation for marketing increased this year.",
     "topic": "finance"
+  },
+  {
+    "id": "v-fin-051",
+    "word": "acquisition",
+    "ipa": "/ˌækwɪˈzɪʃn/",
+    "meaning": "sự mua lại (công ty, tài sản)",
+    "partOfSpeech": "noun",
+    "example": "The acquisition of the smaller firm expanded our market share significantly.",
+    "synonyms": ["takeover", "purchase", "buyout"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-052",
+    "word": "merger",
+    "ipa": "/ˈmɜːrdʒər/",
+    "meaning": "sự sáp nhập (công ty)",
+    "partOfSpeech": "noun",
+    "example": "The merger between the two banks created the largest financial institution in the region.",
+    "synonyms": ["consolidation", "union"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-053",
+    "word": "shareholder",
+    "ipa": "/ˈʃerhoʊldər/",
+    "meaning": "cổ đông",
+    "partOfSpeech": "noun",
+    "example": "Shareholders voted to approve the proposed merger at the annual meeting.",
+    "synonyms": ["stockholder", "investor"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-054",
+    "word": "stock",
+    "ipa": "/stɒk/",
+    "meaning": "cổ phiếu",
+    "partOfSpeech": "noun",
+    "example": "The company's stock rose 10% after the positive earnings report.",
+    "synonyms": ["share", "equity"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-055",
+    "word": "bond",
+    "ipa": "/bɒnd/",
+    "meaning": "trái phiếu",
+    "partOfSpeech": "noun",
+    "example": "Government bonds are considered a low-risk investment option.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-056",
+    "word": "securities",
+    "ipa": "/sɪˈkjʊrətiz/",
+    "meaning": "chứng khoán",
+    "partOfSpeech": "noun",
+    "example": "The firm trades a variety of securities, including stocks and bonds.",
+    "synonyms": ["stocks", "bonds", "financial instruments"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-057",
+    "word": "broker",
+    "ipa": "/ˈbroʊkər/",
+    "meaning": "nhà môi giới",
+    "partOfSpeech": "noun",
+    "example": "She hired a broker to manage her investment portfolio.",
+    "synonyms": ["agent", "dealer", "intermediary"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-058",
+    "word": "inflation",
+    "ipa": "/ɪnˈfleɪʃn/",
+    "meaning": "lạm phát",
+    "partOfSpeech": "noun",
+    "example": "Rising inflation has reduced consumers' purchasing power.",
+    "antonyms": ["deflation"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-059",
+    "word": "deflation",
+    "ipa": "/dɪˈfleɪʃn/",
+    "meaning": "giảm phát",
+    "partOfSpeech": "noun",
+    "example": "Prolonged deflation can lead to reduced economic activity.",
+    "antonyms": ["inflation"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-060",
+    "word": "liquidity",
+    "ipa": "/lɪˈkwɪdɪti/",
+    "meaning": "tính thanh khoản",
+    "partOfSpeech": "noun",
+    "example": "The company maintained high liquidity to cover short-term obligations.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-061",
+    "word": "solvency",
+    "ipa": "/ˈsɒlvənsi/",
+    "meaning": "khả năng thanh toán nợ",
+    "partOfSpeech": "noun",
+    "example": "The bank's solvency was confirmed by the independent financial audit.",
+    "antonyms": ["insolvency", "bankruptcy"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-062",
+    "word": "bankrupt",
+    "ipa": "/ˈbæŋkrʌpt/",
+    "meaning": "phá sản",
+    "partOfSpeech": "adjective",
+    "example": "The retailer was declared bankrupt after months of declining sales.",
+    "synonyms": ["insolvent"],
+    "antonyms": ["solvent"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-063",
+    "word": "collateral",
+    "ipa": "/kəˈlætərəl/",
+    "meaning": "tài sản thế chấp",
+    "partOfSpeech": "noun",
+    "example": "The borrower offered his property as collateral for the business loan.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-064",
+    "word": "default",
+    "ipa": "/dɪˈfɔːlt/",
+    "meaning": "vỡ nợ, không thực hiện nghĩa vụ trả nợ",
+    "partOfSpeech": "noun",
+    "example": "The company was in default after missing three consecutive loan payments.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-065",
+    "word": "overhead",
+    "ipa": "/ˈoʊvərhed/",
+    "meaning": "chi phí cố định (vận hành)",
+    "partOfSpeech": "noun",
+    "example": "Reducing overhead costs helped the company improve its profit margin.",
+    "synonyms": ["operating costs", "fixed costs"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-066",
+    "word": "gross",
+    "ipa": "/ɡroʊs/",
+    "meaning": "tổng (trước khi khấu trừ)",
+    "partOfSpeech": "adjective",
+    "example": "Gross revenue refers to total sales before any deductions.",
+    "antonyms": ["net"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-067",
+    "word": "net",
+    "ipa": "/nɛt/",
+    "meaning": "ròng, thuần (sau khi khấu trừ)",
+    "partOfSpeech": "adjective",
+    "example": "Net profit is calculated after subtracting all expenses from gross revenue.",
+    "antonyms": ["gross"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-068",
+    "word": "cash flow",
+    "ipa": "/ˈkæʃ floʊ/",
+    "meaning": "dòng tiền",
+    "partOfSpeech": "noun",
+    "example": "Positive cash flow is essential for the day-to-day operations of any business.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-069",
+    "word": "surplus",
+    "ipa": "/ˈsɜːrpləs/",
+    "meaning": "thặng dư",
+    "partOfSpeech": "noun",
+    "example": "The government reported a budget surplus for the first time in five years.",
+    "antonyms": ["deficit", "shortfall"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-070",
+    "word": "deficit",
+    "ipa": "/ˈdefɪsɪt/",
+    "meaning": "thâm hụt",
+    "partOfSpeech": "noun",
+    "example": "The trade deficit widened as imports outpaced exports.",
+    "antonyms": ["surplus"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-071",
+    "word": "currency",
+    "ipa": "/ˈkɜːrənsi/",
+    "meaning": "tiền tệ",
+    "partOfSpeech": "noun",
+    "example": "Fluctuations in currency exchange rates affect import costs.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-072",
+    "word": "exchange rate",
+    "ipa": "/ɪksˈtʃeɪndʒ reɪt/",
+    "meaning": "tỷ giá hối đoái",
+    "partOfSpeech": "noun",
+    "example": "The favorable exchange rate boosted the company's overseas earnings.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-073",
+    "word": "fund",
+    "ipa": "/fʌnd/",
+    "meaning": "quỹ",
+    "partOfSpeech": "noun",
+    "example": "The pension fund is managed by an independent investment committee.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-074",
+    "word": "mutual fund",
+    "ipa": "/ˈmjuːtʃuəl fʌnd/",
+    "meaning": "quỹ tương hỗ",
+    "partOfSpeech": "noun",
+    "example": "Investing in a mutual fund allows individuals to pool resources for diversified holdings.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-075",
+    "word": "pension",
+    "ipa": "/ˈpenʃn/",
+    "meaning": "lương hưu, quỹ hưu trí",
+    "partOfSpeech": "noun",
+    "example": "Employees contribute 5% of their salary to the company pension plan.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-076",
+    "word": "valuation",
+    "ipa": "/ˌvæljuˈeɪʃn/",
+    "meaning": "định giá",
+    "partOfSpeech": "noun",
+    "example": "An independent valuation of the property was conducted before the sale.",
+    "synonyms": ["assessment", "appraisal"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-077",
+    "word": "venture",
+    "ipa": "/ˈventʃər/",
+    "meaning": "liên doanh, dự án kinh doanh mạo hiểm",
+    "partOfSpeech": "noun",
+    "example": "The two firms launched a joint venture to develop new software products.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-078",
+    "word": "subsidy",
+    "ipa": "/ˈsʌbsɪdi/",
+    "meaning": "trợ cấp",
+    "partOfSpeech": "noun",
+    "example": "The government provides subsidies to support local agricultural businesses.",
+    "antonyms": ["tax"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-079",
+    "word": "grant",
+    "ipa": "/ɡrænt/",
+    "meaning": "khoản tài trợ",
+    "partOfSpeech": "noun",
+    "example": "The startup received a government grant to fund its research project.",
+    "synonyms": ["subsidy", "funding", "award"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-080",
+    "word": "treasury",
+    "ipa": "/ˈtreʒəri/",
+    "meaning": "kho bạc, bộ tài chính",
+    "partOfSpeech": "noun",
+    "example": "Treasury bonds are issued by the federal government to finance public spending.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-081",
+    "word": "underwrite",
+    "ipa": "/ˈʌndərraɪt/",
+    "meaning": "bảo lãnh phát hành (chứng khoán, bảo hiểm)",
+    "partOfSpeech": "verb",
+    "example": "The investment bank agreed to underwrite the company's initial public offering.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-082",
+    "word": "commission",
+    "ipa": "/kəˈmɪʃn/",
+    "meaning": "hoa hồng",
+    "partOfSpeech": "noun",
+    "example": "The broker charges a 2% commission on every trade executed.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-083",
+    "word": "payable",
+    "ipa": "/ˈpeɪəbl/",
+    "meaning": "phải trả",
+    "partOfSpeech": "adjective",
+    "example": "Accounts payable represents money the company owes to its suppliers.",
+    "antonyms": ["receivable"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-084",
+    "word": "receivable",
+    "ipa": "/rɪˈsiːvəbl/",
+    "meaning": "phải thu",
+    "partOfSpeech": "adjective",
+    "example": "Accounts receivable must be collected within 60 days of invoice.",
+    "antonyms": ["payable"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-085",
+    "word": "remit",
+    "ipa": "/rɪˈmɪt/",
+    "meaning": "chuyển tiền, gửi tiền",
+    "partOfSpeech": "verb",
+    "example": "Please remit payment within 10 business days to avoid late fees.",
+    "synonyms": ["send", "transfer", "dispatch"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-086",
+    "word": "settlement",
+    "ipa": "/ˈsetlmənt/",
+    "meaning": "thanh toán cuối cùng, quyết toán",
+    "partOfSpeech": "noun",
+    "example": "Settlement of the transaction occurs two business days after the trade date.",
+    "synonyms": ["payment", "clearance"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-087",
+    "word": "commodity",
+    "ipa": "/kəˈmɒdɪti/",
+    "meaning": "hàng hóa cơ bản (dầu, vàng, nông sản...)",
+    "partOfSpeech": "noun",
+    "example": "Oil is one of the most actively traded commodities in the world.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-088",
+    "word": "derivative",
+    "ipa": "/dɪˈrɪvətɪv/",
+    "meaning": "công cụ phái sinh",
+    "partOfSpeech": "noun",
+    "example": "Options and futures are common types of financial derivatives.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-089",
+    "word": "hedge",
+    "ipa": "/hedʒ/",
+    "meaning": "phòng ngừa rủi ro",
+    "partOfSpeech": "verb",
+    "example": "The company used futures contracts to hedge against currency fluctuations.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-090",
+    "word": "speculation",
+    "ipa": "/ˌspekjuˈleɪʃn/",
+    "meaning": "đầu cơ",
+    "partOfSpeech": "noun",
+    "example": "Speculation in the real estate market drove prices to unsustainable levels.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-091",
+    "word": "arbitrage",
+    "ipa": "/ˈɑːrbɪtrɑːʒ/",
+    "meaning": "kinh doanh chênh lệch giá",
+    "partOfSpeech": "noun",
+    "example": "Traders use arbitrage to profit from price differences between markets.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-092",
+    "word": "index",
+    "ipa": "/ˈɪndeks/",
+    "meaning": "chỉ số (thị trường chứng khoán)",
+    "partOfSpeech": "noun",
+    "example": "The stock market index fell 3% following the economic data release.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-093",
+    "word": "bull market",
+    "ipa": "/ˈbʊl ˌmɑːrkɪt/",
+    "meaning": "thị trường tăng giá",
+    "partOfSpeech": "noun",
+    "example": "Investors gained considerable returns during the bull market of the past decade.",
+    "antonyms": ["bear market"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-094",
+    "word": "bear market",
+    "ipa": "/ˈber ˌmɑːrkɪt/",
+    "meaning": "thị trường giảm giá",
+    "partOfSpeech": "noun",
+    "example": "Many investors shifted to bonds during the bear market to protect their capital.",
+    "antonyms": ["bull market"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-095",
+    "word": "maturity",
+    "ipa": "/məˈtʃʊərɪti/",
+    "meaning": "ngày đáo hạn",
+    "partOfSpeech": "noun",
+    "example": "The bond reaches maturity in five years, at which point the principal is repaid.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-096",
+    "word": "refinance",
+    "ipa": "/ˌriːˈfaɪnæns/",
+    "meaning": "tái cấp vốn, vay mới để trả nợ cũ",
+    "partOfSpeech": "verb",
+    "example": "The company decided to refinance its debt at a lower interest rate.",
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-097",
+    "word": "accrue",
+    "ipa": "/əˈkruː/",
+    "meaning": "tích lũy, phát sinh (lãi, chi phí)",
+    "partOfSpeech": "verb",
+    "example": "Interest begins to accrue from the date the loan is disbursed.",
+    "synonyms": ["accumulate", "build up"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-098",
+    "word": "appreciate",
+    "ipa": "/əˈpriːʃieɪt/",
+    "meaning": "tăng giá trị",
+    "partOfSpeech": "verb",
+    "example": "Real estate in this area has appreciated by 30% over the past three years.",
+    "antonyms": ["depreciate"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-099",
+    "word": "consolidate",
+    "ipa": "/kənˈsɒlɪdeɪt/",
+    "meaning": "hợp nhất, củng cố",
+    "partOfSpeech": "verb",
+    "example": "The company decided to consolidate its three subsidiaries into one entity.",
+    "synonyms": ["merge", "combine", "unify"],
+    "topic": "finance"
+  },
+  {
+    "id": "v-fin-100",
+    "word": "annuity",
+    "ipa": "/əˈnjuːɪti/",
+    "meaning": "niên kim (khoản thanh toán định kỳ hàng năm)",
+    "partOfSpeech": "noun",
+    "example": "He purchased an annuity to provide a steady income stream during retirement.",
+    "topic": "finance"
   }
 ]
