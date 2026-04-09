@@ -28,7 +28,7 @@ export const part1Questions: Question[] = [
       'Two employees are setting up stage lights.',
       'Two employees are cleaning the parking lot.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation: 'Bối cảnh quầy lễ tân cho thấy hai nhân viên đang chào đón khách hàng.',
   },
   {
@@ -43,7 +43,7 @@ export const part1Questions: Question[] = [
       'A technician is delivering coffee.',
       'A technician is writing on a whiteboard.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation: 'Hình ảnh mô tả kỹ thuật viên đang kiểm tra hệ thống máy chủ của công ty.',
   },
   {
@@ -58,7 +58,7 @@ export const part1Questions: Question[] = [
       'Employees are assembling furniture in a warehouse.',
       'Employees are exercising at a gym.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation: 'Nhiều nhân viên đang xem biểu đồ trong phòng họp, phù hợp bối cảnh công việc.',
   },
   {
@@ -88,7 +88,7 @@ export const part1Questions: Question[] = [
       'A manager is boarding an airplane.',
       'A manager is serving meals in a cafeteria.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation: 'Người quản lý đang ký tài liệu trên bàn làm việc, thường là hợp đồng hoặc giấy tờ nội bộ.',
   },
   {
@@ -103,7 +103,7 @@ export const part1Questions: Question[] = [
       'Staff members are checking train tickets.',
       'Staff members are filming a commercial outdoors.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 2,
     explanation: 'Nhân viên đang sắp xếp sản phẩm trong tủ trưng bày, phù hợp bối cảnh bán lẻ.',
   },
   {
@@ -118,7 +118,7 @@ export const part1Questions: Question[] = [
       'An employee is delivering newspapers.',
       'An employee is setting up a projector outdoors.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 3,
     explanation: 'Thiết bị và vị trí cho thấy nhân viên đang in hoặc photocopy tài liệu.',
   },
   {
@@ -148,7 +148,7 @@ export const part1Questions: Question[] = [
       'Workers are preparing meals in a kitchen.',
       'Workers are giving a training presentation.',
     ],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation: 'Hành động xếp hàng hóa lên xe giao nhận là bối cảnh nơi làm việc thực tế.',
   },
 ]

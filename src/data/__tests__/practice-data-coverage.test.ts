@@ -7,12 +7,25 @@ import { part6Questions } from '../tests/part6'
 import { part7Questions } from '../tests/part7'
 import { Question } from '../../types'
 
-const assertQuestionQuality = (questions: Question[], expectedType: 'listening' | 'reading') => {
+const assertQuestionQuality = (
+  questions: Question[],
+  expectedPart: 1 | 3 | 4 | 5 | 6 | 7,
+  expectedType: 'listening' | 'reading',
+  requiresAudio = false,
+  requiresPassage = false
+) => {
   questions.forEach((question, index) => {
+    expect(question.part).toBe(expectedPart)
     expect(question.options).toHaveLength(4)
     expect(question.correctAnswer).toBeGreaterThanOrEqual(0)
     expect(question.correctAnswer).toBeLessThan(question.options.length)
     expect(question.type).toBe(expectedType)
+    if (requiresAudio) {
+      expect(question.audioUrl).toBeTruthy()
+    }
+    if (requiresPassage) {
+      expect(question.passage).toBeTruthy()
+    }
     expect(question.id).toMatch(/^\w+-\d{3}$/)
     expect(question.explanation.length).toBeGreaterThan(10)
     expect(question.id.endsWith(String(index + 1).padStart(3, '0'))).toBe(true)
@@ -30,11 +43,32 @@ describe('Practice data coverage', () => {
   })
 
   it('keeps question structure and answer indices valid', () => {
-    assertQuestionQuality(part1Questions, 'listening')
-    assertQuestionQuality(part3Questions, 'listening')
-    assertQuestionQuality(part4Questions, 'listening')
-    assertQuestionQuality(part5Questions, 'reading')
-    assertQuestionQuality(part6Questions, 'reading')
-    assertQuestionQuality(part7Questions, 'reading')
+    assertQuestionQuality(part1Questions, 1, 'listening', true)
+    assertQuestionQuality(part3Questions, 3, 'listening', true)
+    assertQuestionQuality(part4Questions, 4, 'listening', true)
+    assertQuestionQuality(part5Questions, 5, 'reading')
+    assertQuestionQuality(part6Questions, 6, 'reading')
+    assertQuestionQuality(part7Questions, 7, 'reading', false, true)
+  })
+
+  it('uses balanced answer keys for each part dataset', () => {
+    const datasets = [part1Questions, part3Questions, part4Questions, part5Questions, part6Questions, part7Questions]
+
+    datasets.forEach((questions) => {
+      const answerSet = new Set(questions.map((q) => q.correctAnswer))
+      ;[0, 1, 2, 3].forEach((answer) => expect(answerSet.has(answer)).toBe(true))
+    })
+  })
+
+  it('groups part 3 and part 4 into 3-question sets', () => {
+    ;[part3Questions, part4Questions].forEach((questions) => {
+      const counts = questions.reduce<Record<string, number>>((acc, question) => {
+        const groupId = question.groupId ?? ''
+        acc[groupId] = (acc[groupId] ?? 0) + 1
+        return acc
+      }, {})
+
+      Object.values(counts).forEach((count) => expect(count).toBe(3))
+    })
   })
 })
