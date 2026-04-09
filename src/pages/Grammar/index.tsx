@@ -1,11 +1,12 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { LessonView } from './LessonView'
 import { partsOfSpeechLesson } from '../../data/grammar/parts-of-speech'
+import { verbTensesLesson } from '../../data/grammar/verb-tenses'
 import { useAppContext } from '../../context/AppContext'
 import { GrammarLesson } from '../../types'
 import { ProgressBar } from '../../components/ProgressBar'
 
-const allLessons: GrammarLesson[] = [partsOfSpeechLesson]
+const allLessons: GrammarLesson[] = [partsOfSpeechLesson, verbTensesLesson]
 
 function LessonList() {
   const navigate = useNavigate()
