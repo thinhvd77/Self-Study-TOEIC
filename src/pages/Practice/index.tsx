@@ -14,31 +14,26 @@ const PARTS = [
 function PartSelection() {
   const navigate = useNavigate()
 
-  const startPractice = (part: number) => {
-    navigate(`/practice/session?part=${part}`)
-  }
-
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Luyện đề thi</h2>
-
+    <div className="animate-fade-in">
+      <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">Luyện đề thi</h2>
       <div className="mb-8">
-        <h3 className="text-lg font-semibold text-gray-700 mb-4">Reading (Part 5-7)</h3>
+        <h3 className="text-lg font-semibold text-[var(--text-secondary)] mb-4">Reading (Part 5-7)</h3>
         <div className="grid gap-4 md:grid-cols-3">
           {PARTS.map((p) => (
             <button
               key={p.part}
-              onClick={() => startPractice(p.part)}
+              onClick={() => navigate(`/practice/session?part=${p.part}`)}
               disabled={p.count === 0}
-              className={`text-left p-5 rounded-lg border-2 transition-colors ${
+              className={`text-left p-5 rounded-xl border-2 transition-all duration-200 ${
                 p.count > 0
-                  ? 'border-blue-200 hover:border-blue-400 bg-white'
-                  : 'border-gray-200 bg-gray-50 opacity-50 cursor-not-allowed'
+                  ? 'border-[var(--border)] hover:border-[var(--accent)] bg-[var(--bg-surface)] hover:-translate-y-0.5'
+                  : 'border-[var(--border)] bg-[var(--bg-surface)] opacity-40 cursor-not-allowed'
               }`}
             >
-              <h4 className="font-bold text-gray-800">{p.label}</h4>
-              <p className="text-sm text-gray-500 mt-1">{p.description}</p>
-              <p className="text-sm text-blue-600 mt-2 font-medium">{p.count} câu</p>
+              <h4 className="font-bold text-[var(--text-primary)]">{p.label}</h4>
+              <p className="text-sm text-[var(--text-secondary)] mt-1">{p.description}</p>
+              <p className="text-sm text-[var(--accent)] mt-2 font-medium">{p.count} câu</p>
             </button>
           ))}
         </div>
@@ -60,19 +55,8 @@ export default function PracticePage() {
   return (
     <Routes>
       <Route index element={<PartSelection />} />
-      <Route
-        path="session"
-        element={
-          <PracticeSession
-            getQuestions={getQuestions}
-            onComplete={setLastResult}
-          />
-        }
-      />
-      <Route
-        path="result"
-        element={<PracticeResult result={lastResult} />}
-      />
+      <Route path="session" element={<PracticeSession getQuestions={getQuestions} onComplete={setLastResult} />} />
+      <Route path="result" element={<PracticeResult result={lastResult} />} />
     </Routes>
   )
 }

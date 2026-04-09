@@ -21,18 +21,15 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
   const questions = getQuestions(part)
 
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [answers, setAnswers] = useState<(number | null)[]>(
-    new Array(questions.length).fill(null)
-  )
+  const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null))
   const [bookmarks, setBookmarks] = useState<Set<number>>(new Set())
   const [isSubmitted, setIsSubmitted] = useState(false)
 
-  // Refs to avoid stale closures in timer callback
   const answersRef = useRef(answers)
   useEffect(() => { answersRef.current = answers }, [answers])
   const submittedRef = useRef(false)
 
-  const timeLimit = questions.length * 30 // 30 seconds per question
+  const timeLimit = questions.length * 30
 
   const handleSubmit = useCallback(() => {
     if (submittedRef.current) return
@@ -48,7 +45,6 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
     }))
 
     const correctCount = answerRecords.filter((a) => a.correct).length
-
     const result: TestResult = {
       id: `test-${Date.now()}`,
       date: new Date().toISOString(),
@@ -70,9 +66,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
 
   const timer = useTimer(timeLimit, handleTimeUp)
 
-  useEffect(() => {
-    timer.start()
-  }, [])
+  useEffect(() => { timer.start() }, [])
 
   const handleSelect = (optionIndex: number) => {
     if (isSubmitted) return
@@ -83,19 +77,16 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
 
   const handleToggleBookmark = () => {
     const newBookmarks = new Set(bookmarks)
-    if (newBookmarks.has(currentIndex)) {
-      newBookmarks.delete(currentIndex)
-    } else {
-      newBookmarks.add(currentIndex)
-    }
+    if (newBookmarks.has(currentIndex)) newBookmarks.delete(currentIndex)
+    else newBookmarks.add(currentIndex)
     setBookmarks(newBookmarks)
   }
 
   if (questions.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">Chưa có câu hỏi cho Part này.</p>
-        <button onClick={() => navigate('/practice')} className="mt-4 text-blue-600 hover:underline">
+        <p className="text-[var(--text-secondary)]">Chưa có câu hỏi cho Part này.</p>
+        <button onClick={() => navigate('/practice')} className="mt-4 text-[var(--accent)] hover:underline">
           Quay lại
         </button>
       </div>
@@ -107,7 +98,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-gray-800">
+        <h2 className="text-xl font-bold text-[var(--text-primary)]">
           Part {part} {isSubmitted && '- Kết quả'}
         </h2>
         {!isSubmitted && (
@@ -138,7 +129,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
             <button
               onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
               disabled={currentIndex === 0}
-              className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 disabled:opacity-50"
+              className="px-4 py-2 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:bg-[var(--border)] disabled:opacity-50 active:scale-95 transition-all"
             >
               Câu trước
             </button>
@@ -146,21 +137,21 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
             {!isSubmitted && currentIndex === questions.length - 1 ? (
               <button
                 onClick={handleSubmit}
-                className="px-6 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 font-medium"
+                className="px-6 py-2 rounded-lg bg-[var(--accent)] text-gray-900 hover:bg-[var(--accent-hover)] font-medium active:scale-95 transition-all"
               >
                 Nộp bài
               </button>
             ) : isSubmitted && currentIndex === questions.length - 1 ? (
               <button
                 onClick={() => navigate('/practice/result')}
-                className="px-6 py-2 rounded bg-green-600 text-white hover:bg-green-700 font-medium"
+                className="px-6 py-2 rounded-lg bg-[var(--success)] text-white hover:brightness-110 font-medium active:scale-95 transition-all"
               >
                 Xem kết quả
               </button>
             ) : (
               <button
                 onClick={() => setCurrentIndex(Math.min(questions.length - 1, currentIndex + 1))}
-                className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300"
+                className="px-4 py-2 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:bg-[var(--border)] active:scale-95 transition-all"
               >
                 Câu sau
               </button>
