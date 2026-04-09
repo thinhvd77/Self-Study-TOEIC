@@ -2,11 +2,26 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { LessonView } from './LessonView'
 import { partsOfSpeechLesson } from '../../data/grammar/parts-of-speech'
 import { verbTensesLesson } from '../../data/grammar/verb-tenses'
+import { passiveVoiceLesson } from '../../data/grammar/passive-voice'
+import { conjunctionsLesson } from '../../data/grammar/conjunctions'
+import { prepositionsLesson } from '../../data/grammar/prepositions'
+import { relativePronounsLesson } from '../../data/grammar/relative-pronouns'
+import { comparativesLesson } from '../../data/grammar/comparatives'
+import { conditionalsLesson } from '../../data/grammar/conditionals'
 import { useAppContext } from '../../context/AppContext'
 import { GrammarLesson } from '../../types'
 import { ProgressBar } from '../../components/ProgressBar'
 
-const allLessons: GrammarLesson[] = [partsOfSpeechLesson, verbTensesLesson]
+const allLessons: GrammarLesson[] = [
+  partsOfSpeechLesson,
+  verbTensesLesson,
+  passiveVoiceLesson,
+  conjunctionsLesson,
+  prepositionsLesson,
+  relativePronounsLesson,
+  comparativesLesson,
+  conditionalsLesson,
+]
 
 function LessonList() {
   const navigate = useNavigate()
