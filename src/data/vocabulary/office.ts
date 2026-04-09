@@ -36,13 +36,13 @@ export const officeVocabulary: VocabularyWord[] =   [
       "id": "v-off-003",
       "word": "timeline",
       "ipa": "/ˈtaɪm.laɪn/",
-      "meaning": "mốc thời gian cho tiến độ dự án",
+      "meaning": "bảng tiến độ theo thời gian",
       "partOfSpeech": "noun",
-      "example": "The manager set a new timeline for the project report.",
+      "example": "The project timeline shows each task's deadline.",
       "topic": "office",
       "synonyms": [
         "schedule",
-        "plan"
+        "time frame"
       ]
     },
     {
