@@ -4,7 +4,7 @@ interface QuestionCardProps {
   passage?: string
   options: string[]
   selectedAnswer: number | null
-  correctAnswer?: number // shown after submit
+  correctAnswer?: number
   explanation?: string
   isBookmarked: boolean
   onSelect: (index: number) => void
@@ -28,12 +28,12 @@ export function QuestionCard({
   const isReviewMode = correctAnswer !== undefined
 
   return (
-    <div className="bg-white rounded-lg shadow p-6">
+    <div className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-6">
       <div className="flex justify-between items-start mb-4">
-        <span className="text-sm font-medium text-gray-500">Câu {questionNumber}</span>
+        <span className="text-sm font-medium text-[var(--text-secondary)]">Câu {questionNumber}</span>
         <button
           onClick={onToggleBookmark}
-          className={`text-lg ${isBookmarked ? 'text-yellow-500' : 'text-gray-300'}`}
+          className={`text-lg ${isBookmarked ? 'text-[var(--accent)]' : 'text-[var(--border)]'}`}
           title={isBookmarked ? 'Bỏ đánh dấu' : 'Đánh dấu'}
         >
           ★
@@ -41,29 +41,29 @@ export function QuestionCard({
       </div>
 
       {passage && (
-        <div className="mb-4 p-4 bg-gray-50 rounded text-sm leading-relaxed whitespace-pre-wrap">
+        <div className="mb-4 p-4 bg-[var(--bg-elevated)] rounded text-sm leading-relaxed whitespace-pre-wrap text-[var(--text-primary)]">
           {passage}
         </div>
       )}
 
-      <p className="text-gray-800 font-medium mb-4">{question}</p>
+      <p className="text-[var(--text-primary)] font-medium mb-4">{question}</p>
 
       <div className="space-y-2">
         {options.map((option, index) => {
-          let className = 'w-full text-left px-4 py-3 rounded-lg border transition-colors '
+          let className = 'w-full text-left px-4 py-3 rounded-lg border transition-all duration-150 active:scale-[0.99] '
 
           if (isReviewMode) {
             if (index === correctAnswer) {
-              className += 'border-green-500 bg-green-50 text-green-800'
+              className += 'border-[var(--success)] bg-[var(--success-soft)] text-[var(--success)]'
             } else if (index === selectedAnswer && index !== correctAnswer) {
-              className += 'border-red-500 bg-red-50 text-red-800'
+              className += 'border-[var(--danger)] bg-[var(--danger-soft)] text-[var(--danger)]'
             } else {
-              className += 'border-gray-200 text-gray-500'
+              className += 'border-[var(--border)] text-[var(--text-secondary)]'
             }
           } else if (index === selectedAnswer) {
-            className += 'border-blue-500 bg-blue-50 text-blue-800'
+            className += 'border-[var(--accent)] bg-[var(--accent-soft)] text-[var(--accent)]'
           } else {
-            className += 'border-gray-200 hover:border-blue-300 hover:bg-blue-50'
+            className += 'border-[var(--border)] bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:border-[var(--accent)] hover:bg-[var(--accent-soft)]'
           }
 
           return (
@@ -81,9 +81,9 @@ export function QuestionCard({
       </div>
 
       {isReviewMode && explanation && (
-        <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-          <p className="text-sm font-medium text-blue-800 mb-1">Giải thích:</p>
-          <p className="text-sm text-blue-700">{explanation}</p>
+        <div className="mt-4 p-4 bg-[var(--bg-elevated)] rounded-lg border border-[var(--border)]">
+          <p className="text-sm font-medium text-[var(--accent)] mb-1">Giải thích:</p>
+          <p className="text-sm text-[var(--text-secondary)]">{explanation}</p>
         </div>
       )}
     </div>

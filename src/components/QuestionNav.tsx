@@ -14,31 +14,31 @@ export function QuestionNav({
   onNavigate,
 }: QuestionNavProps) {
   return (
-    <div className="bg-white rounded-lg shadow p-4">
-      <h3 className="text-sm font-medium text-gray-500 mb-3">Câu hỏi</h3>
+    <div className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-4">
+      <h3 className="text-sm font-medium text-[var(--text-secondary)] mb-3">Câu hỏi</h3>
       <div className="grid grid-cols-5 gap-2">
         {Array.from({ length: total }, (_, i) => {
           let className = 'w-10 h-10 rounded text-sm font-medium transition-colors '
 
           if (i === currentIndex) {
-            className += 'bg-blue-600 text-white'
+            className += 'bg-[var(--accent)] text-gray-900'
           } else if (answers[i] !== null && answers[i] !== undefined) {
-            className += 'bg-green-100 text-green-800 border border-green-300'
+            className += 'bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]'
           } else {
-            className += 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+            className += 'bg-[var(--bg-elevated)] text-[var(--text-secondary)] hover:bg-[var(--border)]'
           }
 
           return (
             <button key={i} onClick={() => onNavigate(i)} className={`${className} relative`}>
               {bookmarks.has(i) && (
-                <span className="absolute top-0 right-0 text-yellow-500 text-xs leading-none">★</span>
+                <span className="absolute top-0 right-0 text-[var(--warning)] text-xs leading-none">★</span>
               )}
               {i + 1}
             </button>
           )
         })}
       </div>
-      <div className="mt-3 flex gap-4 text-xs text-gray-500">
+      <div className="mt-3 flex gap-4 text-xs text-[var(--text-secondary)]">
         <span>Đã làm: {answers.filter((a) => a !== null && a !== undefined).length}/{total}</span>
         <span>Đánh dấu: {bookmarks.size}</span>
       </div>
