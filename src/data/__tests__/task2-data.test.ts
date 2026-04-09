@@ -12,10 +12,10 @@ import {
 } from '../../types'
 
 describe('Task 2 sample data', () => {
-  it('provides 8 sample Part 5 questions', () => {
-    expect(part5Questions).toHaveLength(8)
+  it('provides at least 20 sample Part 5 questions', () => {
+    expect(part5Questions.length).toBeGreaterThanOrEqual(20)
     expect(part5Questions[0].id).toBe('p5-001')
-    expect(part5Questions[7].id).toBe('p5-008')
+    expect(part5Questions[19].id).toBe('p5-020')
   })
 
   it('provides 100 business vocabulary words', () => {
