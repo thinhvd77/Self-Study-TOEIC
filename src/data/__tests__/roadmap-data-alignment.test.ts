@@ -40,11 +40,16 @@ describe('Roadmap and data alignment', () => {
         return matches.map((match) => `part:${match[1]}`)
       })
 
-    const uniqueMentionedParts = [...new Set(mentionedParts)].filter((target) => supportedPartTargets.has(target))
-    expect(uniqueMentionedParts.length).toBeGreaterThan(0)
+    const uniqueMentionedParts = [...new Set(mentionedParts)]
+    const unsupportedMentionedParts = uniqueMentionedParts
+      .filter((target) => !supportedPartTargets.has(target))
+      .sort()
+    expect(unsupportedMentionedParts).toEqual(['part:2'])
 
-    uniqueMentionedParts.forEach((target) => {
+    uniqueMentionedParts
+      .filter((target) => supportedPartTargets.has(target))
+      .forEach((target) => {
       expect(partBank[target]).toBeGreaterThan(0)
-    })
+      })
   })
 })
