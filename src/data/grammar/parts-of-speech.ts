@@ -5,29 +5,112 @@ export const partsOfSpeechLesson: GrammarLesson = {
   title: 'Loại từ & Vị trí trong câu',
   order: 1,
   content: `
-## Loại từ trong tiếng Anh
+## Loại từ trong TOEIC Part 5
 
-Trong TOEIC Part 5, bạn thường gặp câu hỏi yêu cầu chọn đúng **loại từ** (part of speech) để điền vào chỗ trống.
+Trong Part 5, câu hỏi về **loại từ** (part of speech) thường kiểm tra xem bạn có nhận ra vai trò của từ trong câu hay không. Mấu chốt không chỉ là nhìn đuôi từ, mà là đọc **vị trí xung quanh chỗ trống**.
 
-### 4 loại từ chính:
+### 1) Noun (danh từ)
+Danh từ chỉ người, vật, sự việc, ý tưởng.
 
-**1. Noun (Danh từ)** - chỉ người, vật, sự việc
-- Vị trí: sau mạo từ (a/an/the), sau tính từ, sau giới từ
-- Đuôi thường gặp: -tion, -ment, -ness, -ity, -ance/-ence
+**Dấu hiệu nhận biết**
+- Đứng sau **a / an / the / this / that / these / those / my / our / their**
+- Đứng sau **tính từ**: a successful ___, an important ___
+- Đứng sau **giới từ**: in the ___, of the ___, for the ___
+- Đứng trước **of + noun**: the ___ of the company
 
-**2. Verb (Động từ)** - chỉ hành động, trạng thái
-- Vị trí: sau chủ ngữ, sau trợ động từ (will, can, must, have)
-- Đuôi thường gặp: -ize, -ify, -ate
+**Đuôi thường gặp**
+- -tion / -sion, -ment, -ness, -ity, -ance / -ence, -ship, -hood
 
-**3. Adjective (Tính từ)** - mô tả danh từ
-- Vị trí: trước danh từ, sau "be/become/seem"
-- Đuôi thường gặp: -ful, -ive, -ous, -able, -al
+**Lưu ý**
+Nếu thấy mẫu **article + blank + of**, khả năng rất cao blank cần danh từ.
 
-**4. Adverb (Trạng từ)** - bổ nghĩa cho động từ, tính từ, trạng từ khác
-- Vị trí: trước/sau động từ, trước tính từ
-- Đuôi thường gặp: -ly
+### 2) Verb (động từ)
+Động từ diễn tả hành động hoặc trạng thái.
 
-### Mẹo: Nhìn vị trí trong câu để xác định loại từ cần điền!
+**Dấu hiệu nhận biết**
+- Đứng sau **chủ ngữ**: The manager ___
+- Đứng sau **modal verbs**: can, should, must, will, may
+- Đứng sau **to**: to ___, nhưng phải phân biệt với danh từ đuôi -tion
+- Đứng sau **have / has / had / be** để tạo thì hoặc thể bị động
+
+**Đuôi thường gặp**
+- -ize, -ify, -ate, -en
+
+**Lưu ý**
+Đôi khi một từ vừa là danh từ vừa là động từ. Hãy đọc cấu trúc quanh chỗ trống thay vì đoán theo nghĩa quen thuộc.
+
+### 3) Adjective (tính từ)
+Tính từ mô tả danh từ.
+
+**Dấu hiệu nhận biết**
+- Đứng **trước danh từ**: a practical solution
+- Đứng sau **linking verbs**: be, become, seem, look, feel, sound
+- Đứng sau **too / very / quite / rather / extremely**
+
+**Đuôi thường gặp**
+- -ful, -ive, -ous, -able / -ible, -al, -ic, -ary, -ent
+
+**Lưu ý**
+Nhiều câu Part 5 kiểm tra cặp **adjective vs adverb**. Nếu từ cần bổ nghĩa cho danh từ thì chọn adjective; nếu bổ nghĩa cho động từ thì chọn adverb.
+
+### 4) Adverb (trạng từ)
+Trạng từ bổ nghĩa cho động từ, tính từ hoặc trạng từ khác.
+
+**Dấu hiệu nhận biết**
+- Đứng gần động từ: work efficiently
+- Đứng trước tính từ: highly effective
+- Đứng trước một trạng từ khác: very carefully
+- Đôi khi đứng đầu câu để bổ nghĩa cả mệnh đề: Fortunately, ...
+
+**Đuôi thường gặp**
+- -ly là dấu hiệu mạnh nhất, nhưng không phải 100%.
+
+**Lưu ý**
+Một số từ có đuôi -ly nhưng không phải adverb (friendly, likely khi dùng như adjective). Vì vậy phải kiểm tra ngữ cảnh.
+
+### TOEIC word-family traps
+TOEIC rất thích bẫy theo **word family**: các từ cùng gốc nhưng khác loại từ.
+
+- **success / succeed / successful / successfully**
+  - success = noun
+  - succeed = verb
+  - successful = adjective
+  - successfully = adverb
+- **confidence / confident / confidently**
+  - confidence = noun
+  - confident = adjective
+  - confidently = adverb
+- **responsibility / responsible / responsibly**
+  - responsibility = noun
+  - responsible = adjective
+  - responsibly = adverb
+- **simplicity / simple / simplify / simply**
+  - simplicity = noun
+  - simple = adjective
+  - simplify = verb
+  - simply = adverb
+- **economic / economical / economy / economically**
+  - economy = noun
+  - economic = adjective liên quan kinh tế
+  - economical = adjective tiết kiệm
+  - economically = adverb
+
+Khi gặp bẫy này, đừng chỉ dịch nghĩa. Hãy hỏi: **từ đó đang đóng vai trò gì trong câu?**
+
+### Quick checklist cho Part 5
+Trước khi chọn đáp án, hãy tự hỏi 4 câu sau:
+1. Chỗ trống đứng **sau** từ loại nào?
+2. Chỗ trống đứng **trước** từ loại nào?
+3. Từ cần điền có đang bổ nghĩa cho **noun / verb / adjective / adverb** không?
+4. Có phải đây là **word-family trap** không?
+
+### Quy tắc chốt nhanh
+- Sau **article + adjective** → thường là **noun**
+- Trước **noun** → thường là **adjective**
+- Sau **subject / modal / to** → thường là **verb**
+- Bổ nghĩa cho **verb / adjective / adverb** → thường là **adverb**
+
+Nếu còn phân vân, hãy quay lại **vị trí của blank** và đọc cả cụm từ thay vì nhìn một từ đơn lẻ.
   `.trim(),
   examples: [
     {
@@ -49,35 +132,35 @@ Trong TOEIC Part 5, bạn thường gặp câu hỏi yêu cầu chọn đúng **
       question: 'The _______ of the new software took several months.',
       options: ['develop', 'development', 'developing', 'developer'],
       correctAnswer: 1,
-      explanation: 'Sau "The" và trước "of" cần danh từ. "development" là noun chỉ sự phát triển.',
+      explanation: 'Gợi ý: sau "The" và trước "of" thường cần một danh từ. Đáp án đúng là "development" vì đây là noun, nghĩa là "sự phát triển". Các đáp án còn lại sai vì "develop" là động từ, "developing" không tự nhiên trong cấu trúc này, còn "developer" chỉ người phát triển chứ không phải quá trình phát triển.',
     },
     {
       id: 'gram-01-ex02',
       question: 'Our team worked _______ to meet the deadline.',
       options: ['diligent', 'diligence', 'diligently', 'diligentness'],
       correctAnswer: 2,
-      explanation: 'Cần trạng từ bổ nghĩa cho động từ "worked". "diligently" là adverb.',
+      explanation: 'Gợi ý: blank bổ nghĩa cho động từ "worked", nên cần một trạng từ. Đáp án đúng là "diligently" (adverb), mang nghĩa "một cách chăm chỉ". Các đáp án khác sai vì "diligent" là tính từ, "diligence" là danh từ, còn "diligentness" không phải cách dùng tự nhiên trong TOEIC.',
     },
     {
       id: 'gram-01-ex03',
-      question: 'The report contains _______ information about the market.',
-      options: ['value', 'valuable', 'valuably', 'valuation'],
-      correctAnswer: 1,
-      explanation: 'Trước danh từ "information" cần tính từ. "valuable" là adjective = có giá trị.',
+      question: 'The manager gave a _______ answer to the client.',
+      options: ['quick', 'quickly', 'quicken', 'quickness'],
+      correctAnswer: 0,
+      explanation: 'Gợi ý: blank đứng trước danh từ "answer", nên cần một tính từ. Đáp án đúng là "quick" vì nó mô tả danh từ phía sau. Các đáp án còn lại sai vì "quickly" là trạng từ, "quicken" là động từ, còn "quickness" là danh từ nên không thể đứng trước "answer" theo cách này.',
     },
     {
       id: 'gram-01-ex04',
-      question: 'We need to _______ the process to save time.',
-      options: ['simplification', 'simple', 'simplify', 'simply'],
-      correctAnswer: 2,
-      explanation: 'Sau "to" cần động từ nguyên mẫu. "simplify" là verb = đơn giản hóa.',
+      question: 'The policy was _______ updated after the meeting.',
+      options: ['recent', 'recently', 'recentness', 'recenter'],
+      correctAnswer: 1,
+      explanation: 'Gợi ý: blank bổ nghĩa cho cụm động từ "was updated", vì vậy cần trạng từ. Đáp án đúng là "recently", nghĩa là "gần đây". Các đáp án khác sai vì "recent" là tính từ, "recentness" là danh từ, còn "recenter" là động từ không phù hợp với cấu trúc câu.',
     },
     {
       id: 'gram-01-ex05',
-      question: 'Customer _______ is our top priority.',
-      options: ['satisfy', 'satisfactory', 'satisfaction', 'satisfactorily'],
-      correctAnswer: 2,
-      explanation: 'Vị trí chủ ngữ trước "is" cần danh từ. "satisfaction" là noun = sự hài lòng.',
+      question: 'The team adopted an _______ approach to reduce operating costs.',
+      options: ['economic', 'economical', 'economically', 'economy'],
+      correctAnswer: 1,
+      explanation: 'Gợi ý: blank đứng trước danh từ "approach", nên cần một tính từ. Đáp án đúng là "economical" vì nó mang nghĩa "tiết kiệm, không tốn kém", rất hợp với cụm "reduce operating costs". "Economic" chỉ nghĩa "thuộc về kinh tế", "economically" là trạng từ, còn "economy" là danh từ nên đều không phù hợp ở vị trí này.',
     },
   ],
 }

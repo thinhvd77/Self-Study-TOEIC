@@ -29,7 +29,7 @@ export const roadmap: RoadmapWeek[] = [
     tasks: [
       { id: 'w3-1', type: 'vocabulary', description: 'Học 50 từ vựng chủ đề Finance', target: 'topic:finance', quantity: 50 },
       { id: 'w3-2', type: 'grammar', description: 'Bài 3: Câu bị động', target: 'lesson:gram-03' },
-      { id: 'w3-3', type: 'practice', description: 'Làm quen Part 1 & Part 2', target: 'part:1', quantity: 5 },
+      { id: 'w3-3', type: 'practice', description: 'Làm quen Part 1 cơ bản', target: 'part:1', quantity: 5 },
     ],
   },
   {
