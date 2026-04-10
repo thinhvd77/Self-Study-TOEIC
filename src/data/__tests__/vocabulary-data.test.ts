@@ -63,8 +63,9 @@ describe('Vocabulary data structure', () => {
     })
   })
 
-  it.each(allVocabulary)('$name words have sequential IDs from 001 to expectedCount', ({ data, prefix, expectedCount }) => {
-    for (let i = 0; i < expectedCount; i++) {
+  it.each(allVocabulary)('$name words have sequential IDs from 001 to $expectedCount', ({ data, prefix, expectedCount }) => {
+    expect(data).toHaveLength(expectedCount)  // fails cleanly here first
+    for (let i = 0; i < data.length; i++) {   // only iterate what exists
       const expectedId = `${prefix}${String(i + 1).padStart(3, '0')}`
       expect(data[i].id).toBe(expectedId)
     }

@@ -101,4 +101,19 @@ describe('Task 2 type contracts', () => {
     expect(weeks[0].phase).toBe(1)
     expect(progress.currentWeek).toBe(1)
   })
+
+  it('supports double-passage Question type', () => {
+    const doublePassageQuestion: Question = {
+      id: 'p7-test',
+      part: 7,
+      type: 'reading',
+      passage: 'First passage text',
+      passage2: 'Second passage text',
+      question: 'What is the topic?',
+      options: ['A', 'B', 'C', 'D'],
+      correctAnswer: 0,
+      explanation: 'Test explanation',
+    }
+    expect(doublePassageQuestion.passage2).toBeDefined()
+  })
 })
