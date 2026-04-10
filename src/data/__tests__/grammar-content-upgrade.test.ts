@@ -6,6 +6,8 @@ import { passiveVoiceLesson } from '../grammar/passive-voice'
 import { conjunctionsLesson } from '../grammar/conjunctions'
 import { prepositionsLesson } from '../grammar/prepositions'
 import { relativePronounsLesson } from '../grammar/relative-pronouns'
+import { comparativesLesson } from '../grammar/comparatives'
+import { conditionalsLesson } from '../grammar/conditionals'
 
 const requiredHeadings = [
   '## Mục tiêu bài học',
@@ -17,7 +19,16 @@ const requiredHeadings = [
   '## Tóm tắt nhanh',
 ]
 
-const expectedLessonIds = ['gram-01', 'gram-02', 'gram-03', 'gram-04', 'gram-05', 'gram-06']
+const expectedLessonIds = [
+  'gram-01',
+  'gram-02',
+  'gram-03',
+  'gram-04',
+  'gram-05',
+  'gram-06',
+  'gram-07',
+  'gram-08',
+]
 
 const expectedExerciseIdsByLesson = {
   'gram-01': ['gram-01-ex01', 'gram-01-ex02', 'gram-01-ex03', 'gram-01-ex04', 'gram-01-ex05'],
@@ -26,6 +37,8 @@ const expectedExerciseIdsByLesson = {
   'gram-04': ['gram-04-ex01', 'gram-04-ex02', 'gram-04-ex03', 'gram-04-ex04', 'gram-04-ex05'],
   'gram-05': ['gram-05-ex01', 'gram-05-ex02', 'gram-05-ex03', 'gram-05-ex04', 'gram-05-ex05'],
   'gram-06': ['gram-06-ex01', 'gram-06-ex02', 'gram-06-ex03', 'gram-06-ex04', 'gram-06-ex05'],
+  'gram-07': ['gram-07-ex01', 'gram-07-ex02', 'gram-07-ex03', 'gram-07-ex04', 'gram-07-ex05'],
+  'gram-08': ['gram-08-ex01', 'gram-08-ex02', 'gram-08-ex03', 'gram-08-ex04', 'gram-08-ex05'],
 } as const
 
 const expectedCorrectAnswersByLesson = {
@@ -71,6 +84,20 @@ const expectedCorrectAnswersByLesson = {
     'gram-06-ex04': 3,
     'gram-06-ex05': 3,
   },
+  'gram-07': {
+    'gram-07-ex01': 0,
+    'gram-07-ex02': 1,
+    'gram-07-ex03': 1,
+    'gram-07-ex04': 2,
+    'gram-07-ex05': 0,
+  },
+  'gram-08': {
+    'gram-08-ex01': 0,
+    'gram-08-ex02': 1,
+    'gram-08-ex03': 2,
+    'gram-08-ex04': 3,
+    'gram-08-ex05': 0,
+  },
 } as const
 
 function assertStructuredLesson(lesson: GrammarLesson) {
@@ -102,10 +129,12 @@ describe('Grammar content upgrade contract', () => {
       partsOfSpeechLesson,
       verbTensesLesson,
       passiveVoiceLesson,
-      conjunctionsLesson,
-      prepositionsLesson,
-      relativePronounsLesson,
-    ]
+        conjunctionsLesson,
+        prepositionsLesson,
+        relativePronounsLesson,
+        comparativesLesson,
+        conditionalsLesson,
+      ]
 
     expect(lessons.map((lesson) => lesson.id)).toEqual(expectedLessonIds)
 
@@ -116,7 +145,7 @@ describe('Grammar content upgrade contract', () => {
     }
   })
 
-  it('locks exact answer keys for gram-01 to gram-06 exercises', () => {
+  it('locks exact answer keys for gram-01 to gram-08 exercises', () => {
     const lessons = [
       partsOfSpeechLesson,
       verbTensesLesson,
@@ -124,6 +153,8 @@ describe('Grammar content upgrade contract', () => {
       conjunctionsLesson,
       prepositionsLesson,
       relativePronounsLesson,
+      comparativesLesson,
+      conditionalsLesson,
     ]
 
     for (const lesson of lessons) {
@@ -154,7 +185,7 @@ describe('Grammar content upgrade contract', () => {
     })
   })
 
-  it('locks representative beginner-friendly wording for gram-04 to gram-06', () => {
+  it('locks representative beginner-friendly wording for gram-04 to gram-08', () => {
     const conjunctionsItem = conjunctionsLesson.exercises.find(
       (exercise) => exercise.id === 'gram-04-ex05',
     )
@@ -163,6 +194,12 @@ describe('Grammar content upgrade contract', () => {
     )
     const relativePronounsItem = relativePronounsLesson.exercises.find(
       (exercise) => exercise.id === 'gram-06-ex04',
+    )
+    const comparativesItem = comparativesLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-07-ex03',
+    )
+    const conditionalsItem = conditionalsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-08-ex04',
     )
 
     expect(conjunctionsItem).toMatchObject({
@@ -179,6 +216,16 @@ describe('Grammar content upgrade contract', () => {
     expect(relativePronounsItem).toMatchObject({
       question: 'The conference room _______ we hold our meetings needs renovation.',
       options: ['when', 'who', 'which', 'where'],
+    })
+
+    expect(comparativesItem).toMatchObject({
+      question: 'The backup system is _______ the main server during peak hours.',
+      options: ['more reliable than', 'as reliable as', 'the most reliable', 'reliably as'],
+    })
+
+    expect(conditionalsItem).toMatchObject({
+      question: 'If the team had checked the figures, they _______ the reporting error.',
+      options: ['avoid', 'will avoid', 'would avoid', 'would have avoided'],
     })
   })
 
@@ -204,5 +251,13 @@ describe('Grammar content upgrade contract', () => {
 
   it('keeps gram-06 beginner-friendly and structured', () => {
     assertStructuredLesson(relativePronounsLesson)
+  })
+
+  it('keeps gram-07 beginner-friendly and structured', () => {
+    assertStructuredLesson(comparativesLesson)
+  })
+
+  it('keeps gram-08 beginner-friendly and structured', () => {
+    assertStructuredLesson(conditionalsLesson)
   })
 })
