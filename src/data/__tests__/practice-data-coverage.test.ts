@@ -51,13 +51,17 @@ describe('Practice data coverage', () => {
     assertQuestionQuality(part7Questions, 7, 'reading', false, true)
   })
 
-  it('uses balanced answer keys for each part dataset', () => {
+  it('uses safe answer-key diversity without forcing wrong mappings', () => {
     const datasets = [part1Questions, part3Questions, part4Questions, part5Questions, part6Questions, part7Questions]
+    const globalAnswerSet = new Set<number>()
 
     datasets.forEach((questions) => {
       const answerSet = new Set(questions.map((q) => q.correctAnswer))
-      ;[0, 1, 2, 3].forEach((answer) => expect(answerSet.has(answer)).toBe(true))
+      expect(answerSet.size).toBeGreaterThanOrEqual(2)
+      answerSet.forEach((answer) => globalAnswerSet.add(answer))
     })
+
+    ;[0, 1, 2, 3].forEach((answer) => expect(globalAnswerSet.has(answer)).toBe(true))
   })
 
   it('groups part 3 and part 4 into 3-question sets', () => {

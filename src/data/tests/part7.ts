@@ -25,7 +25,7 @@ export const part7Questions: Question[] = [
       'Email\nSubject: Printer Replacement\nThe third-floor printer will be replaced on Tuesday morning. During this time, staff should use the second-floor copy room.',
     question: 'Where should staff print documents on Tuesday morning?',
     options: ['In the second-floor copy room', 'At the front desk', 'In the training center', 'At a nearby branch office'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Email ghi rõ máy in tầng 3 thay mới nên tạm dùng phòng copy tầng 2.',
   },
   {
@@ -36,7 +36,7 @@ export const part7Questions: Question[] = [
       'Notice\nA customer feedback survey will be sent to all online shoppers this weekend. Please remind customers to check their inbox and complete it.',
     question: 'When will the survey be sent?',
     options: ['This weekend', 'This afternoon', 'Next month', 'At the end of the year'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Thông báo nêu thời điểm gửi khảo sát là vào cuối tuần này.',
   },
   {
@@ -52,7 +52,7 @@ export const part7Questions: Question[] = [
       'Warehouse size doubled',
       'Driver salaries were reduced',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Đoạn văn nêu rõ chi phí nhiên liệu giảm 12% sau khi tối ưu lộ trình.',
   },
   {
@@ -84,7 +84,7 @@ export const part7Questions: Question[] = [
       'Only returning customers',
       'Only managers',
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Quảng cáo nói người đăng ký sớm trước ngày 5/5 sẽ được giảm 20%.',
   },
   {
@@ -100,7 +100,7 @@ export const part7Questions: Question[] = [
       'Move to another office',
       'Wait for a scheduled inspection',
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Tin nhắn hướng dẫn liên hệ bộ phận Dịch vụ Tòa nhà qua máy nhánh 224.',
   },
   {
@@ -116,7 +116,7 @@ export const part7Questions: Question[] = [
       'The branch closes earlier',
       'The branch offers new services',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Thông báo nêu chi nhánh mở cửa trễ hơn 1 giờ vào thứ Hai.',
   },
   {
@@ -138,12 +138,12 @@ export const part7Questions: Question[] = [
       'Email\nAttached is the revised contract draft. Please review sections 4 and 5 carefully and share your comments before Thursday noon.',
     question: 'What is the main purpose of this email?',
     options: [
-      'To request feedback on a revised contract',
       'To confirm a payment transfer',
       'To announce a public holiday',
       'To assign a new project manager',
+      'To request feedback on a revised contract',
     ],
-    correctAnswer: 1,
+    correctAnswer: 3,
     explanation: 'Email gửi bản hợp đồng chỉnh sửa và đề nghị phản hồi trước hạn.',
   },
 ]

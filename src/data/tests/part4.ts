@@ -25,7 +25,7 @@ export const part4Questions: Question[] = [
     groupId: 'p4-g01',
     question: 'When will the event take place?',
     options: ['At 10:00 a.m. on Thursday', 'At 8:00 a.m. on Monday', 'At 1:30 p.m. on Friday', 'At 6:00 p.m. today'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Người nói nhắc cụ thể buổi diễn tập diễn ra lúc 10 giờ sáng thứ Năm.',
   },
   {
@@ -57,7 +57,7 @@ export const part4Questions: Question[] = [
       'Restaurant suppliers',
       'Hotel guests',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Tin nhắn nhắc khách hàng về thời gian giao bưu kiện nên hướng tới người nhận hàng.',
   },
   {
@@ -100,7 +100,7 @@ export const part4Questions: Question[] = [
     groupId: 'p4-g03',
     question: 'What is being advertised?',
     options: ['A leadership workshop', 'A software discount', 'A new office chair', 'A language course'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Bài nói giới thiệu khóa đào tạo kỹ năng lãnh đạo cho nhân sự quản lý.',
   },
   {
@@ -116,7 +116,7 @@ export const part4Questions: Question[] = [
       'Participants can skip annual reviews',
       'Participants receive a company car',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Người nói nhấn mạnh học viên sẽ nhận chứng chỉ sau khi hoàn thành khóa học.',
   },
   {
@@ -148,7 +148,7 @@ export const part4Questions: Question[] = [
       'A shortage of meeting rooms',
       'A failure in internet service',
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Bài nói giải thích đơn bàn ghế văn phòng bị chậm do nhà cung cấp vận chuyển trễ.',
   },
   {
@@ -164,7 +164,7 @@ export const part4Questions: Question[] = [
       'Employees will work overtime today',
       'All meetings will be canceled',
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Người nói thông báo giải pháp tạm thời là lắp bàn làm việc tạm trong khu phụ.',
   },
   {
@@ -180,7 +180,7 @@ export const part4Questions: Question[] = [
       'Sign up for weekend shifts',
       'Review supplier contracts today',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Người nói yêu cầu các nhóm gửi cập nhật tiến độ dự án trước thứ Tư.',
   },
 ]

@@ -30,7 +30,7 @@ export const part3Questions: Question[] = [
       'Visit the client office today',
       'Reduce the annual contract fee',
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Người đàn ông nói sẽ gửi lịch giao hàng đã cập nhật qua email.',
   },
   {
@@ -62,7 +62,7 @@ export const part3Questions: Question[] = [
       'The company website is down',
       'The office parking lot is full',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Hai người trao đổi về máy chiếu bị lỗi trước buổi họp với khách.',
   },
   {
@@ -105,7 +105,7 @@ export const part3Questions: Question[] = [
     groupId: 'p3-g03',
     question: 'Where most likely are the speakers?',
     options: ['At a hotel front desk', 'At a bank branch', 'At a factory floor', 'At an airport gate'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Họ nói về nhận phòng và yêu cầu hóa đơn công tác nên bối cảnh là quầy khách sạn.',
   },
   {
@@ -121,7 +121,7 @@ export const part3Questions: Question[] = [
       'An extension of his contract',
       'A meeting with the sales team',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Người đàn ông muốn phòng yên tĩnh ở tầng cao để nghỉ ngơi trước cuộc họp.',
   },
   {
@@ -153,7 +153,7 @@ export const part3Questions: Question[] = [
       'A staff picnic',
       'A software installation',
     ],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Họ đang chia việc hoàn thiện slide và tài liệu trước buổi thuyết trình cho khách.',
   },
   {
@@ -169,7 +169,7 @@ export const part3Questions: Question[] = [
       'Canceling the presentation',
       'Moving the meeting to next week',
     ],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Cô ấy đề xuất bổ sung số liệu doanh số quý trước để tăng tính thuyết phục.',
   },
   {
@@ -185,7 +185,7 @@ export const part3Questions: Question[] = [
       'Attend a training workshop',
       'Book the conference hall',
     ],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'Người quản lý yêu cầu bổ sung trang tóm tắt để ban giám đốc dễ theo dõi.',
   },
 ]

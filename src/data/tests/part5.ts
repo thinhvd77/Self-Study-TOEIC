@@ -16,7 +16,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'All employees must submit their reports _______ Friday.',
     options: ['by', 'until', 'since', 'for'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: '"by + thời điểm" = trước thời điểm đó. "by Friday" = trước thứ Sáu.',
   },
   {
@@ -25,7 +25,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The manager was _______ impressed by the presentation.',
     options: ['particular', 'particularly', 'particularity', 'particularize'],
-    correctAnswer: 2,
+    correctAnswer: 1,
     explanation: 'Cần trạng từ (adverb) để bổ nghĩa cho tính từ "impressed". "particularly" là adverb.',
   },
   {
@@ -34,7 +34,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The budget proposal was approved _______ some minor revisions.',
     options: ['despite', 'with', 'although', 'because'],
-    correctAnswer: 3,
+    correctAnswer: 1,
     explanation: '"with some minor revisions" = kèm theo một số chỉnh sửa nhỏ. "with" là giới từ phù hợp.',
   },
   {
@@ -43,7 +43,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'Ms. Chen is responsible _______ overseeing the new project.',
     options: ['to', 'for', 'with', 'about'],
-    correctAnswer: 0,
+    correctAnswer: 1,
     explanation: '"responsible for + V-ing" là collocation cố định. "responsible for overseeing" = chịu trách nhiệm giám sát.',
   },
   {
@@ -52,7 +52,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The conference room is _______ enough to accommodate 50 people.',
     options: ['large', 'largely', 'larger', 'largest'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Cấu trúc "adj + enough": cần tính từ nguyên mẫu. "large enough" = đủ lớn.',
   },
   {
@@ -61,7 +61,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'Customers who _______ before March 1 will receive a discount.',
     options: ['register', 'registers', 'registering', 'registered'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: '"Customers who" là chủ ngữ số nhiều, cần động từ không chia. Câu ở thì hiện tại đơn.',
   },
   {
@@ -70,7 +70,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The annual report includes a _______ analysis of market trends.',
     options: ['comprehend', 'comprehensive', 'comprehension', 'comprehensively'],
-    correctAnswer: 3,
+    correctAnswer: 1,
     explanation: 'Trước danh từ "analysis" cần tính từ. "comprehensive" (adj) = toàn diện.',
   },
   {
@@ -88,7 +88,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The training session will start _______ 9:00 a.m. in Meeting Room A.',
     options: ['at', 'on', 'in', 'by'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: '"at" dùng với giờ cụ thể: at 9:00 a.m.',
   },
   {
@@ -97,7 +97,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The new software is expensive, _______ it will reduce processing time significantly.',
     options: ['but', 'because', 'unless', 'if'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Hai mệnh đề tương phản nên cần liên từ "but".',
   },
   {
@@ -106,7 +106,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'Ms. Rivera is the consultant _______ prepared our market analysis.',
     options: ['who', 'whose', 'whom', 'which'],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: '"who" thay cho người làm chủ ngữ của động từ "prepared".',
   },
   {
@@ -124,7 +124,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'All invoices must _______ by the finance manager before payment.',
     options: ['be approved', 'approved', 'approving', 'be approving'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: 'Sau "must" trong câu bị động dùng "be + past participle": be approved.',
   },
   {
@@ -133,7 +133,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The CEO praised the team for their _______ response to the client’s request.',
     options: ['prompt', 'promptly', 'promptnessly', 'prompting'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Cần tính từ bổ nghĩa cho danh từ "response". "prompt response" là cụm đúng.',
   },
   {
@@ -142,7 +142,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'There is only _______ time left before the deadline, so please prioritize urgent tasks.',
     options: ['a little', 'a few', 'many', 'several'],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: '"time" là danh từ không đếm được nên dùng "a little".',
   },
   {
@@ -160,7 +160,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'Our interns are looking forward to _______ with the product team next month.',
     options: ['working', 'work', 'worked', 'be work'],
-    correctAnswer: 1,
+    correctAnswer: 0,
     explanation: '"look forward to" luôn đi với V-ing, nên chọn "working".',
   },
   {
@@ -169,7 +169,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'The workshop covers writing effective emails, managing schedules, and _______ meeting notes.',
     options: ['taking', 'take', 'took', 'taken'],
-    correctAnswer: 2,
+    correctAnswer: 0,
     explanation: 'Cần song song cấu trúc với "writing, managing", nên đáp án đúng là V-ing "taking".',
   },
   {
@@ -178,7 +178,7 @@ export const part5Questions: Question[] = [
     type: 'reading',
     question: 'Of all regional branches, the Da Nang office recorded the _______ sales growth this quarter.',
     options: ['highest', 'higher', 'high', 'more high'],
-    correctAnswer: 3,
+    correctAnswer: 0,
     explanation: 'So sánh trong phạm vi nhiều đối tượng dùng so sánh nhất: "the highest".',
   },
 ]
