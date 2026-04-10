@@ -97,11 +97,11 @@ export const conjunctionsLesson: GrammarLesson = {
     },
     {
       id: 'gram-04-ex05',
-      question: '_______ the headquarters is in Tokyo, _______ the regional office is in Singapore.',
+      question: '_______ the headquarters _______ the regional office are located in Asia.',
       options: ['Both / and', 'Neither / nor', 'Either / or', 'Not only / but also'],
       correctAnswer: 0,
       explanation:
-        'Quan hệ logic là bổ sung hai thông tin đều đúng cùng lúc, không phải lựa chọn hay phủ định. Câu cần mẫu cặp song song "Both + clause A + and + clause B", nên đáp án đúng là **Both / and**.',
+        'Câu diễn tả hai chủ ngữ cùng đúng và cùng chia sẻ một động từ, nên cần cấu trúc song song "Both A and B + plural verb". Vì vậy đáp án đúng là **Both / and**.',
     },
   ],
 }

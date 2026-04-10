@@ -89,11 +89,11 @@ Hãy tìm "tín hiệu điều khiển" trước: đây là **giờ/ngày/tháng
     },
     {
       id: 'gram-05-ex04',
-      question: 'The new policy is _______ improving employee satisfaction.',
+      question: 'The management team is _______ improving employee satisfaction.',
       options: ['committed to', 'familiar with', 'based on', 'interested in'],
       correctAnswer: 0,
       explanation:
-        'Đáp án được quyết định bởi collocation cố định "be committed to + V-ing" nghĩa là cam kết làm gì. Chỉ **committed to** khớp với mẫu giới từ cố định điều khiển sau tính từ và V-ing.',
+        'Chủ ngữ "management team" phù hợp với collocation kinh doanh "be committed to + V-ing" để diễn tả sự cam kết thực hiện điều gì. Chỉ **committed to** khớp tự nhiên với mẫu này.',
     },
     {
       id: 'gram-05-ex05',

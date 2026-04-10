@@ -154,6 +154,33 @@ describe('Grammar content upgrade contract', () => {
     })
   })
 
+  it('locks representative beginner-friendly wording for gram-04 to gram-06', () => {
+    const conjunctionsItem = conjunctionsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-04-ex05',
+    )
+    const prepositionsItem = prepositionsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-05-ex04',
+    )
+    const relativePronounsItem = relativePronounsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-06-ex04',
+    )
+
+    expect(conjunctionsItem).toMatchObject({
+      question: '_______ the headquarters _______ the regional office are located in Asia.',
+      options: ['Both / and', 'Neither / nor', 'Either / or', 'Not only / but also'],
+    })
+
+    expect(prepositionsItem).toMatchObject({
+      question: 'The management team is _______ improving employee satisfaction.',
+      options: ['committed to', 'familiar with', 'based on', 'interested in'],
+    })
+
+    expect(relativePronounsItem).toMatchObject({
+      question: 'The conference room _______ we hold our meetings needs renovation.',
+      options: ['when', 'who', 'which', 'where'],
+    })
+  })
+
   it('keeps gram-01 beginner-friendly and structured', () => {
     assertStructuredLesson(partsOfSpeechLesson)
   })
