@@ -89,11 +89,12 @@ Hãy tìm "tín hiệu điều khiển" trước: đây là **giờ/ngày/tháng
     },
     {
       id: 'gram-05-ex04',
-      question: 'The management team is _______ improving employee satisfaction.',
-      options: ['committed to', 'familiar with', 'based on', 'interested in'],
+      question:
+        'The management team is _______ to improving employee satisfaction through monthly feedback reviews.',
+      options: ['committed', 'familiar', 'aware', 'similar'],
       correctAnswer: 0,
       explanation:
-        'Chủ ngữ "management team" phù hợp với collocation kinh doanh "be committed to + V-ing" để diễn tả sự cam kết thực hiện điều gì. Chỉ **committed to** khớp tự nhiên với mẫu này.',
+        'Sau tính từ cần một cụm diễn tả sự cam kết hành động, mẫu đúng là **be committed to + V-ing**. Vì vậy chỉ **committed** tạo thành câu tự nhiên: "is committed to improving ..."; các lựa chọn còn lại không đi với cấu trúc này.',
     },
     {
       id: 'gram-05-ex05',

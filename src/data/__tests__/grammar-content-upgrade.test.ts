@@ -171,8 +171,9 @@ describe('Grammar content upgrade contract', () => {
     })
 
     expect(prepositionsItem).toMatchObject({
-      question: 'The management team is _______ improving employee satisfaction.',
-      options: ['committed to', 'familiar with', 'based on', 'interested in'],
+      question:
+        'The management team is _______ to improving employee satisfaction through monthly feedback reviews.',
+      options: ['committed', 'familiar', 'aware', 'similar'],
     })
 
     expect(relativePronounsItem).toMatchObject({
