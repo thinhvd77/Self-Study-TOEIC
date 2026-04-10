@@ -2,6 +2,7 @@ interface QuestionCardProps {
   questionNumber: number
   question: string
   passage?: string
+  passage2?: string
   options: string[]
   selectedAnswer: number | null
   correctAnswer?: number
@@ -17,6 +18,7 @@ export function QuestionCard({
   questionNumber,
   question,
   passage,
+  passage2,
   options,
   selectedAnswer,
   correctAnswer,
@@ -43,6 +45,17 @@ export function QuestionCard({
       {passage && (
         <div className="mb-4 p-4 bg-[var(--bg-elevated)] rounded text-sm leading-relaxed whitespace-pre-wrap text-[var(--text-primary)]">
           {passage}
+        </div>
+      )}
+
+      {passage2 && (
+        <div className="mb-4">
+          <div className="border-t border-[var(--border)] pt-4">
+            <p className="text-xs font-semibold text-[var(--text-secondary)] uppercase tracking-wide mb-2">Đoạn văn 2</p>
+            <div className="p-4 bg-[var(--bg-elevated)] rounded text-sm leading-relaxed whitespace-pre-wrap text-[var(--text-primary)]">
+              {passage2}
+            </div>
+          </div>
         </div>
       )}
 
