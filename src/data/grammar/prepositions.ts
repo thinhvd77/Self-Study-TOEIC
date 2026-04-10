@@ -5,90 +5,61 @@ export const prepositionsLesson: GrammarLesson = {
   title: 'Giới từ (Prepositions)',
   order: 5,
   content: `
-## Giới từ (Prepositions)
+## Mục tiêu bài học
+- Chọn đúng giới từ theo cụm cố định và theo dạng biểu thức thời gian trong TOEIC.
+- Tránh các bẫy hay gặp như \`in/on/at\`, \`for/since\`, và động từ đi kèm giới từ cố định.
 
-Giới từ là từ chỉ mối quan hệ giữa các thành phần trong câu về **thời gian**, **nơi chốn**, hoặc **hướng đi**. Trong TOEIC Part 5/6, giới từ xuất hiện rất thường xuyên — đặc biệt trong các cụm từ cố định.
+## Khái niệm cốt lõi
+Giới từ cho biết quan hệ về **thời gian, nơi chốn, hướng đi**, hoặc đi theo **cụm cố định**. Trong TOEIC Part 5, nhiều câu không thể dịch từng từ; bạn phải nhận ra **pattern** như \`at 9:00 a.m.\`, \`for three years\`, \`comply with a rule\`.
 
----
+## Cách nhận diện trong câu
+- Nếu chỗ trống đứng trước **giờ cụ thể**, nghĩ đến \`at\`: \`at 9:00 a.m.\`
+- Nếu đứng trước **ngày/thứ/ngày cụ thể**, nghĩ đến \`on\`: \`on Monday\`
+- Nếu đứng trước **tháng, năm, buổi trong ngày**, nghĩ đến \`in\`: \`in June\`, \`in 2024\`, \`in the morning\`
+- Nếu câu có **khoảng thời gian kéo dài**, dùng \`for\`: \`for three years\`
+- Nếu câu có **mốc bắt đầu cụ thể**, dùng \`since\`: \`since 2021\`
+- Nếu sau tính từ/động từ là một collocation quen thuộc như \`responsible for\`, \`based on\`, \`comply with\`, hãy nhớ theo cụm.
 
-### 1. Giới từ chỉ thời gian
+## Công thức/mẫu cần nhớ
+- Giờ cụ thể: \`at + time\`
+- Ngày/thứ: \`on + day/date\`
+- Tháng/năm/khoảng thời gian lớn: \`in + month/year/part of day\`
+- Khoảng thời gian: \`for + duration\`
+- Mốc bắt đầu: \`since + starting point\`
+- Cụm cố định: \`comply with\`, \`interested in\`, \`responsible for\`, \`according to\`, \`based on\`
 
-| Giới từ | Cách dùng | Ví dụ |
-|---------|-----------|-------|
-| **at** | Thời điểm cụ thể | at 9 a.m., at noon, at midnight |
-| **on** | Ngày / thứ / ngày cụ thể | on Monday, on June 5th |
-| **in** | Tháng / năm / khoảng thời gian | in March, in 2024, in the morning |
-| **by** | Trước thời hạn (deadline) | by Friday, by the end of the month |
-| **until** | Tiếp diễn đến thời điểm | until 5 p.m., until further notice |
-| **during** | Trong suốt khoảng thời gian | during the meeting, during summer |
-| **within** | Trong vòng (khoảng thời gian) | within 3 days, within a week |
-| **for** | Khoảng thời gian kéo dài | for two hours, for a year |
-| **since** | Từ thời điểm (dùng với thì hiện tại hoàn thành) | since 2020, since last week |
+## Lỗi thường gặp
+- Dùng \`in\` hoặc \`on\` với giờ cụ thể thay vì \`at\`.
+- Nhầm \`for\` và \`since\`: \`for\` đi với khoảng thời gian, \`since\` đi với mốc bắt đầu.
+- Dịch từng từ rồi viết sai collocation như \`comply to\` hoặc \`responsible of\`.
+- Chỉ nhìn nghĩa chung "ở" rồi đoán \`in/on/at\` mà không kiểm tra loại thời gian hoặc cụm cố định.
 
----
+## Mẹo làm TOEIC Part 5
+Hãy tìm "tín hiệu điều khiển" trước: đây là **giờ/ngày/tháng**, **duration/starting point**, hay **cụm cố định**? Khi xác định đúng nhóm, bạn thường loại được 3 đáp án rất nhanh.
 
-### 2. Giới từ chỉ nơi chốn
-
-| Giới từ | Cách dùng | Ví dụ |
-|---------|-----------|-------|
-| **at** | Địa điểm cụ thể | at the office, at the airport |
-| **in** | Không gian có giới hạn / thành phố / quốc gia | in the room, in Tokyo, in Japan |
-| **on** | Trên bề mặt | on the desk, on the wall |
-| **above** | Phía trên (không tiếp xúc) | above the table |
-| **below** | Phía dưới | below the line |
-| **between** | Ở giữa (hai vật) | between the offices |
-| **beside / next to** | Ở cạnh | beside the printer |
-| **near** | Gần | near the entrance |
-| **behind** | Phía sau | behind the counter |
-
----
-
-### 3. Giới từ chỉ hướng đi
-
-- **to** – hướng đến: *go to the meeting room*
-- **from** – xuất phát từ: *a message from the manager*
-- **into** – đi vào trong: *walk into the conference room*
-- **out of** – ra khỏi: *take out of the box*
-- **through** – đi xuyên qua: *pass through customs*
-- **along** – dọc theo: *walk along the corridor*
-- **toward** – hướng về phía: *move toward the goal*
-
----
-
-### 4. Cụm giới từ thường gặp trong kinh doanh (TOEIC Part 5/6)
-
-| Cụm từ | Nghĩa |
-|--------|-------|
-| **responsible for** | chịu trách nhiệm về |
-| **interested in** | quan tâm đến |
-| **familiar with** | quen thuộc với |
-| **committed to** | cam kết với |
-| **in charge of** | phụ trách / quản lý |
-| **based on** | dựa trên |
-| **according to** | theo / căn cứ theo |
-
----
-
-### Mẹo TOEIC
-
-Học thuộc các **cụm giới từ cố định** (fixed prepositional phrases) — đây là dạng câu hỏi hay gặp nhất trong Part 5/6. Không thể suy luận từ nghĩa, phải nhớ theo cụm:
-
-> *She is **responsible for** managing the budget.* (KHÔNG nói "responsible of")
-
-> *The report is **based on** recent data.* (KHÔNG nói "based in")
-  `.trim(),
+## Tóm tắt nhanh
+- \`at\` + giờ cụ thể
+- \`on\` + ngày/thứ
+- \`in\` + tháng/năm/buổi
+- \`for\` + khoảng thời gian
+- \`since\` + mốc bắt đầu
+- Nhiều câu TOEIC là collocation: nhớ cả cụm, ví dụ \`comply with\`
+`.trim(),
   examples: [
     {
-      english: 'Please submit the report by Friday at 5 p.m.',
-      vietnamese: '"by" chỉ deadline (nộp trước thứ Sáu); "at" chỉ thời điểm cụ thể (lúc 5 giờ chiều)',
+      english: 'The orientation session starts at 9:00 a.m. in the main hall.',
+      vietnamese:
+        'Biểu thức "9:00 a.m." là giờ cụ thể nên phải dùng "at". Đây là quy tắc thời gian rất hay xuất hiện trong Part 5.',
     },
     {
-      english: 'The manager is responsible for overseeing the entire project.',
-      vietnamese: '"responsible for" là cụm giới từ cố định = chịu trách nhiệm về (KHÔNG dùng "responsible of")',
+      english: 'Ms. Ruiz has worked for three years in the accounting department.',
+      vietnamese:
+        'Cụm "three years" là khoảng thời gian kéo dài, vì vậy dùng "for" chứ không dùng "since". Mẫu là "for + duration".',
     },
     {
-      english: 'The new branch is located in Hanoi, on Tran Hung Dao Street.',
-      vietnamese: '"in" dùng cho thành phố (Hanoi); "on" dùng cho tên đường (bề mặt/tuyến đường)',
+      english: 'All suppliers must comply with the new safety rules.',
+      vietnamese:
+        'Động từ "comply" đi với giới từ cố định "with". Đây là collocation phải nhớ nguyên cụm, không đổi sang "to" hay "for".',
     },
   ],
   exercises: [
@@ -97,35 +68,40 @@ Học thuộc các **cụm giới từ cố định** (fixed prepositional phras
       question: 'The sales meeting will be held _______ Monday morning.',
       options: ['in', 'at', 'on', 'by'],
       correctAnswer: 2,
-      explanation: '"on" dùng trước ngày trong tuần (Monday). "in" dùng cho tháng/năm, "at" dùng cho thời điểm cụ thể.',
+      explanation:
+        'Cụm thời gian "Monday morning" được điều khiển bởi quy tắc ngày/thứ cụ thể, nên dùng mẫu "on + day/date". Vì vậy đáp án đúng là **on**, không phải **at** hay **in**.',
     },
     {
       id: 'gram-05-ex02',
       question: 'Please send your application _______ the end of this week.',
       options: ['until', 'during', 'by', 'since'],
       correctAnswer: 2,
-      explanation: '"by" chỉ deadline — hành động phải hoàn thành trước thời điểm đó. "until" chỉ sự tiếp diễn.',
+      explanation:
+        'Câu nói về hạn chót phải hoàn thành trước một mốc thời gian, nên dùng collocation thời gian "by the end of ...". Quy tắc điều khiển đáp án là deadline expression, vì vậy chọn **by**.',
     },
     {
       id: 'gram-05-ex03',
       question: 'Ms. Park has been working at this company _______ 2019.',
       options: ['for', 'during', 'within', 'since'],
       correctAnswer: 3,
-      explanation: '"since" + mốc thời gian cụ thể, dùng với thì hiện tại hoàn thành (has been working). "for" + khoảng thời gian.',
+      explanation:
+        'Mốc "2019" là điểm bắt đầu cụ thể, và câu đang ở hiện tại hoàn thành tiếp diễn "has been working". Quy tắc là "since + starting point", nên đáp án đúng là **since** chứ không phải **for**.',
     },
     {
       id: 'gram-05-ex04',
       question: 'The new policy is _______ improving employee satisfaction.',
       options: ['committed to', 'familiar with', 'based on', 'interested in'],
       correctAnswer: 0,
-      explanation: '"committed to + V-ing" = cam kết thực hiện điều gì. Đây là cụm giới từ cố định thường gặp trong TOEIC.',
+      explanation:
+        'Đáp án được quyết định bởi collocation cố định "be committed to + V-ing" nghĩa là cam kết làm gì. Chỉ **committed to** khớp với mẫu giới từ cố định điều khiển sau tính từ và V-ing.',
     },
     {
       id: 'gram-05-ex05',
       question: 'The assistant put the documents _______ the manager\'s desk before the meeting.',
       options: ['between', 'on', 'into', 'behind'],
       correctAnswer: 1,
-      explanation: '"on" chỉ vị trí trên bề mặt (on the desk = trên mặt bàn). "into" chỉ hướng đi vào trong.',
+      explanation:
+        'Danh từ "desk" gợi quy tắc vị trí trên bề mặt, nên cụm đúng là "on the desk". Đây là spatial pattern chỉ vị trí bề mặt, vì vậy chọn **on** thay vì **into** hay **behind**.',
     },
   ],
 }

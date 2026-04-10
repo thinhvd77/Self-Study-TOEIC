@@ -3,6 +3,9 @@ import { GrammarLesson } from '../../types'
 import { partsOfSpeechLesson } from '../grammar/parts-of-speech'
 import { verbTensesLesson } from '../grammar/verb-tenses'
 import { passiveVoiceLesson } from '../grammar/passive-voice'
+import { conjunctionsLesson } from '../grammar/conjunctions'
+import { prepositionsLesson } from '../grammar/prepositions'
+import { relativePronounsLesson } from '../grammar/relative-pronouns'
 
 const requiredHeadings = [
   '## Mục tiêu bài học',
@@ -14,12 +17,15 @@ const requiredHeadings = [
   '## Tóm tắt nhanh',
 ]
 
-const expectedLessonIds = ['gram-01', 'gram-02', 'gram-03']
+const expectedLessonIds = ['gram-01', 'gram-02', 'gram-03', 'gram-04', 'gram-05', 'gram-06']
 
 const expectedExerciseIdsByLesson = {
   'gram-01': ['gram-01-ex01', 'gram-01-ex02', 'gram-01-ex03', 'gram-01-ex04', 'gram-01-ex05'],
   'gram-02': ['gram-02-ex01', 'gram-02-ex02', 'gram-02-ex03', 'gram-02-ex04', 'gram-02-ex05'],
   'gram-03': ['gram-03-ex01', 'gram-03-ex02', 'gram-03-ex03', 'gram-03-ex04', 'gram-03-ex05'],
+  'gram-04': ['gram-04-ex01', 'gram-04-ex02', 'gram-04-ex03', 'gram-04-ex04', 'gram-04-ex05'],
+  'gram-05': ['gram-05-ex01', 'gram-05-ex02', 'gram-05-ex03', 'gram-05-ex04', 'gram-05-ex05'],
+  'gram-06': ['gram-06-ex01', 'gram-06-ex02', 'gram-06-ex03', 'gram-06-ex04', 'gram-06-ex05'],
 } as const
 
 const expectedCorrectAnswersByLesson = {
@@ -43,6 +49,27 @@ const expectedCorrectAnswersByLesson = {
     'gram-03-ex03': 2,
     'gram-03-ex04': 2,
     'gram-03-ex05': 2,
+  },
+  'gram-04': {
+    'gram-04-ex01': 1,
+    'gram-04-ex02': 2,
+    'gram-04-ex03': 0,
+    'gram-04-ex04': 2,
+    'gram-04-ex05': 0,
+  },
+  'gram-05': {
+    'gram-05-ex01': 2,
+    'gram-05-ex02': 2,
+    'gram-05-ex03': 3,
+    'gram-05-ex04': 0,
+    'gram-05-ex05': 1,
+  },
+  'gram-06': {
+    'gram-06-ex01': 2,
+    'gram-06-ex02': 3,
+    'gram-06-ex03': 2,
+    'gram-06-ex04': 3,
+    'gram-06-ex05': 3,
   },
 } as const
 
@@ -71,7 +98,14 @@ function assertStructuredLesson(lesson: GrammarLesson) {
 
 describe('Grammar content upgrade contract', () => {
   it('preserves required lesson IDs and exercise IDs', () => {
-    const lessons = [partsOfSpeechLesson, verbTensesLesson, passiveVoiceLesson]
+    const lessons = [
+      partsOfSpeechLesson,
+      verbTensesLesson,
+      passiveVoiceLesson,
+      conjunctionsLesson,
+      prepositionsLesson,
+      relativePronounsLesson,
+    ]
 
     expect(lessons.map((lesson) => lesson.id)).toEqual(expectedLessonIds)
 
@@ -82,8 +116,15 @@ describe('Grammar content upgrade contract', () => {
     }
   })
 
-  it('locks exact answer keys for gram-01 to gram-03 exercises', () => {
-    const lessons = [partsOfSpeechLesson, verbTensesLesson, passiveVoiceLesson]
+  it('locks exact answer keys for gram-01 to gram-06 exercises', () => {
+    const lessons = [
+      partsOfSpeechLesson,
+      verbTensesLesson,
+      passiveVoiceLesson,
+      conjunctionsLesson,
+      prepositionsLesson,
+      relativePronounsLesson,
+    ]
 
     for (const lesson of lessons) {
       expect(
@@ -123,5 +164,17 @@ describe('Grammar content upgrade contract', () => {
 
   it('keeps gram-03 beginner-friendly and structured', () => {
     assertStructuredLesson(passiveVoiceLesson)
+  })
+
+  it('keeps gram-04 beginner-friendly and structured', () => {
+    assertStructuredLesson(conjunctionsLesson)
+  })
+
+  it('keeps gram-05 beginner-friendly and structured', () => {
+    assertStructuredLesson(prepositionsLesson)
+  })
+
+  it('keeps gram-06 beginner-friendly and structured', () => {
+    assertStructuredLesson(relativePronounsLesson)
   })
 })
