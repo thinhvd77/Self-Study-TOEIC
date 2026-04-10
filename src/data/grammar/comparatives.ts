@@ -68,11 +68,11 @@ Câu so sánh không bắt bạn dịch hết câu trước. Việc quan trọng
   exercises: [
     {
       id: 'gram-07-ex01',
-      question: 'The new logistics software is _______ the old system for tracking deliveries.',
-      options: ['more efficient than', 'the most efficient', 'as efficient as', 'efficiently than'],
+      question: 'The new logistics software is _______ than the old system for tracking deliveries.',
+      options: ['more efficient', 'most efficient', 'as efficient', 'efficiently'],
       correctAnswer: 0,
       explanation:
-        'Marker nhìn thấy trong câu là **than**, nên đây là comparative. Vì "efficient" là tính từ dài, mẫu đúng phải là **more + adjective + than** -> **more efficient than**.',
+        'Marker nhìn thấy trong câu là **than**, nên đây là comparative. Vì "efficient" là tính từ dài, chỗ trống phải điền **more efficient** để hoàn thành mẫu **more + adjective + than**.',
     },
     {
       id: 'gram-07-ex02',
@@ -84,19 +84,19 @@ Câu so sánh không bắt bạn dịch hết câu trước. Việc quan trọng
     },
     {
       id: 'gram-07-ex03',
-      question: 'The backup system is _______ the main server during peak hours.',
-      options: ['more reliable than', 'as reliable as', 'the most reliable', 'reliably as'],
+      question: 'The backup system is as _______ as the main server during peak hours.',
+      options: ['more reliable', 'reliable', 'the most reliable', 'reliably'],
       correctAnswer: 1,
       explanation:
-        'Khung so sánh nhìn thấy là **as ... as**, nên phải chọn một tính từ nguyên mẫu ở giữa. Vì vậy đáp án đúng là **as reliable as**, không phải **more reliable than**.',
+        'Khung so sánh nhìn thấy ngay trong câu là **as ... as**, nên chỗ trống phải là tính từ nguyên mẫu. Vì vậy đáp án đúng là **reliable** để tạo thành **as reliable as**.',
     },
     {
       id: 'gram-07-ex04',
-      question: 'This quarter\'s sales were _______ last quarter\'s results.',
-      options: ['gooder than', 'best', 'better than', 'more best'],
+      question: 'This quarter\'s sales were _______ than last quarter\'s results.',
+      options: ['gooder', 'best', 'better', 'more best'],
       correctAnswer: 2,
       explanation:
-        'Marker **than** cho biết đây là comparative. Với tính từ bất quy tắc "good", dạng so sánh hơn là **better**, nên mẫu hoàn chỉnh phải là **better than**.',
+        'Marker nhìn thấy là **than**, nên đây là comparative. Với tính từ bất quy tắc "good", dạng so sánh hơn đúng là **better**, nên đáp án cần điền là **better**.',
     },
     {
       id: 'gram-07-ex05',

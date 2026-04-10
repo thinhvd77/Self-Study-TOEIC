@@ -219,13 +219,36 @@ describe('Grammar content upgrade contract', () => {
     })
 
     expect(comparativesItem).toMatchObject({
-      question: 'The backup system is _______ the main server during peak hours.',
-      options: ['more reliable than', 'as reliable as', 'the most reliable', 'reliably as'],
+      question: 'The backup system is as _______ as the main server during peak hours.',
+      options: ['more reliable', 'reliable', 'the most reliable', 'reliably'],
     })
 
     expect(conditionalsItem).toMatchObject({
       question: 'If the team had checked the figures, they _______ the reporting error.',
       options: ['avoid', 'will avoid', 'would avoid', 'would have avoided'],
+    })
+  })
+
+  it('keeps visible comparison markers in the most sensitive gram-07 items', () => {
+    expect(comparativesLesson.exercises.find((exercise) => exercise.id === 'gram-07-ex01')).toMatchObject({
+      question: 'The new logistics software is _______ than the old system for tracking deliveries.',
+      options: ['more efficient', 'most efficient', 'as efficient', 'efficiently'],
+      correctAnswer: 0,
+    })
+
+    expect(comparativesLesson.exercises.find((exercise) => exercise.id === 'gram-07-ex04')).toMatchObject({
+      question: "This quarter's sales were _______ than last quarter's results.",
+      options: ['gooder', 'best', 'better', 'more best'],
+      correctAnswer: 2,
+    })
+  })
+
+  it('keeps gram-08-ex01 clearly framed as a zero conditional rule', () => {
+    expect(conditionalsLesson.exercises.find((exercise) => exercise.id === 'gram-08-ex01')).toMatchObject({
+      question:
+        'If employees miss the safety drill, they always _______ a follow-up session under company policy.',
+      options: ['attend', 'will attend', 'would attend', 'would have attended'],
+      correctAnswer: 0,
     })
   })
 
