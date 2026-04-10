@@ -47,7 +47,7 @@ describe('Practice data coverage', () => {
     assertQuestionQuality(part3Questions, 3, 'listening', true)
     assertQuestionQuality(part4Questions, 4, 'listening', true)
     assertQuestionQuality(part5Questions, 5, 'reading')
-    assertQuestionQuality(part6Questions, 6, 'reading')
+    assertQuestionQuality(part6Questions, 6, 'reading', false, true)
     assertQuestionQuality(part7Questions, 7, 'reading', false, true)
   })
 
