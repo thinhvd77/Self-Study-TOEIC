@@ -80,7 +80,7 @@ Câu so sánh không bắt bạn dịch hết câu trước. Việc quan trọng
       options: ['more profitable', 'the most profitable', 'as profitable as', 'profitabler'],
       correctAnswer: 1,
       explanation:
-        'Câu có **the** trước chỗ trống và có phạm vi nhóm **in the company**, nên cần superlative. Với tính từ dài "profitable", marker phù hợp là **the most**, nên đáp án đúng là **the most profitable**.',
+        'Cụm **in the company** cho thấy đang so sánh trong cả một nhóm, nên cần superlative. Với tính từ dài "profitable", dạng đúng là **the most profitable** để diễn tả dòng sản phẩm có lợi nhuận cao nhất trong công ty.',
     },
     {
       id: 'gram-07-ex03',
