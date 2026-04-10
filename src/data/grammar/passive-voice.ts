@@ -86,7 +86,7 @@ Hỏi nhanh: chủ ngữ có tự làm hành động này không? Nếu không, 
       options: ['must review', 'must be reviewing', 'must be reviewed', 'must have reviewed'],
       correctAnswer: 2,
       explanation:
-        'Chủ ngữ "All expenses" là đối tượng được xem xét, nên đây là tình huống subject receives the action và cần passive. Sau modal "must", cấu trúc đúng là "must be reviewed"; ba đáp án còn lại hoặc là active, hoặc là dạng tiếp diễn/hoàn thành không phù hợp với mẫu modal passive.',
+        'Chủ ngữ "All expenses" là đối tượng được xem xét, nghĩa là chủ ngữ chịu tác động của hành động nên câu cần bị động. Sau modal "must", cấu trúc đúng là "must be reviewed"; ba đáp án còn lại hoặc là active, hoặc là dạng tiếp diễn/hoàn thành không phù hợp với mẫu modal passive.',
     },
     {
       id: 'gram-03-ex05',

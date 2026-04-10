@@ -22,6 +22,30 @@ const expectedExerciseIdsByLesson = {
   'gram-03': ['gram-03-ex01', 'gram-03-ex02', 'gram-03-ex03', 'gram-03-ex04', 'gram-03-ex05'],
 } as const
 
+const expectedCorrectAnswersByLesson = {
+  'gram-01': {
+    'gram-01-ex01': 1,
+    'gram-01-ex02': 2,
+    'gram-01-ex03': 1,
+    'gram-01-ex04': 2,
+    'gram-01-ex05': 2,
+  },
+  'gram-02': {
+    'gram-02-ex01': 1,
+    'gram-02-ex02': 1,
+    'gram-02-ex03': 2,
+    'gram-02-ex04': 0,
+    'gram-02-ex05': 2,
+  },
+  'gram-03': {
+    'gram-03-ex01': 1,
+    'gram-03-ex02': 1,
+    'gram-03-ex03': 2,
+    'gram-03-ex04': 2,
+    'gram-03-ex05': 2,
+  },
+} as const
+
 function assertStructuredLesson(lesson: GrammarLesson) {
   expect(lesson.content).toBe(lesson.content.trim())
 
@@ -56,6 +80,37 @@ describe('Grammar content upgrade contract', () => {
         expectedExerciseIdsByLesson[lesson.id as keyof typeof expectedExerciseIdsByLesson],
       )
     }
+  })
+
+  it('locks exact answer keys for gram-01 to gram-03 exercises', () => {
+    const lessons = [partsOfSpeechLesson, verbTensesLesson, passiveVoiceLesson]
+
+    for (const lesson of lessons) {
+      expect(
+        Object.fromEntries(
+          lesson.exercises.map((exercise) => [exercise.id, exercise.correctAnswer]),
+        ),
+      ).toEqual(expectedCorrectAnswersByLesson[lesson.id as keyof typeof expectedCorrectAnswersByLesson])
+    }
+  })
+
+  it('keeps ambiguity-sensitive questions unchanged', () => {
+    const verbTensesAmbiguousItem = verbTensesLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-02-ex04',
+    )
+    const passiveVoiceAmbiguousItem = passiveVoiceLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-03-ex02',
+    )
+
+    expect(verbTensesAmbiguousItem).toMatchObject({
+      question: 'If the venue is available, the conference _______ place next month.',
+      options: ['will take', 'takes', 'is taking', 'has taken'],
+    })
+
+    expect(passiveVoiceAmbiguousItem).toMatchObject({
+      question: 'The new branch office _______ by the CEO in Singapore last year.',
+      options: ['opened', 'was opened', 'has been opened', 'is opening'],
+    })
   })
 
   it('keeps gram-01 beginner-friendly and structured', () => {
