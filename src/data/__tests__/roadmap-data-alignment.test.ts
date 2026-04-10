@@ -44,7 +44,7 @@ describe('Roadmap and data alignment', () => {
     const unsupportedMentionedParts = uniqueMentionedParts
       .filter((target) => !supportedPartTargets.has(target))
       .sort()
-    expect(unsupportedMentionedParts).toEqual(['part:2'])
+    expect(unsupportedMentionedParts).toEqual([])
 
     uniqueMentionedParts
       .filter((target) => supportedPartTargets.has(target))
