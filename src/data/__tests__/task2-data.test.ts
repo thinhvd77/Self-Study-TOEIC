@@ -1,7 +1,14 @@
 import { describe, expect, it } from 'vitest'
 import { part5Questions } from '../tests/part5'
 import { businessVocabulary } from '../vocabulary/business'
+import { comparativesLesson } from '../grammar/comparatives'
+import { conditionalsLesson } from '../grammar/conditionals'
+import { conjunctionsLesson } from '../grammar/conjunctions'
 import { partsOfSpeechLesson } from '../grammar/parts-of-speech'
+import { passiveVoiceLesson } from '../grammar/passive-voice'
+import { prepositionsLesson } from '../grammar/prepositions'
+import { relativePronounsLesson } from '../grammar/relative-pronouns'
+import { verbTensesLesson } from '../grammar/verb-tenses'
 import { roadmap } from '../roadmap'
 import {
   GrammarLesson,
@@ -10,6 +17,17 @@ import {
   UserProgress,
   VocabularyWord,
 } from '../../types'
+
+const grammarLessons = [
+  partsOfSpeechLesson,
+  verbTensesLesson,
+  passiveVoiceLesson,
+  conjunctionsLesson,
+  prepositionsLesson,
+  relativePronounsLesson,
+  comparativesLesson,
+  conditionalsLesson,
+]
 
 describe('Task 2 sample data', () => {
   it('provides 8 sample Part 5 questions', () => {
@@ -23,9 +41,22 @@ describe('Task 2 sample data', () => {
     expect(businessVocabulary[0].topic).toBe('business')
   })
 
-  it('provides parts of speech lesson with exercises', () => {
-    expect(partsOfSpeechLesson.id).toBe('gram-01')
-    expect(partsOfSpeechLesson.exercises).toHaveLength(5)
+  it('provides 8 grammar lessons with 5 exercises each', () => {
+    expect(grammarLessons).toHaveLength(8)
+    expect(grammarLessons.map((lesson) => lesson.id)).toEqual([
+      'gram-01',
+      'gram-02',
+      'gram-03',
+      'gram-04',
+      'gram-05',
+      'gram-06',
+      'gram-07',
+      'gram-08',
+    ])
+
+    for (const lesson of grammarLessons) {
+      expect(lesson.exercises).toHaveLength(5)
+    }
   })
 
   it('provides 16-week roadmap', () => {
