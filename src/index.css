@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+:root {
+  --bg-primary: #0f0f13;
+  --bg-surface: #1a1a24;
+  --bg-elevated: #242433;
+  --border: #2e2e42;
+  --text-primary: #f1f0f5;
+  --text-secondary: #8b8ba7;
+  --accent: #f59e0b;
+  --accent-hover: #fbbf24;
+  --accent-soft: #2d1f05;
+  --success: #10b981;
+  --success-soft: #052e1c;
+  --danger: #ef4444;
+  --danger-soft: #2d0a0a;
+  --warning: #fbbf24;
+  --warning-soft: #2d1e04;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.markdown-content { color: var(--text-primary); }
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 { color: var(--accent); margin-top: 1rem; margin-bottom: 0.5rem; font-weight: 700; }
+.markdown-content strong { color: var(--text-primary); font-weight: 600; }
+.markdown-content ul,
+.markdown-content ol { color: var(--text-secondary); padding-left: 1.5rem; }
+.markdown-content li { margin-bottom: 0.25rem; }
+.markdown-content code {
+  background: var(--bg-elevated);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}

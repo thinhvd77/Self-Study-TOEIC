@@ -9,10 +9,10 @@ const navItems = [
 
 export function Layout() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow-sm border-b">
+    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
+      <header className="sticky top-0 z-50 bg-[var(--bg-surface)] border-b border-[var(--border)] backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          <h1 className="text-xl font-bold text-blue-700">TOEIC 550+</h1>
+          <h1 className="text-xl font-bold text-[var(--accent)]">🎯 TOEIC 550+</h1>
           <nav className="flex gap-1">
             {navItems.map((item) => (
               <NavLink
@@ -22,8 +22,8 @@ export function Layout() {
                 className={({ isActive }) =>
                   `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-600 hover:bg-gray-100'
+                      ? 'text-[var(--accent)] border-b-2 border-[var(--accent)]'
+                      : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)] hover:bg-[var(--accent-soft)]'
                   }`
                 }
               >

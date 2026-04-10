@@ -13,13 +13,13 @@ export function Timer({ timeLeft, isRunning, onToggle }: TimerProps) {
   return (
     <div className="flex items-center gap-3">
       <span
-        className={`font-mono text-2xl font-bold ${isLow ? 'text-red-600' : 'text-gray-800'}`}
+        className={`font-mono text-2xl font-bold ${isLow ? 'text-[var(--danger)]' : 'text-[var(--accent)]'}`}
       >
         {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
       </span>
       <button
         onClick={onToggle}
-        className="px-3 py-1 text-sm rounded bg-gray-200 hover:bg-gray-300"
+        className="px-3 py-1 text-sm rounded bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:bg-[var(--border)] active:scale-95 transition-all"
       >
         {isRunning ? 'Tạm dừng' : 'Tiếp tục'}
       </button>

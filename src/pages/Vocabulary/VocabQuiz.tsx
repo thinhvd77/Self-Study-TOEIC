@@ -28,7 +28,6 @@ function generateQuizQuestions(words: VocabularyWord[]): QuizQuestion[] {
     const distractors = shuffleArray(otherWords).slice(0, 3).map((w) => w.meaning)
     const allOptions = shuffleArray([word.meaning, ...distractors])
     const correctAnswer = allOptions.indexOf(word.meaning)
-
     return { word, options: allOptions, correctAnswer }
   })
 }
@@ -38,7 +37,6 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
   const navigate = useNavigate()
   const topic = searchParams.get('topic') || ''
   const words = useMemo(() => getWords(topic), [getWords, topic])
-
   const questions = useMemo(() => generateQuizQuestions(words), [words])
 
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -48,8 +46,8 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
   if (words.length < 4) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">Cần ít nhất 4 từ để tạo quiz.</p>
-        <button onClick={() => navigate('/vocabulary')} className="mt-4 text-blue-600 hover:underline">
+        <p className="text-[var(--text-secondary)]">Cần ít nhất 4 từ để tạo quiz.</p>
+        <button onClick={() => navigate('/vocabulary')} className="mt-4 text-[var(--accent)] hover:underline">
           Quay lại
         </button>
       </div>
@@ -63,23 +61,21 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
     setAnswers(newAnswers)
   }
 
-  const handleSubmit = () => setIsSubmitted(true)
-
   const correctCount = answers.filter((a, i) => a === questions[i].correctAnswer).length
 
   if (isSubmitted && currentIndex === questions.length) {
     return (
-      <div className="max-w-lg mx-auto text-center py-12">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Kết quả Quiz</h2>
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <p className="text-5xl font-bold text-blue-700">
+      <div className="max-w-lg mx-auto text-center py-12 animate-fade-in">
+        <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Kết quả Quiz</h2>
+        <div className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-6 mb-6">
+          <p className="text-5xl font-bold text-[var(--accent)]">
             {Math.round((correctCount / questions.length) * 100)}%
           </p>
-          <p className="text-gray-500 mt-2">{correctCount}/{questions.length} câu đúng</p>
+          <p className="text-[var(--text-secondary)] mt-2">{correctCount}/{questions.length} câu đúng</p>
         </div>
         <button
           onClick={() => navigate('/vocabulary')}
-          className="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 font-medium"
+          className="px-6 py-3 rounded-xl bg-[var(--accent)] text-gray-900 hover:bg-[var(--accent-hover)] font-medium active:scale-95 transition-all"
         >
           Quay lại
         </button>
@@ -92,8 +88,8 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-gray-800">Quiz: {topic}</h2>
-        <span className="text-sm text-gray-500">{currentIndex + 1}/{questions.length}</span>
+        <h2 className="text-xl font-bold text-[var(--text-primary)]">Quiz: {topic}</h2>
+        <span className="text-sm text-[var(--text-secondary)]">{currentIndex + 1}/{questions.length}</span>
       </div>
 
       <QuestionCard
@@ -112,22 +108,22 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
         <button
           onClick={() => setCurrentIndex(Math.max(0, currentIndex - 1))}
           disabled={currentIndex === 0}
-          className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 disabled:opacity-50"
+          className="px-4 py-2 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:bg-[var(--border)] disabled:opacity-50 active:scale-95 transition-all"
         >
           Câu trước
         </button>
 
         {currentIndex === questions.length - 1 && !isSubmitted ? (
           <button
-            onClick={handleSubmit}
-            className="px-6 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 font-medium"
+            onClick={() => setIsSubmitted(true)}
+            className="px-6 py-2 rounded-lg bg-[var(--accent)] text-gray-900 hover:bg-[var(--accent-hover)] font-medium active:scale-95 transition-all"
           >
             Nộp bài
           </button>
         ) : isSubmitted && currentIndex === questions.length - 1 ? (
           <button
             onClick={() => setCurrentIndex(questions.length)}
-            className="px-6 py-2 rounded bg-green-600 text-white hover:bg-green-700 font-medium"
+            className="px-6 py-2 rounded-lg bg-[var(--success)] text-white hover:brightness-110 font-medium active:scale-95 transition-all"
           >
             Xem kết quả
           </button>
@@ -135,7 +131,7 @@ export function VocabQuiz({ getWords }: VocabQuizProps) {
           <button
             onClick={() => setCurrentIndex(currentIndex + 1)}
             disabled={isSubmitted}
-            className="px-4 py-2 rounded bg-gray-200 hover:bg-gray-300 disabled:opacity-50"
+            className="px-4 py-2 rounded-lg bg-[var(--bg-elevated)] text-[var(--text-primary)] hover:bg-[var(--border)] disabled:opacity-50 active:scale-95 transition-all"
           >
             Câu sau
           </button>

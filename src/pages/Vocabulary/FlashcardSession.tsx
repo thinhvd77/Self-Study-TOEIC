@@ -36,10 +36,10 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
   if (words.length === 0) {
     return (
       <div className="text-center py-12">
-        <p className="text-gray-500">
+        <p className="text-[var(--text-secondary)]">
           {isReview ? 'Không có từ nào cần ôn hôm nay!' : 'Không tìm thấy từ vựng.'}
         </p>
-        <button onClick={() => navigate('/vocabulary')} className="mt-4 text-blue-600 hover:underline">
+        <button onClick={() => navigate('/vocabulary')} className="mt-4 text-[var(--accent)] hover:underline">
           Quay lại
         </button>
       </div>
@@ -50,9 +50,7 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
     const word = words[currentIndex]
     const existing = progress.vocabularyProgress.find((v) => v.wordId === word.id)
     const currentLevel = existing?.level ?? 0
-
     const { level, intervalDays } = calculateNextReview({ level: currentLevel, quality })
-
     const updatedProgress: VocabularyProgress = {
       wordId: word.id,
       level,
@@ -61,42 +59,36 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
       correctCount: (existing?.correctCount ?? 0) + (quality >= 3 ? 1 : 0),
       incorrectCount: (existing?.incorrectCount ?? 0) + (quality < 3 ? 1 : 0),
     }
-
     dispatch({ type: 'UPDATE_VOCAB_PROGRESS', payload: updatedProgress })
-
     setStats((prev) => ({
       total: prev.total + 1,
       knew: prev.knew + (quality === 5 ? 1 : 0),
       didntKnow: prev.didntKnow + (quality === 1 ? 1 : 0),
     }))
-
-    if (currentIndex < words.length - 1) {
-      setCurrentIndex(currentIndex + 1)
-    } else {
-      setCurrentIndex(-1)
-    }
+    if (currentIndex < words.length - 1) setCurrentIndex(currentIndex + 1)
+    else setCurrentIndex(-1)
   }
 
   if (currentIndex === -1) {
     return (
-      <div className="max-w-lg mx-auto text-center py-12">
-        <h2 className="text-2xl font-bold text-gray-800 mb-4">Hoàn thành!</h2>
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <p className="text-gray-600">Đã học {stats.total} từ</p>
+      <div className="max-w-lg mx-auto text-center py-12 animate-fade-in">
+        <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Hoàn thành!</h2>
+        <div className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-6 mb-6">
+          <p className="text-[var(--text-secondary)]">Đã học {stats.total} từ</p>
           <div className="flex justify-center gap-8 mt-4">
             <div>
-              <p className="text-2xl font-bold text-green-600">{stats.knew}</p>
-              <p className="text-sm text-gray-500">Biết rồi</p>
+              <p className="text-2xl font-bold text-[var(--success)]">{stats.knew}</p>
+              <p className="text-sm text-[var(--text-secondary)]">Biết rồi</p>
             </div>
             <div>
-              <p className="text-2xl font-bold text-red-600">{stats.didntKnow}</p>
-              <p className="text-sm text-gray-500">Chưa biết</p>
+              <p className="text-2xl font-bold text-[var(--danger)]">{stats.didntKnow}</p>
+              <p className="text-sm text-[var(--text-secondary)]">Chưa biết</p>
             </div>
           </div>
         </div>
         <button
           onClick={() => navigate('/vocabulary')}
-          className="px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 font-medium"
+          className="px-6 py-3 rounded-xl bg-[var(--accent)] text-gray-900 hover:bg-[var(--accent-hover)] font-medium active:scale-95 transition-all"
         >
           Quay lại
         </button>
@@ -107,14 +99,11 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-gray-800">
+        <h2 className="text-xl font-bold text-[var(--text-primary)]">
           {isReview ? 'Ôn tập' : `Từ vựng: ${topic}`}
         </h2>
-        <span className="text-sm text-gray-500">
-          {currentIndex + 1}/{words.length}
-        </span>
+        <span className="text-sm text-[var(--text-secondary)]">{currentIndex + 1}/{words.length}</span>
       </div>
-
       <Flashcard word={words[currentIndex]} onRate={handleRate} />
     </div>
   )

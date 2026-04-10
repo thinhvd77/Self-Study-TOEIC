@@ -35,26 +35,26 @@ function TopicSelection() {
   const dueForReview = getWordsToReview(progress.vocabularyProgress)
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Học từ vựng</h2>
+    <div className="animate-fade-in">
+      <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-6">Học từ vựng</h2>
 
-      <div className="bg-white rounded-lg shadow p-6 mb-6">
+      <div className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-6 mb-6">
         <div className="grid grid-cols-3 gap-4 text-center">
           <div>
-            <p className="text-3xl font-bold text-blue-700">{learnedCount}</p>
-            <p className="text-sm text-gray-500">Đã học</p>
+            <p className="text-3xl font-bold text-[var(--accent)]">{learnedCount}</p>
+            <p className="text-sm text-[var(--text-secondary)]">Đã học</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-yellow-600">{dueForReview.length}</p>
-            <p className="text-sm text-gray-500">Cần ôn hôm nay</p>
+            <p className="text-3xl font-bold text-[var(--warning)]">{dueForReview.length}</p>
+            <p className="text-sm text-[var(--text-secondary)]">Cần ôn hôm nay</p>
           </div>
           <div>
-            <p className="text-3xl font-bold text-green-600">
+            <p className="text-3xl font-bold text-[var(--success)]">
               {learnedCount > 0
                 ? Math.round((progress.vocabularyProgress.filter((v) => v.level >= 3).length / learnedCount) * 100)
                 : 0}%
             </p>
-            <p className="text-sm text-gray-500">Tỷ lệ nhớ</p>
+            <p className="text-sm text-[var(--text-secondary)]">Tỷ lệ nhớ</p>
           </div>
         </div>
         <div className="mt-4">
@@ -68,29 +68,29 @@ function TopicSelection() {
       {dueForReview.length > 0 && (
         <button
           onClick={() => navigate('/vocabulary/review')}
-          className="w-full mb-6 p-4 rounded-lg bg-yellow-50 border-2 border-yellow-300 hover:border-yellow-400 text-left"
+          className="w-full mb-6 p-4 rounded-xl bg-[var(--warning-soft)] border-2 border-[var(--warning)] hover:brightness-110 text-left active:scale-[0.99] transition-all"
         >
-          <h3 className="font-bold text-yellow-800">Ôn tập hôm nay</h3>
-          <p className="text-sm text-yellow-600">{dueForReview.length} từ cần ôn lại</p>
+          <h3 className="font-bold text-[var(--warning)]">Ôn tập hôm nay</h3>
+          <p className="text-sm text-[var(--warning)] opacity-80">{dueForReview.length} từ cần ôn lại</p>
         </button>
       )}
 
-      <h3 className="text-lg font-semibold text-gray-700 mb-4">Chủ đề</h3>
+      <h3 className="text-lg font-semibold text-[var(--text-secondary)] mb-4">Chủ đề</h3>
       <div className="grid gap-4 md:grid-cols-2">
         {allTopics.map((topic) => (
-          <div key={topic.id} className="bg-white rounded-lg shadow p-5">
-            <h4 className="font-bold text-gray-800 text-lg">{topic.label}</h4>
-            <p className="text-sm text-gray-500 mt-1">{topic.words.length} từ</p>
+          <div key={topic.id} className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-5 hover:border-[var(--accent)] hover:-translate-y-0.5 transition-all duration-200">
+            <h4 className="font-bold text-[var(--text-primary)] text-lg">{topic.label}</h4>
+            <p className="text-sm text-[var(--text-secondary)] mt-1">{topic.words.length} từ</p>
             <div className="flex gap-2 mt-4">
               <button
                 onClick={() => navigate(`/vocabulary/flashcard?topic=${topic.id}`)}
-                className="flex-1 px-3 py-2 text-sm rounded bg-blue-100 text-blue-700 hover:bg-blue-200 font-medium"
+                className="flex-1 px-3 py-2 text-sm rounded-lg bg-[var(--accent-soft)] text-[var(--accent)] hover:brightness-110 font-medium active:scale-95 transition-all"
               >
                 Flashcard
               </button>
               <button
                 onClick={() => navigate(`/vocabulary/quiz?topic=${topic.id}`)}
-                className="flex-1 px-3 py-2 text-sm rounded bg-green-100 text-green-700 hover:bg-green-200 font-medium"
+                className="flex-1 px-3 py-2 text-sm rounded-lg bg-[var(--success-soft)] text-[var(--success)] hover:brightness-110 font-medium active:scale-95 transition-all"
               >
                 Quiz
               </button>
