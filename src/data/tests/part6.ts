@@ -111,4 +111,70 @@ export const part6Questions: Question[] = [
     correctAnswer: 0,
     explanation: '"by + thời điểm" nghĩa là trước hoặc vào đúng thời điểm đó.',
   },
+  {
+    id: 'p6-011',
+    part: 6,
+    type: 'reading',
+    passage:
+      'Dear Ms. Kim,\nThank you for attending our product demonstration last Thursday. We were pleased to meet your team and discuss how our software can streamline your operations.',
+    question: 'We were pleased to meet your team and discuss how our software can ______ your operations.',
+    options: ['streamline', 'streamlines', 'streamlined', 'streamlining'],
+    correctAnswer: 0,
+    explanation: 'Sau "can" dùng động từ nguyên mẫu không "to". "streamline" là base form đúng.',
+  },
+  {
+    id: 'p6-012',
+    part: 6,
+    type: 'reading',
+    passage:
+      'NOTICE TO ALL STAFF\nThe office will be closed on Monday, April 15, for a public holiday. ______, normal business hours will resume on Tuesday.',
+    question: '______, normal business hours will resume on Tuesday.',
+    options: ['However', 'Therefore', 'Accordingly', 'Nevertheless'],
+    correctAnswer: 2,
+    explanation: '"Accordingly" (tương ứng với điều trên) phù hợp nhất ở đây vì thứ Ba là ngày tiếp theo sau kỳ nghỉ. "However/Nevertheless" mang nghĩa tương phản không hợp ngữ cảnh.',
+  },
+  {
+    id: 'p6-013',
+    part: 6,
+    type: 'reading',
+    passage:
+      'The marketing department is seeking volunteers to help organize the annual company picnic scheduled for May 20. Participants are expected to assist with setup, catering coordination, and post-event cleanup.',
+    question: 'Participants are expected to assist with setup, catering coordination, and post-event ______.',
+    options: ['cleanup', 'clean', 'cleaning', 'cleaner'],
+    correctAnswer: 0,
+    explanation: 'Cần danh từ song song với "setup" và "coordination". "cleanup" (danh từ) là đúng, không phải "clean" (verb) hay "cleaning" (gerund không tự nhiên trong liệt kê này).',
+  },
+  {
+    id: 'p6-014',
+    part: 6,
+    type: 'reading',
+    passage:
+      'The board of directors ______ a 5% salary increase for all full-time employees effective July 1. This decision reflects the company\'s strong financial performance in the first half of the year.',
+    question: 'The board of directors ______ a 5% salary increase for all full-time employees effective July 1.',
+    options: ['approved', 'approves', 'approving', 'is approved'],
+    correctAnswer: 0,
+    explanation: '"approved" (quá khứ đơn) phù hợp vì đây là quyết định đã được thông qua. Chủ ngữ "The board" là danh từ tập hợp đi với động từ số ít hoặc chia theo ngữ cảnh quá khứ.',
+  },
+  {
+    id: 'p6-015',
+    part: 6,
+    type: 'reading',
+    passage:
+      'Starting next quarter, all expense reports must be submitted through the new digital portal ______ of the paper-based process previously used.',
+    question: 'All expense reports must be submitted through the new digital portal ______ of the paper-based process.',
+    options: ['instead', 'regardless', 'in place', 'ahead'],
+    correctAnswer: 2,
+    explanation: '"in place of" = thay thế cho. Đây là cụm giới từ cố định. "instead" cần đi với "instead of", còn "regardless" cần "regardless of" với nghĩa khác.',
+  },
+  {
+    id: 'p6-016',
+    part: 6,
+    type: 'reading',
+    passage:
+      'We are delighted to announce that our Hanoi branch has achieved ______ highest customer satisfaction rating in the company\'s history for the third consecutive year.',
+    question: 'Our Hanoi branch has achieved ______ highest customer satisfaction rating in the company\'s history.',
+    options: ['a', 'an', 'the', 'its'],
+    correctAnswer: 2,
+    explanation: '"the highest" — dùng mạo từ xác định "the" trước so sánh nhất, không dùng "a/an". "its" không cần thiết vì đã có "the" xác định duy nhất.',
+  },
 ]
