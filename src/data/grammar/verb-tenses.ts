@@ -85,11 +85,11 @@ Thì động từ cho biết hành động xảy ra khi nào. Trong TOEIC, bạn
     },
     {
       id: 'gram-02-ex04',
-      question: 'The conference _______ place next month.',
+      question: 'If the venue is available, the conference _______ place next month.',
       options: ['will take', 'takes', 'is taking', 'has taken'],
       correctAnswer: 0,
       explanation:
-        'Time signal là "next month", nên người làm bài phải chọn nhóm thì tương lai trước tiên. "will take" đúng vì đây là Future Simple cho một thông báo về sự kiện sắp tới; "takes" là hiện tại đơn, "is taking" có thể dùng trong ngữ cảnh kế hoạch nhưng không phải lựa chọn mục tiêu của câu này, còn "has taken" là hiện tại hoàn thành nên sai mốc thời gian.',
+        'Mệnh đề điều kiện "If the venue is available" đẩy câu về dạng tương lai ở mệnh đề chính, nên đáp án đúng là Future Simple "will take". "takes" không phù hợp với cấu trúc điều kiện loại 1 trong ngữ cảnh này, "is taking" sai vì cụm "take place" hầu như không dùng ở thì tiếp diễn, còn "has taken" trái hẳn với mốc tương lai "next month".',
     },
     {
       id: 'gram-02-ex05',

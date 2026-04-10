@@ -14,6 +14,14 @@ const requiredHeadings = [
   '## Tóm tắt nhanh',
 ]
 
+const expectedLessonIds = ['gram-01', 'gram-02', 'gram-03']
+
+const expectedExerciseIdsByLesson = {
+  'gram-01': ['gram-01-ex01', 'gram-01-ex02', 'gram-01-ex03', 'gram-01-ex04', 'gram-01-ex05'],
+  'gram-02': ['gram-02-ex01', 'gram-02-ex02', 'gram-02-ex03', 'gram-02-ex04', 'gram-02-ex05'],
+  'gram-03': ['gram-03-ex01', 'gram-03-ex02', 'gram-03-ex03', 'gram-03-ex04', 'gram-03-ex05'],
+} as const
+
 function assertStructuredLesson(lesson: GrammarLesson) {
   expect(lesson.content).toBe(lesson.content.trim())
 
@@ -38,6 +46,18 @@ function assertStructuredLesson(lesson: GrammarLesson) {
 }
 
 describe('Grammar content upgrade contract', () => {
+  it('preserves required lesson IDs and exercise IDs', () => {
+    const lessons = [partsOfSpeechLesson, verbTensesLesson, passiveVoiceLesson]
+
+    expect(lessons.map((lesson) => lesson.id)).toEqual(expectedLessonIds)
+
+    for (const lesson of lessons) {
+      expect(lesson.exercises.map((exercise) => exercise.id)).toEqual(
+        expectedExerciseIdsByLesson[lesson.id as keyof typeof expectedExerciseIdsByLesson],
+      )
+    }
+  })
+
   it('keeps gram-01 beginner-friendly and structured', () => {
     assertStructuredLesson(partsOfSpeechLesson)
   })

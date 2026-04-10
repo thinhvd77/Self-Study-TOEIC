@@ -66,11 +66,11 @@ Hỏi nhanh: chủ ngữ có tự làm hành động này không? Nếu không, 
     },
     {
       id: 'gram-03-ex02',
-      question: 'The new branch office _______ in Singapore last year.',
+      question: 'The new branch office _______ by the CEO in Singapore last year.',
       options: ['opened', 'was opened', 'has been opened', 'is opening'],
       correctAnswer: 1,
       explanation:
-        'Chủ ngữ "The new branch office" được nhấn mạnh như đối tượng nhận hành động khai trương, nên câu này hướng người học đến passive form. Với time signal "last year", dạng phù hợp là Past Simple passive "was opened"; "opened" là active, còn "has been opened" và "is opening" sai mốc thời gian.',
+        'Cụm "by the CEO" cho thấy chủ ngữ "The new branch office" là đối tượng nhận hành động, nên câu bắt buộc phải ở dạng bị động. Với mốc quá khứ rõ ràng "last year", đáp án đúng là Past Simple passive "was opened"; "opened" thiếu trợ động từ bị động, còn "has been opened" và "is opening" đều sai về thì.',
     },
     {
       id: 'gram-03-ex03',
