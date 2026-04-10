@@ -15,6 +15,7 @@ const partBank: Record<string, number> = {
   'part:6': part6Questions.length,
   'part:7': part7Questions.length,
 }
+const supportedPartTargets = new Set(Object.keys(partBank))
 
 describe('Roadmap and data alignment', () => {
   it('ensures each part target in roadmap has available question data', () => {
@@ -26,6 +27,23 @@ describe('Roadmap and data alignment', () => {
     expect(partTargets.length).toBeGreaterThan(0)
 
     partTargets.forEach((target) => {
+      expect(partBank[target]).toBeGreaterThan(0)
+    })
+  })
+
+  it('covers all parts mentioned in practice task descriptions', () => {
+    const mentionedParts = roadmap
+      .flatMap((week) => week.tasks)
+      .filter((task) => task.type === 'practice')
+      .flatMap((task) => {
+        const matches = [...task.description.matchAll(/Part\s+([1-7])/gi)]
+        return matches.map((match) => `part:${match[1]}`)
+      })
+
+    const uniqueMentionedParts = [...new Set(mentionedParts)].filter((target) => supportedPartTargets.has(target))
+    expect(uniqueMentionedParts.length).toBeGreaterThan(0)
+
+    uniqueMentionedParts.forEach((target) => {
       expect(partBank[target]).toBeGreaterThan(0)
     })
   })
