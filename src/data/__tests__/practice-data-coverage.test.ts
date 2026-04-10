@@ -37,9 +37,9 @@ describe('Practice data coverage', () => {
     expect(part1Questions.length).toBeGreaterThanOrEqual(10)
     expect(part3Questions.length).toBeGreaterThanOrEqual(10)
     expect(part4Questions.length).toBeGreaterThanOrEqual(10)
-    expect(part5Questions.length).toBeGreaterThanOrEqual(20)
-    expect(part6Questions.length).toBeGreaterThanOrEqual(10)
-    expect(part7Questions.length).toBeGreaterThanOrEqual(10)
+    expect(part5Questions.length).toBeGreaterThanOrEqual(30)
+    expect(part6Questions.length).toBeGreaterThanOrEqual(16)
+    expect(part7Questions.length).toBeGreaterThanOrEqual(48)
   })
 
   it('keeps question structure and answer indices valid', () => {
