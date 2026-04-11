@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
 import { Flashcard } from '../../components/Flashcard'
 import { useAppContext } from '../../context/AppContext'
-import { calculateNextReview, getNextReviewDate, getWordsToReview } from '../../hooks/useSpacedRepetition'
+import { calculateNextBox, getNextReviewDate, getWordsToReview } from '../../hooks/useLeitnerBoxes'
 import { VocabularyWord, VocabularyProgress } from '../../types'
 import { businessVocabulary } from '../../data/vocabulary/business'
 
@@ -32,6 +32,14 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [stats, setStats] = useState({ total: 0, knew: 0, didntKnow: 0 })
+  const [toast, setToast] = useState<{ from: number; to: number; intervalDays: number } | null>(null)
+
+  useEffect(() => {
+    if (toast) {
+      const timer = setTimeout(() => setToast(null), 1500)
+      return () => clearTimeout(timer)
+    }
+  }, [toast])
 
   if (words.length === 0) {
     return (
@@ -49,23 +57,24 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
   const handleRate = (quality: 1 | 3 | 5) => {
     const word = words[currentIndex]
     const existing = progress.vocabularyProgress.find((v) => v.wordId === word.id)
-    // The old useSpacedRepetition hook uses 'level' terminology (0-5)
-    // The new VocabularyProgress type uses 'box' terminology (1-5)
-    // We bridge them here with Math.max(1, ...) until Task 9 replaces the hook
-    const currentLevel = existing?.box ?? 1
-    const { level, intervalDays } = calculateNextReview({ level: currentLevel, quality })
+    const currentBox = existing?.box ?? 1
+
+    // Map quality (from Flashcard) to Leitner rating
+    const qualityToRating = { 1: 'didntKnow', 3: 'soSo', 5: 'known' } as const
+    const rating = qualityToRating[quality as keyof typeof qualityToRating]
+    const result = calculateNextBox({ box: currentBox as 1 | 2 | 3 | 4 | 5, quality: rating })
+    const { box, intervalDays } = result
+
     const updatedProgress: VocabularyProgress = {
       wordId: word.id,
-      // SM-2 returns level 0 for "failed" which maps to Leitner box 1 (lowest level)
-      // This is temporary until Task 9 replaces with useLeitnerBoxes
-      // The mapping is intentional and correct — both represent "reset to lowest"
-      box: Math.max(1, level),
+      box,
       nextReview: getNextReviewDate(intervalDays),
       lastReviewed: new Date().toISOString().split('T')[0],
       correctCount: (existing?.correctCount ?? 0) + (quality >= 3 ? 1 : 0),
       incorrectCount: (existing?.incorrectCount ?? 0) + (quality < 3 ? 1 : 0),
     }
     dispatch({ type: 'UPDATE_VOCAB_PROGRESS', payload: updatedProgress })
+    setToast({ from: currentBox, to: box, intervalDays })
     setStats((prev) => ({
       total: prev.total + 1,
       knew: prev.knew + (quality === 5 ? 1 : 0),
@@ -111,6 +120,13 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
         <span className="text-sm text-[var(--text-secondary)]">{currentIndex + 1}/{words.length}</span>
       </div>
       <Flashcard word={words[currentIndex]} onRate={handleRate} />
+      {toast && (
+        <div className="fixed bottom-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-lg shadow-lg animate-fade-in">
+          {toast.from < toast.to && `Hộp ${toast.from} → Hộp ${toast.to} ✨`}
+          {toast.from > toast.to && `Hộp ${toast.from} → Hộp ${toast.to} 🔁`}
+          {toast.from === toast.to && `Hộp ${toast.from} • Ôn lại sau ${toast.intervalDays} ngày`}
+        </div>
+      )}
     </div>
   )
 }
