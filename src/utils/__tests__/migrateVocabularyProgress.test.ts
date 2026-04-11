@@ -65,6 +65,8 @@ describe('loadAndMigrate', () => {
       testHistory: [],
       vocabularyProgress: [],
       grammarProgress: [],
+      dailyBatchSize: 15,
+      topicBatches: {},
     }
     localStorage.setItem('toeic-progress-v2', JSON.stringify(mockV2State))
 
@@ -131,6 +133,8 @@ describe('loadAndMigrate', () => {
       testHistory: [],
       vocabularyProgress: [],
       grammarProgress: [],
+      dailyBatchSize: 15,
+      topicBatches: {},
     }
     localStorage.setItem('toeic-progress', JSON.stringify(legacyState))
     localStorage.setItem('toeic-progress-v2', JSON.stringify(v2State))
