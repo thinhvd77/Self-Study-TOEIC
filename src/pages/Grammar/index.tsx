@@ -8,6 +8,11 @@ import { prepositionsLesson } from '../../data/grammar/prepositions'
 import { relativePronounsLesson } from '../../data/grammar/relative-pronouns'
 import { comparativesLesson } from '../../data/grammar/comparatives'
 import { conditionalsLesson } from '../../data/grammar/conditionals'
+import { articlesLesson } from '../../data/grammar/articles'
+import { gerundInfinitivesLesson } from '../../data/grammar/gerunds-infinitives'
+import { subjectVerbAgreementLesson } from '../../data/grammar/subject-verb-agreement'
+import { pronounsLesson } from '../../data/grammar/pronouns'
+import { wordOrderLesson } from '../../data/grammar/word-order'
 import { useAppContext } from '../../context/AppContext'
 import { GrammarLesson } from '../../types'
 import { ProgressBar } from '../../components/ProgressBar'
@@ -15,6 +20,7 @@ import { ProgressBar } from '../../components/ProgressBar'
 const allLessons: GrammarLesson[] = [
   partsOfSpeechLesson, verbTensesLesson, passiveVoiceLesson, conjunctionsLesson,
   prepositionsLesson, relativePronounsLesson, comparativesLesson, conditionalsLesson,
+  articlesLesson, gerundInfinitivesLesson, subjectVerbAgreementLesson, pronounsLesson, wordOrderLesson,
 ]
 
 function LessonList() {
