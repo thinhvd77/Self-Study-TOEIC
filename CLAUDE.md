@@ -32,9 +32,10 @@ Commits: Use `feat: ` for features, `fix: ` for bug fixes, `chore: ` for setup/t
 src/
 ├── types/index.ts              # All TypeScript interfaces
 ├── data/
-│   ├── tests/part5.ts          # Part 5 questions (and part6.ts, part7.ts)
-│   ├── vocabulary/business.ts  # Vocab by topic (business, office, finance, travel, health, technology, hr, manufacturing)
-│   ├── grammar/parts-of-speech.ts  # Lessons (parts-of-speech, verb-tenses, ...)
+│   ├── tests/                  # part1.ts, part3.ts, part4.ts, part5.ts, part6.ts, part7.ts
+│   ├── vocabulary/             # 8 topics: business, finance, health, hr, manufacturing, office, technology, travel (150 words each)
+│   ├── grammar/                # 8 lessons: parts-of-speech, verb-tenses, comparatives, conditionals, conjunctions, passive-voice, prepositions, relative-pronouns
+│   ├── __tests__/              # crawled-vocabulary, dataset-quality, practice-data-coverage, roadmap-data-alignment, task2-data, vocabulary-data
 │   └── roadmap.ts              # 16-week roadmap data
 ├── hooks/
 │   ├── useLocalStorage.ts      # Persist state to localStorage
@@ -69,7 +70,7 @@ public/
 ## Key Data Types
 
 ```typescript
-// Practice: Question, TestResult, AnswerRecord
+// Practice: Question (optional passage2 for double-passage Part 7), TestResult, AnswerRecord
 // Vocabulary: VocabularyWord, VocabularyProgress
 // Grammar: GrammarLesson, GrammarExercise, GrammarProgress
 // Roadmap: RoadmapWeek, RoadmapTask
@@ -95,8 +96,8 @@ All types defined in `src/types/index.ts`.
 
 ## Practice Modes
 
-- **Luyện theo Part**: Single part, optional timer
-- **Mini Test**: ~30 min, mix of parts
+- **Luyện theo Part**: Single part, optional timer (Part 5, 6, 7 enabled; Part 1-4 require audio files)
+- **Mini Test**: ~30 min, mix of parts (enabled)
 - **Full Test**: 120 min, 200 questions (simulates real TOEIC)
 
 Features during practice: countdown timer, bookmark uncertain questions, question navigation panel, audio player (Part 1-4) with speed control.
@@ -116,7 +117,8 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Test setup: `src/test/setup.ts` imports `@testing-library/jest-dom`
 - Vitest config: jsdom environment, globals enabled
 - TDD workflow: Create test first, verify fails with `npx vitest run src/path/to/test.ts`, implement, verify passes
-- `npm test` runs 31 tests: useLocalStorage 4, useTimer 4, useSpacedRepetition 5, scoring 3, data verification 15
+- `npm test` runs 86 tests across 10 test files (main src). Note: `npm test` also picks up tests from `.worktrees/` — in-progress worktree work may show failures; this is expected.
+- To run only main src tests without worktree noise: `npx vitest run --exclude '.worktrees/**'`
 
 ## Verification Criteria
 
@@ -131,63 +133,4 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 
 ## Implementation Status
 
-**Task 1: Project Setup** ✅ Complete (branch: `task-1-implementation`)
-- Vite + React 18 + TypeScript scaffold
-- Tailwind CSS v4 via `@tailwindcss/vite`
-- React Router v6 with placeholder routes
-- Vitest + Testing Library configured
-- All deps aligned, npm audit clean
-
-**Task 2: Types & Sample Data** ✅ Complete (commit: `ca61522`)
-- Added domain types in `src/types/index.ts`
-- Added sample data in `src/data/tests/part5.ts`, `src/data/vocabulary/business.ts`, `src/data/grammar/parts-of-speech.ts`, and `src/data/roadmap.ts`
-- Added data verification tests in `src/data/__tests__/task2-data.test.ts`
-
-**Task 3: Custom Hooks** ✅ Complete (branch: `task-1-implementation`)
-- Added `src/hooks/useLocalStorage.ts`, `src/hooks/useTimer.ts`, and `src/hooks/useSpacedRepetition.ts`
-- Added hook tests in `src/hooks/__tests__/useLocalStorage.test.ts`, `src/hooks/__tests__/useTimer.test.ts`, and `src/hooks/__tests__/useSpacedRepetition.test.ts`
-- Implemented timer pause/resume/reset + `initialSeconds` resync behavior in `useTimer`
-- Implemented spaced repetition utilities with interval mapping `[1, 1, 2, 4, 7, 14]`, level cap at 5, and day-granularity due checks
-
-**Task 4: App Context & Scoring Utility** ✅ Complete
-- `src/context/AppContext.tsx`: React Context + useReducer, localStorage key `toeic-progress`
-- `src/utils/scoring.ts`: `calculateToeicScore` (proportional, max 495 per section), `getPartAccuracy`
-
-**Task 5: Layout & Shared Components** ✅ Complete
-- All components in `src/components/` created and integrated
-- `src/App.tsx` now uses `AppProvider` + `Layout` with nested routes
-
-**Task 6: Practice Page - Part Selection & Quiz Session** ✅ Complete (commit: `c831846`)
-- Created `src/pages/Practice/index.tsx` with part selection UI (Part 5 enabled, 6&7 disabled)
-- Created `src/pages/Practice/PracticeSession.tsx` with timer, bookmarks, question navigation, auto-submit on time-up
-- Created `src/pages/Practice/PracticeResult.tsx` with score display and ProgressBar
-- Updated `src/App.tsx` to import real PracticePage component
-- **Implementation detail**: Used `useRef` for `answers` and `submitted` state in PracticeSession to prevent stale closure bugs in timer callback
-
-**Task 7: Vocabulary Page - Flashcard & Quiz** ✅ Complete (commit: `0421f2a`)
-- Created `src/pages/Vocabulary/index.tsx` with topic selection, stats (learned/due-for-review/retention%), progress bar, "Ôn tập hôm nay" button
-- Created `src/pages/Vocabulary/FlashcardSession.tsx` with Flashcard flip UI, SM-2 spaced repetition dispatch, review session support
-- Created `src/pages/Vocabulary/VocabQuiz.tsx` with auto-generated multiple-choice, forward/back navigation, submit & results
-- Updated `src/App.tsx` to import real VocabularyPage component
-- **Architectural pattern**: Vocabulary topics are designed to scale — `allTopics` array in index.tsx aggregates all topics; pass `allWords` prop to `FlashcardSession` for review mode to support future topics (business, office, finance, etc.)
-- **React patterns**: Use `useMemo` for derived state that depends on function results (e.g., `words` from `getWords(topic)`) to prevent dependency invalidation and re-shuffling; disable interactive buttons after submission to prevent unexpected navigation
-- **Quality checks**: learnedCount should filter by `correctCount > 0`, not raw array length, to avoid inflating stats with words rated "Chưa biết"
-
-**Task 8: Grammar Page - Lessons & Exercises** ✅ Complete (commits: `d820d42`, `f488545`)
-- Created `src/pages/Grammar/index.tsx` with lesson list, progress bar, per-lesson score display, and navigation
-- Created `src/pages/Grammar/LessonView.tsx` with Markdown lesson content, examples, exercise mode with per-question navigation, submit, results, and `UPDATE_GRAMMAR_PROGRESS` dispatch
-- Updated `src/App.tsx` to import real GrammarPage component, replaced inline stub
-- **Key learning**: Grammar lesson content is Markdown-formatted; code review caught that initial `dangerouslySetInnerHTML` with only `\n → <br/>` broke Markdown rendering. Fixed by adding `react-markdown` dependency.
-
-**Task 9: Dashboard Page - Roadmap, Stats & Charts** ✅ Complete (commit: `39682cb`)
-- Created `src/pages/Dashboard/index.tsx` with roadmap tracker (current phase/week, phase progress bar, current week tasks with ✓/○ checkmarks), stats grid (vocab learned, grammar completed, tests done, vocab retention %), score chart (Recharts LineChart), and weakness analysis (lowest-accuracy Part)
-- Updated `src/App.tsx` to import real DashboardPage component, removed inline stub
-- **Quality improvements**: (1) Vocab learned count filters by `correctCount > 0` per Task 7 guideline; (2) `phaseProgress` clamped to [0, 100] to handle corrupted localStorage; (3) All expensive derived stats (`totalVocabLearned`, `grammarCompleted`, `chartData`, `weakestPart`) wrapped in `useMemo` with specific dependencies to prevent unnecessary recomputation on every context update
-- **Code review pattern**: Two-stage review (spec compliance → code quality) caught real issues: raw array length for vocab count and missing memoization for expensive calculations
-
-**Task 10: End-to-End Verification & Polish** ✅ Complete
-- Ran full test suite: 31/31 tests pass (5 test files)
-- Ran production build: succeeds with no errors (~670 kB bundle with Recharts + react-markdown)
-- Verified git status: clean working tree, all changes committed
-- No issues found requiring fixes
-- **Verification note**: Bundle size ~670 kB is expected and not a concern for this single-user local app
+All core features complete (Tasks 1–10): project setup, types/data, hooks, context, layout, practice, vocabulary, grammar, dashboard, E2E verification. Active development continues via git worktrees for content and feature upgrades.
