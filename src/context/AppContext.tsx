@@ -23,6 +23,8 @@ type Action =
   | { type: 'COMPLETE_TASK'; payload: string }
   | { type: 'SET_WEEK'; payload: number }
   | { type: 'LOAD'; payload: UserProgress }
+  | { type: 'UPDATE_TOPIC_BATCH'; payload: { topicId: string; date: string; startIndex: number } }
+  | { type: 'UPDATE_DAILY_BATCH_SIZE'; payload: number }
 
 function reducer(state: UserProgress, action: Action): UserProgress {
   switch (action.type) {
@@ -59,6 +61,19 @@ function reducer(state: UserProgress, action: Action): UserProgress {
       return { ...state, currentWeek: action.payload }
     case 'LOAD':
       return action.payload
+    case 'UPDATE_TOPIC_BATCH':
+      return {
+        ...state,
+        topicBatches: {
+          ...state.topicBatches,
+          [action.payload.topicId]: {
+            date: action.payload.date,
+            startIndex: action.payload.startIndex,
+          },
+        },
+      }
+    case 'UPDATE_DAILY_BATCH_SIZE':
+      return { ...state, dailyBatchSize: Math.min(50, Math.max(5, action.payload)) }
     default:
       return state
   }
