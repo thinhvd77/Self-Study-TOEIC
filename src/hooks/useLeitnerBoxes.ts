@@ -67,3 +67,35 @@ export function getBoxDistribution(allProgress: VocabularyProgress[]): number[] 
 
   return distribution
 }
+
+export function getReviewSchedule(
+  allProgress: VocabularyProgress[],
+  daysAhead: number = 7
+): Array<{ date: string; count: number }> {
+  const today = getDateOnlyString(new Date())
+
+  // Build the window: daysAhead entries starting from today
+  const schedule = Array.from({ length: daysAhead }, (_, i) => {
+    const d = new Date(Date.now() + i * 24 * 60 * 60 * 1000)
+    return { date: getDateOnlyString(d), count: 0 }
+  })
+
+  const dateToIndex = new Map(schedule.map((s, i) => [s.date, i]))
+
+  for (const p of allProgress) {
+    const reviewDate = normalizeReviewDate(p.nextReview)
+    if (!reviewDate) continue
+
+    if (reviewDate <= today) {
+      // Overdue → bucket into today
+      schedule[0].count++
+    } else {
+      const idx = dateToIndex.get(reviewDate)
+      if (idx !== undefined) {
+        schedule[idx].count++
+      }
+    }
+  }
+
+  return schedule
+}

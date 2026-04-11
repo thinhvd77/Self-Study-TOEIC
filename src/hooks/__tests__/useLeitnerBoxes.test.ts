@@ -7,6 +7,7 @@ import {
   isDueForReview,
   getWordsToReview,
   getBoxDistribution,
+  getReviewSchedule,
 } from '../useLeitnerBoxes'
 
 describe('useLeitnerBoxes utilities', () => {
@@ -258,5 +259,60 @@ describe('useLeitnerBoxes utilities', () => {
     }
 
     expect(isDueForReview(dueWord)).toBe(true)
+  })
+})
+
+describe('getReviewSchedule', () => {
+  beforeEach(() => {
+    vi.useFakeTimers()
+    vi.setSystemTime(new Date('2026-04-11T00:00:00.000Z'))
+  })
+
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+
+  it('counts words due on the correct days', () => {
+    const progress: VocabularyProgress[] = [
+      { wordId: 'a', box: 1, nextReview: '2026-04-11', lastReviewed: '2026-04-10', correctCount: 1, incorrectCount: 0 },
+      { wordId: 'b', box: 2, nextReview: '2026-04-12', lastReviewed: '2026-04-10', correctCount: 1, incorrectCount: 0 },
+      { wordId: 'c', box: 2, nextReview: '2026-04-12', lastReviewed: '2026-04-10', correctCount: 1, incorrectCount: 0 },
+      { wordId: 'd', box: 3, nextReview: '2026-04-14', lastReviewed: '2026-04-10', correctCount: 1, incorrectCount: 0 },
+    ]
+    const schedule = getReviewSchedule(progress, 7)
+    expect(schedule).toHaveLength(7)
+    expect(schedule[0]).toEqual({ date: '2026-04-11', count: 1 })
+    expect(schedule[1]).toEqual({ date: '2026-04-12', count: 2 })
+    expect(schedule[3]).toEqual({ date: '2026-04-14', count: 1 })
+  })
+
+  it('counts overdue words (nextReview in the past) in today bucket', () => {
+    const progress: VocabularyProgress[] = [
+      { wordId: 'a', box: 1, nextReview: '2026-04-09', lastReviewed: '2026-04-08', correctCount: 1, incorrectCount: 0 },
+      { wordId: 'b', box: 1, nextReview: '2026-04-10', lastReviewed: '2026-04-09', correctCount: 1, incorrectCount: 0 },
+    ]
+    const schedule = getReviewSchedule(progress, 7)
+    expect(schedule[0]).toEqual({ date: '2026-04-11', count: 2 })
+  })
+
+  it('returns 7 entries for empty progress, all counts zero', () => {
+    const schedule = getReviewSchedule([], 7)
+    expect(schedule).toHaveLength(7)
+    expect(schedule.every((d) => d.count === 0)).toBe(true)
+    expect(schedule[0].date).toBe('2026-04-11')
+  })
+
+  it('ignores words due beyond the daysAhead window', () => {
+    const progress: VocabularyProgress[] = [
+      { wordId: 'a', box: 5, nextReview: '2026-04-20', lastReviewed: '2026-04-10', correctCount: 1, incorrectCount: 0 },
+    ]
+    const schedule = getReviewSchedule(progress, 7)
+    expect(schedule.every((d) => d.count === 0)).toBe(true)
+  })
+
+  it('includes today in results even when count is 0', () => {
+    const schedule = getReviewSchedule([], 7)
+    expect(schedule[0].date).toBe('2026-04-11')
+    expect(schedule[0].count).toBe(0)
   })
 })
