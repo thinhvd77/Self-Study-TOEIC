@@ -59,7 +59,7 @@ function TopicSelection() {
           <div>
             <p className="text-3xl font-bold text-[var(--success)]">
               {learnedCount > 0
-                ? Math.round((progress.vocabularyProgress.filter((v) => v.level >= 3).length / learnedCount) * 100)
+                ? Math.round((progress.vocabularyProgress.filter((v) => v.box >= 3).length / learnedCount) * 100)
                 : 0}%
             </p>
             <p className="text-sm text-[var(--text-secondary)]">Tỷ lệ nhớ</p>

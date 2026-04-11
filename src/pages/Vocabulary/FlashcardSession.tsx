@@ -49,11 +49,11 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
   const handleRate = (quality: 1 | 3 | 5) => {
     const word = words[currentIndex]
     const existing = progress.vocabularyProgress.find((v) => v.wordId === word.id)
-    const currentLevel = existing?.level ?? 0
+    const currentLevel = existing?.box ?? 1
     const { level, intervalDays } = calculateNextReview({ level: currentLevel, quality })
     const updatedProgress: VocabularyProgress = {
       wordId: word.id,
-      level,
+      box: Math.max(1, level),
       nextReview: getNextReviewDate(intervalDays),
       lastReviewed: new Date().toISOString().split('T')[0],
       correctCount: (existing?.correctCount ?? 0) + (quality >= 3 ? 1 : 0),

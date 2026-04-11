@@ -79,7 +79,7 @@ describe('useSpacedRepetition utilities', () => {
   it('checks whether a word is due for review', () => {
     const dueWord: VocabularyProgress = {
       wordId: 'w1',
-      level: 2,
+      box: 2,
       nextReview: '2025-01-14',
       lastReviewed: '2025-01-10T00:00:00.000Z',
       correctCount: 2,
@@ -101,7 +101,7 @@ describe('useSpacedRepetition utilities', () => {
 
     const sameDayLaterTime: VocabularyProgress = {
       wordId: 'w4',
-      level: 1,
+      box: 1,
       nextReview: '2025-01-15T23:59:59.000Z',
       lastReviewed: '2025-01-14T00:00:00.000Z',
       correctCount: 1,
@@ -115,7 +115,7 @@ describe('useSpacedRepetition utilities', () => {
     const allProgress: VocabularyProgress[] = [
       {
         wordId: 'w1',
-        level: 1,
+        box: 1,
         nextReview: '2025-01-13',
         lastReviewed: '2025-01-10T00:00:00.000Z',
         correctCount: 1,
@@ -123,7 +123,7 @@ describe('useSpacedRepetition utilities', () => {
       },
       {
         wordId: 'w2',
-        level: 3,
+        box: 3,
         nextReview: '2025-01-17',
         lastReviewed: '2025-01-12T00:00:00.000Z',
         correctCount: 3,
@@ -131,7 +131,7 @@ describe('useSpacedRepetition utilities', () => {
       },
       {
         wordId: 'w3',
-        level: 0,
+        box: 1,
         nextReview: '2025-01-15',
         lastReviewed: '2025-01-14T00:00:00.000Z',
         correctCount: 0,

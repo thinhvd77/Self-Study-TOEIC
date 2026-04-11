@@ -122,7 +122,7 @@ export default function DashboardPage() {
           {
             value: `${progress.vocabularyProgress.length > 0
               ? Math.round(
-                  (progress.vocabularyProgress.filter((v) => v.level >= 3).length /
+                  (progress.vocabularyProgress.filter((v) => v.box >= 3).length /
                     progress.vocabularyProgress.length) * 100
                 )
               : 0}%`,
