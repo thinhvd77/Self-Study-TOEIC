@@ -14,7 +14,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-002',
     word: 'renewable energy',
-    ipa: '/rɪˈnjuːəbəl ˈɛnərʤi/',
+    ipa: '/rɪˈnuːəbəl ˈɛnərʤi/',
     meaning: 'năng lượng tái tạo',
     partOfSpeech: 'noun',
     example: 'The factory switched to renewable energy sources to lower its operating costs and emissions.',
@@ -114,7 +114,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-012',
     word: 'deforestation',
-    ipa: '/diːˌfɒrɪˈsteɪʃən/',
+    ipa: '/diːˌfɔːrɪˈsteɪʃən/',
     meaning: 'nạn phá rừng',
     partOfSpeech: 'noun',
     example: 'The NGO launched a campaign to raise awareness about the consequences of deforestation.',
@@ -124,7 +124,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-013',
     word: 'reforestation',
-    ipa: '/riːˌfɒrɪˈsteɪʃən/',
+    ipa: '/riːˌfɔːrɪˈsteɪʃən/',
     meaning: 'tái trồng rừng',
     partOfSpeech: 'noun',
     example: 'The government launched a reforestation program to restore degraded land.',
@@ -134,7 +134,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-014',
     word: 'conservation',
-    ipa: '/ˌkɒnsərˈveɪʃən/',
+    ipa: '/ˌkɑːnsərˈveɪʃən/',
     meaning: 'sự bảo tồn',
     partOfSpeech: 'noun',
     example: 'The company donated funds to support marine conservation efforts in the region.',
@@ -184,7 +184,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-019',
     word: 'carbon neutral',
-    ipa: '/ˈkɑːrbən ˈnjuːtrəl/',
+    ipa: '/ˈkɑːrbən ˈnuːtrəl/',
     meaning: 'trung hòa carbon',
     partOfSpeech: 'adjective',
     example: 'The hotel chain aims to become carbon neutral by investing in renewable energy projects.',
@@ -194,7 +194,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-020',
     word: 'circular economy',
-    ipa: '/ˈsɜːrkjʊlər ɪˈkɒnəmi/',
+    ipa: '/ˈsɜːrkjʊlər ɪˈkɑːnəmi/',
     meaning: 'kinh tế tuần hoàn',
     partOfSpeech: 'noun',
     example: 'The manufacturer adopted a circular economy model to minimize waste and reuse materials.',
@@ -393,7 +393,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-040',
     word: 'environmental policy',
-    ipa: '/ɪnˌvaɪrənˈmɛntəl ˈpɒlɪsi/',
+    ipa: '/ɪnˌvaɪrənˈmɛntəl ˈpɑːlɪsi/',
     meaning: 'chính sách môi trường',
     partOfSpeech: 'noun',
     example: "The corporation updated its environmental policy to align with international climate agreements.",
@@ -453,7 +453,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-046',
     word: 'toxic waste',
-    ipa: '/ˈtɒksɪk weɪst/',
+    ipa: '/ˈtɑːksɪk weɪst/',
     meaning: 'chất thải độc hại',
     partOfSpeech: 'noun',
     example: 'Companies must follow strict procedures when disposing of toxic waste materials.',
@@ -503,7 +503,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-051',
     word: 'air quality',
-    ipa: '/ɛr ˈkwɒlɪti/',
+    ipa: '/ɛr ˈkwɑːlɪti/',
     meaning: 'chất lượng không khí',
     partOfSpeech: 'noun',
     example: 'The city installed monitoring stations to measure air quality across different neighborhoods.',
@@ -513,7 +513,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-052',
     word: 'water quality',
-    ipa: '/ˈwɔːtər ˈkwɒlɪti/',
+    ipa: '/ˈwɔːtər ˈkwɑːlɪti/',
     meaning: 'chất lượng nước',
     partOfSpeech: 'noun',
     example: 'Regular testing ensures the water quality in the reservoir meets drinking standards.',
@@ -663,7 +663,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-067',
     word: 'monitor',
-    ipa: '/ˈmɒnɪtər/',
+    ipa: '/ˈmɑːnɪtər/',
     meaning: 'giám sát, theo dõi',
     partOfSpeech: 'verb',
     example: 'Sensors installed throughout the facility continuously monitor air and water quality.',
@@ -703,7 +703,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-071',
     word: 'renewable',
-    ipa: '/rɪˈnjuːəbəl/',
+    ipa: '/rɪˈnuːəbəl/',
     meaning: 'có thể tái tạo',
     partOfSpeech: 'adjective',
     example: 'The company has committed to sourcing 100% renewable electricity by 2030.',
@@ -733,7 +733,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-074',
     word: 'toxic',
-    ipa: '/ˈtɒksɪk/',
+    ipa: '/ˈtɑːksɪk/',
     meaning: 'độc hại',
     partOfSpeech: 'adjective',
     example: 'Workers must be trained to handle toxic chemicals safely according to safety regulations.',
@@ -813,7 +813,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-082',
     word: 'carbon dioxide',
-    ipa: '/ˈkɑːrbən daɪˈɒksaɪd/',
+    ipa: '/ˈkɑːrbən daɪˈɑːksaɪd/',
     meaning: 'khí carbon dioxide (CO₂)',
     partOfSpeech: 'noun',
     example: 'Burning coal releases large amounts of carbon dioxide into the atmosphere.',
@@ -893,7 +893,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-090',
     word: 'clean technology',
-    ipa: '/kliːn tɛkˈnɒləʤi/',
+    ipa: '/kliːn tɛkˈnɑːləʤi/',
     meaning: 'công nghệ sạch',
     partOfSpeech: 'noun',
     example: 'Investment in clean technology is seen as essential for achieving net zero targets.',
@@ -923,7 +923,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-093',
     word: 'ecological footprint',
-    ipa: '/ˌiːkəˈlɒʤɪkəl ˈfʊtprɪnt/',
+    ipa: '/ˌiːkəˈlɑːʤɪkəl ˈfʊtprɪnt/',
     meaning: 'dấu chân sinh thái',
     partOfSpeech: 'noun',
     example: "Reducing the company's ecological footprint is a key pillar of its five-year strategy.",
@@ -963,7 +963,7 @@ export const environmentVocabulary: VocabularyWord[] = [
   {
     id: 'v-env-097',
     word: 'environmental stewardship',
-    ipa: '/ɪnˌvaɪrənˈmɛntəl ˈstjuːərʤʃɪp/',
+    ipa: '/ɪnˌvaɪrənˈmɛntəl ˈstuːərʤʃɪp/',
     meaning: 'trách nhiệm quản lý môi trường',
     partOfSpeech: 'noun',
     example: 'The award recognized the firm for its outstanding environmental stewardship over the past decade.',
