@@ -1,0 +1,9 @@
+
+ RUN  v4.1.3 /home/thinh77/Projects/Self-Study-TOEIC
+
+
+ Test Files  13 passed (13)
+      Tests  148 passed (148)
+   Start at  19:57:02
+   Duration  1.83s (transform 2.05s, setup 805ms, import 2.65s, tests 444ms, environment 14.12s)
+
