@@ -4,7 +4,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-001',
     word: 'contract',
-    ipa: '/ˈkɒntrækt/',
+    ipa: '/ˈkɑːntrækt/',
     meaning: 'hợp đồng',
     partOfSpeech: 'noun',
     example: 'The company signed a contract with the new supplier last week.',
@@ -17,7 +17,7 @@ export const legalVocabulary: VocabularyWord[] = [
     ipa: '/klɔːz/',
     meaning: 'điều khoản (trong hợp đồng)',
     partOfSpeech: 'noun',
-    example: 'The termination clause allows either party to end the agreement with 30 days notice.',
+    example: 'The termination clause allows either party to end the agreement with 30 days\' notice.',
     synonyms: ['provision', 'article'],
     topic: 'legal',
   },
@@ -34,7 +34,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-004',
     word: 'warranty',
-    ipa: '/ˈwɒrənti/',
+    ipa: '/ˈwɔːrənti/',
     meaning: 'bảo hành; cam kết',
     partOfSpeech: 'noun',
     example: 'The product comes with a two-year warranty against manufacturing defects.',
@@ -212,7 +212,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-022',
     word: 'copyright',
-    ipa: '/ˈkɒpɪraɪt/',
+    ipa: '/ˈkɑːpɪraɪt/',
     meaning: 'bản quyền tác giả',
     partOfSpeech: 'noun',
     example: 'The author holds the copyright to the book for 70 years after publication.',
@@ -312,7 +312,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-032',
     word: 'fiduciary',
-    ipa: '/fɪˈdjuːʃiəri/',
+    ipa: '/fɪˈduːʃieri/',
     meaning: 'người được ủy thác; liên quan đến nghĩa vụ ủy thác',
     partOfSpeech: 'noun',
     example: 'The board members have a fiduciary duty to act in the best interest of shareholders.',
@@ -321,7 +321,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-033',
     word: 'proxy',
-    ipa: '/ˈprɒksi/',
+    ipa: '/ˈprɑːksi/',
     meaning: 'ủy quyền; người được ủy quyền',
     partOfSpeech: 'noun',
     example: 'Shareholders who cannot attend may vote by proxy at the annual general meeting.',
@@ -421,7 +421,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-043',
     word: 'non-compete',
-    ipa: '/ˌnɒn kəmˈpiːt/',
+    ipa: '/ˌnɑːn kəmˈpiːt/',
     meaning: 'thỏa thuận không cạnh tranh',
     partOfSpeech: 'noun',
     example: 'The employee signed a non-compete agreement preventing work for rivals for two years.',
@@ -709,7 +709,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-072',
     word: 'confidential',
-    ipa: '/ˌkɒnfɪˈdenʃəl/',
+    ipa: '/ˌkɑːnfɪˈdenʃəl/',
     meaning: 'bảo mật; mật',
     partOfSpeech: 'adjective',
     example: 'All terms of the settlement agreement are strictly confidential.',
@@ -779,7 +779,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-079',
     word: 'voluntary',
-    ipa: '/ˈvɒləntəri/',
+    ipa: '/ˈvɑːləntəri/',
     meaning: 'tự nguyện',
     partOfSpeech: 'adjective',
     example: 'The employee\'s resignation was voluntary and not the result of any pressure.',
@@ -789,7 +789,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-080',
     word: 'intellectual property',
-    ipa: '/ˌɪntəlektʃuəl ˈprɒpəti/',
+    ipa: '/ˌɪntəlektʃuəl ˈprɑːpərti/',
     meaning: 'sở hữu trí tuệ',
     partOfSpeech: 'noun',
     example: 'The company aggressively protects its intellectual property against infringement.',
@@ -799,7 +799,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-081',
     word: 'confidentiality',
-    ipa: '/ˌkɒnfɪˌdenʃiˈælɪti/',
+    ipa: '/ˌkɑːnfɪˌdenʃiˈælɪti/',
     meaning: 'tính bảo mật; nghĩa vụ giữ bí mật',
     partOfSpeech: 'noun',
     example: 'The NDA ensures the confidentiality of proprietary business information.',
@@ -869,7 +869,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-088',
     word: 'obligation',
-    ipa: '/ˌɒblɪˈɡeɪʃən/',
+    ipa: '/ˌɑːblɪˈɡeɪʃən/',
     meaning: 'nghĩa vụ; trách nhiệm',
     partOfSpeech: 'noun',
     example: 'Each party has a legal obligation to fulfill the terms of the agreement.',
@@ -889,7 +889,7 @@ export const legalVocabulary: VocabularyWord[] = [
   {
     id: 'v-leg-090',
     word: 'confidentiality agreement',
-    ipa: '/ˌkɒnfɪˌdenʃiˈælɪti əˈɡriːmənt/',
+    ipa: '/ˌkɑːnfɪˌdenʃiˈælɪti əˈɡriːmənt/',
     meaning: 'thỏa thuận bảo mật (NDA)',
     partOfSpeech: 'noun',
     example: 'New employees are required to sign a confidentiality agreement before starting work.',
