@@ -1,7 +1,6 @@
 import { createContext, useContext, useReducer, useEffect, ReactNode } from 'react'
 import { UserProgress, TestResult, VocabularyProgress, GrammarProgress } from '../types'
-
-const STORAGE_KEY = 'toeic-progress'
+import { CURRENT_STORAGE_KEY, loadAndMigrate } from '../utils/migrateVocabularyProgress'
 
 function makeInitialProgress(): UserProgress {
   return {
@@ -11,7 +10,7 @@ function makeInitialProgress(): UserProgress {
     testHistory: [],
     vocabularyProgress: [],
     grammarProgress: [],
-    version: 1,
+    version: 2,
   }
 }
 
@@ -73,23 +72,14 @@ const AppContext = createContext<AppContextType | null>(null)
 export function AppProvider({ children }: { children: ReactNode }) {
   const [progress, dispatch] = useReducer(reducer, null, () => {
     try {
-      const stored = localStorage.getItem(STORAGE_KEY)
-      if (stored) {
-        const parsed = JSON.parse(stored) as UserProgress
-        // Backfill version for existing sessions without it
-        if (parsed.version === undefined) {
-          parsed.version = 1 // Legacy sessions start at v1
-        }
-        return parsed
-      }
-      return makeInitialProgress()
+      return loadAndMigrate()
     } catch {
       return makeInitialProgress()
     }
   })
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(progress))
+    localStorage.setItem(CURRENT_STORAGE_KEY, JSON.stringify(progress))
   }, [progress])
 
   return <AppContext.Provider value={{ progress, dispatch }}>{children}</AppContext.Provider>
