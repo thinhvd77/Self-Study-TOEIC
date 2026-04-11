@@ -22,6 +22,8 @@ npm run dev          # Start dev server (port 5173)
 npm run build        # Production build (verified ✓)
 npm test             # Run all tests (verified ✓)
 npx vitest run src/path/to/test.ts  # Run specific test
+npx vitest run --exclude '.worktrees/**'  # Run main src tests only (clean output during feature branches)
+npx vitest run .worktrees/<branch>/src/  # Test specific worktree
 ```
 
 Commits: Use `feat: ` for features, `fix: ` for bug fixes, `chore: ` for setup/tooling
@@ -94,6 +96,14 @@ All types defined in `src/types/index.ts`.
 - **Derived stats memoization**: Wrap all derived stats calculations (vocab counts, grammar counts, test counts, chart data transformations) in `useMemo` with specific array dependencies to prevent recomputation on every context update. Example: `useMemo(() => progress.vocabularyProgress.filter(...).length, [progress.vocabularyProgress])`.
 - **VocabQuiz render guards**: `VocabQuiz.tsx` returns results view when `isSubmitted && currentIndex === questions.length` (line 70) before accessing `questions[currentIndex]` (line 90). The early return safely guards against out-of-bounds access — don't remove this guard as it protects the subsequent render logic.
 
+## Vocabulary Data Pattern
+
+Every vocabulary file exports `const topicVocabulary: VocabularyWord[] = [...]` with 100–150 words. Structure per entry: `id` (sequential v-XXX-001..N), `word`, `ipa` (American English only, `/.../ format`), `meaning` (Vietnamese, ≤70 chars for office/finance), `partOfSpeech` (noun|verb|adjective|adverb|preposition|conjunction), `example` (business context), `topic` (exact match), optional `synonyms`. POS target: ~15–20% verbs, ~10–15% adjectives, rest nouns. After writing, register in `src/pages/Vocabulary/index.tsx` `allTopics` and in `src/data/__tests__/vocabulary-data.test.ts` `allVocabulary` with `expectedCount` field.
+
+## IPA Standardization (American English)
+
+All IPA must use General American English. Key fixes: `/ɒ/` → `/ɑː/` (contract, policy, toxic); `/ɒ/` → `/ɔː/` when before r (deforestation); `/tj/` cluster (British yod-forming) → yod-dropped (stewardship `/ˈstuːərdʒɪp/` not `/ˈstjuːərdʒɪp/`); `/njuː/` → `/nuː/` in General American (renewable, neutral).
+
 ## Practice Modes
 
 - **Luyện theo Part**: Single part, optional timer (Part 5, 6, 7 enabled; Part 1-4 require audio files)
@@ -119,6 +129,13 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - TDD workflow: Create test first, verify fails with `npx vitest run src/path/to/test.ts`, implement, verify passes
 - `npm test` runs 86 tests across 10 test files (main src). Note: `npm test` also picks up tests from `.worktrees/` — in-progress worktree work may show failures; this is expected.
 - To run only main src tests without worktree noise: `npx vitest run --exclude '.worktrees/**'`
+
+## Vocabulary Testing Constraints
+
+- Office + finance: every example must contain one of (company|team|meeting|project|client|manager|department|report|policy|employee)
+- Office + finance: meanings ≤ 70 chars
+- Cross-topic duplicates (business/hr/manufacturing/office/finance): ≤ 20 total
+- Grammar lesson content: ≥ 1800 characters (depth gate for consistency with gram-01)
 
 ## Verification Criteria
 
