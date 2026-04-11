@@ -108,4 +108,6 @@ export interface UserProgress {
   vocabularyProgress: VocabularyProgress[]
   grammarProgress: GrammarProgress[]
   version: number
+  dailyBatchSize: number
+  topicBatches: Record<string, { date: string; startIndex: number }>
 }

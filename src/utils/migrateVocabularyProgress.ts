@@ -17,6 +17,8 @@ function makeInitialProgress(): UserProgress {
     vocabularyProgress: [],
     grammarProgress: [],
     version: LATEST_VERSION,
+    dailyBatchSize: 15,
+    topicBatches: {},
   }
 }
 
@@ -88,6 +90,13 @@ export function migrateProgress(raw: unknown): UserProgress {
     vocabularyProgress,
     grammarProgress,
     version: LATEST_VERSION,
+    dailyBatchSize: typeof legacy.dailyBatchSize === 'number' ? legacy.dailyBatchSize : 15,
+    topicBatches:
+      typeof legacy.topicBatches === 'object' &&
+      legacy.topicBatches !== null &&
+      !Array.isArray(legacy.topicBatches)
+        ? (legacy.topicBatches as Record<string, { date: string; startIndex: number }>)
+        : {},
   }
 }
 
@@ -106,7 +115,11 @@ export function loadAndMigrate(): UserProgress {
     if (v2Stored) {
       const v2Parsed = JSON.parse(v2Stored) as UserProgress
       if (v2Parsed.version === LATEST_VERSION) {
-        return v2Parsed
+        return {
+          ...v2Parsed,
+          dailyBatchSize: v2Parsed.dailyBatchSize ?? 15,
+          topicBatches: v2Parsed.topicBatches ?? {},
+        }
       }
     }
   } catch {

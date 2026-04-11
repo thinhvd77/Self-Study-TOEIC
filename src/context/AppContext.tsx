@@ -11,6 +11,8 @@ function makeInitialProgress(): UserProgress {
     vocabularyProgress: [],
     grammarProgress: [],
     version: 2,
+    dailyBatchSize: 15,
+    topicBatches: {},
   }
 }
 
