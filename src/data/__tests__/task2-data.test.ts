@@ -25,7 +25,7 @@ describe('Task 2 sample data', () => {
 
   it('provides parts of speech lesson with exercises', () => {
     expect(partsOfSpeechLesson.id).toBe('gram-01')
-    expect(partsOfSpeechLesson.exercises).toHaveLength(5)
+    expect(partsOfSpeechLesson.exercises).toHaveLength(10)
   })
 
   it('provides 16-week roadmap', () => {
