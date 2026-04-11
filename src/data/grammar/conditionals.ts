@@ -5,133 +5,108 @@ export const conditionalsLesson: GrammarLesson = {
   title: 'Câu điều kiện (Conditional Sentences)',
   order: 8,
   content: `
-## Câu điều kiện (Conditional Sentences)
+## Mục tiêu bài học
+- Nhận ra nhanh 4 loại câu điều kiện: zero, first, second, và third conditional.
+- Phân biệt **khả năng thực tế**, **tình huống giả định**, và **sự tiếc nuối về quá khứ** để chọn đúng mẫu động từ.
 
-Câu điều kiện diễn tả **mối quan hệ nguyên nhân - kết quả** giữa hai mệnh đề. Trong TOEIC Part 5 và 6, bạn thường gặp dạng câu hỏi yêu cầu chọn đúng thì động từ trong câu điều kiện. Mẹo quan trọng: hãy xác định **loại điều kiện** dựa vào thì của động từ trong cả hai vế.
+## Khái niệm cốt lõi
+Câu điều kiện có 2 phần: **mệnh đề điều kiện** và **mệnh đề kết quả**. Trong TOEIC, bạn không cần học thuộc định nghĩa dài; bạn cần nhìn xem câu đang nói về:
+- **Sự thật/quy tắc chung** -> zero conditional
+- **Khả năng có thể xảy ra thật** -> first conditional
+- **Giả định không có thật ở hiện tại/tương lai** -> second conditional
+- **Tiếc nuối về chuyện đã không xảy ra trong quá khứ** -> third conditional
 
----
+## Cách nhận diện trong câu
+- Thấy **if + hiện tại đơn**, và vế kia cũng là hiện tại đơn -> zero conditional.
+- Thấy **if + hiện tại đơn** nhưng vế kết quả có **will + V** -> first conditional.
+- Thấy **if + quá khứ đơn** và vế kết quả có **would + V** -> second conditional.
+- Thấy **if + had + V3** và vế kết quả có **would have + V3** -> third conditional.
+- Thấy **unless** -> hiểu nhanh là **if ... not**; thường đi cùng zero hoặc first conditional.
+- Các cụm như **provided that** hoặc **as long as** cũng có thể mở đầu mệnh đề điều kiện. Với **in case**, hãy hiểu là “để phòng khi”, không xem như marker điều kiện cơ bản trong bài này.
 
-### Loại 0 – Zero Conditional (Sự thật hiển nhiên / Quy luật tự nhiên)
+## Công thức/mẫu cần nhớ
+- Zero conditional: \`if + present simple, present simple\`
+- First conditional: \`if + present simple, will + base verb\`
+- Second conditional: \`if + past simple, would + base verb\`
+- Third conditional: \`if + past perfect, would have + past participle\`
+- Với động từ \`to be\` trong second conditional: ưu tiên \`If I were ...\`
+- \`unless + present simple\` = \`if ... not\` trong câu điều kiện thực tế
 
-**Cấu trúc:** If + Present Simple, Present Simple
+## Lỗi thường gặp
+- Viết \`if + will\` trong first conditional. Sau **if** thường không dùng **will**.
+- Thấy **would** rồi vẫn chọn hiện tại đơn ở vế điều kiện, làm hỏng second conditional.
+- Nhầm third conditional với second conditional: nếu có **had + V3**, hãy nghĩ ngay đến chuyện tiếc nuối trong quá khứ.
+- Dịch \`unless\` như \`if\` bình thường và quên mất nghĩa phủ định của nó.
+- Dùng \`was\` thay vì \`were\` trong mẫu chuẩn \`If I were ...\`.
 
-Dùng để diễn tả **sự thật, quy luật khoa học, thói quen** luôn luôn đúng.
+## Mẹo làm TOEIC Part 5
+Hãy nhìn **cặp động từ** trước khi nhìn nghĩa. Một vế sẽ tiết lộ loại câu điều kiện, và loại đó sẽ khóa luôn mẫu động từ ở vế còn lại. Trong nhiều câu TOEIC, chỉ cần thấy **will**, **would**, hoặc **would have** là bạn đã loại được phần lớn đáp án.
 
-- "If water reaches 100°C, it boils." (Nếu nước đạt 100°C, nó sôi.)
-- "If employees are late, they receive a warning." (Nếu nhân viên đi trễ, họ bị cảnh cáo.)
-
-> **Lưu ý:** Cả hai vế đều dùng **Present Simple**. Có thể thay "if" bằng "when" mà không đổi nghĩa.
-
----
-
-### Loại 1 – First Conditional (Điều kiện có thể xảy ra ở tương lai)
-
-**Cấu trúc:** If + Present Simple, will + động từ nguyên mẫu
-
-Dùng để nói về **khả năng thực tế** có thể xảy ra trong tương lai.
-
-- "If we finish early, we will celebrate." (Nếu chúng ta hoàn thành sớm, chúng ta sẽ ăn mừng.)
-- "If the client approves the proposal, we will sign the contract." (Nếu khách hàng duyệt đề xuất, chúng ta sẽ ký hợp đồng.)
-
-> **Mẹo TOEIC:** Mệnh đề "if" dùng thì **hiện tại đơn** (KHÔNG dùng "will"), mệnh đề kết quả dùng **will + V**.
-
----
-
-### Loại 2 – Second Conditional (Điều kiện không có thực ở hiện tại)
-
-**Cấu trúc:** If + Past Simple, would + động từ nguyên mẫu
-
-Dùng để nói về **tình huống giả định, không có thật** ở hiện tại hoặc tương lai.
-
-- "If I were the manager, I would change the policy." (Nếu tôi là giám đốc, tôi sẽ thay đổi chính sách.)
-- "If the company had more funding, it would hire new staff." (Nếu công ty có nhiều kinh phí hơn, họ sẽ tuyển thêm nhân viên.)
-
-> **Lưu ý đặc biệt:** Với động từ "to be", luôn dùng **were** cho mọi ngôi (I/he/she/it were), không dùng "was" trong văn viết chuẩn.
-
----
-
-### Loại 3 – Third Conditional (Điều kiện không có thực trong quá khứ)
-
-**Cấu trúc:** If + Past Perfect, would have + past participle
-
-Dùng để nói về **tình huống không xảy ra trong quá khứ** và kết quả giả định của nó.
-
-- "If she had prepared more, she would have passed the interview." (Nếu cô ấy chuẩn bị kỹ hơn, cô ấy đã vượt qua phỏng vấn rồi.)
-- "If they had invested earlier, they would have made a profit." (Nếu họ đầu tư sớm hơn, họ đã có lợi nhuận rồi.)
-
----
-
-### Unless = If...not
-
-**Unless** có nghĩa là "nếu không" (= if...not). Cấu trúc theo cùng loại điều kiện.
-
-- "Unless you confirm by Friday, we will cancel the order." = "If you do not confirm by Friday, we will cancel the order."
-- "Unless the report is submitted, the project will be delayed."
-
----
-
-### ⚠️ Mẹo TOEIC quan trọng
-
-Để xác định loại câu điều kiện trong bài thi, hãy **nhìn vào thì của cả hai vế**:
-
-| Loại | Mệnh đề IF | Mệnh đề kết quả |
-|------|-----------|----------------|
-| Zero | Present Simple | Present Simple |
-| First | Present Simple | will + V |
-| Second | Past Simple | would + V |
-| Third | Past Perfect | would have + V3 |
-
-Khi gặp chỗ trống, hãy xác định loại điều kiện từ vế còn lại, rồi chọn đúng thì cho vế chứa chỗ trống.
-  `.trim(),
+## Tóm tắt nhanh
+- Zero: sự thật chung -> present / present
+- First: khả năng thật -> present / will + V
+- Second: giả định hiện tại -> past / would + V
+- Third: tiếc nuối quá khứ -> had + V3 / would have + V3
+- **unless** = **if ... not**
+`.trim(),
   examples: [
     {
-      english: 'If the manager _______ (approve) the budget, we will start the project next week.',
-      vietnamese: 'Mệnh đề kết quả dùng "will start" → đây là First Conditional. Mệnh đề "if" phải dùng Present Simple: **approves**. (Nếu giám đốc phê duyệt ngân sách, chúng ta sẽ bắt đầu dự án vào tuần tới.)',
+      english: 'If the shipment arrives today, we will send the invoices this afternoon.',
+      vietnamese:
+        'Đây là **first conditional** vì câu nói về khả năng thực tế trong tương lai. Cặp mẫu nhìn thấy là **if + present simple** (arrives) và **will + V** (will send).',
     },
     {
-      english: 'If I _______ (be) the CEO, I would restructure the entire department.',
-      vietnamese: 'Mệnh đề kết quả dùng "would restructure" → đây là Second Conditional (giả định không có thực ở hiện tại). Mệnh đề "if" dùng Past Simple, và với "to be" luôn dùng **were**: **were**. (Nếu tôi là CEO, tôi sẽ tái cơ cấu toàn bộ phòng ban.)',
+      english: 'If I were the team leader, I would call the client immediately.',
+      vietnamese:
+        'Đây là **second conditional** vì người nói giả định một tình huống không thật ở hiện tại. Mẫu đúng là **if + past simple** (were) và **would + V** (would call).',
     },
     {
-      english: 'If the team had communicated better, they _______ (avoid) the costly mistake.',
-      vietnamese: 'Mệnh đề "if" dùng "had communicated" (Past Perfect) → đây là Third Conditional (không có thực trong quá khứ). Mệnh đề kết quả phải dùng: **would have avoided**. (Nếu nhóm đã giao tiếp tốt hơn, họ đã tránh được sai lầm tốn kém đó.)',
+      english: 'If the team had checked the figures, it would have avoided the error.',
+      vietnamese:
+        'Đây là **third conditional** vì câu nói về một điều đã không xảy ra trong quá khứ và kết quả đáng tiếc. Mẫu là **if + had + V3** (had checked) và **would have + V3** (would have avoided).',
     },
   ],
   exercises: [
     {
       id: 'gram-08-ex01',
-      question: 'If you heat ice, it _______ into water.',
-      options: ['melts', 'will melt', 'would melt', 'would have melted'],
+      question:
+        'If employees miss the safety drill, they always _______ a follow-up session under company policy.',
+      options: ['attend', 'will attend', 'would attend', 'would have attended'],
       correctAnswer: 0,
-      explanation: 'Đây là Zero Conditional – sự thật khoa học luôn đúng. Cả hai vế đều dùng Present Simple: **melts**. (Nếu bạn làm nóng nước đá, nó tan thành nước.)',
+      explanation:
+        'Tín hiệu **always** và cụm **under company policy** cho biết đây là quy định chung, nên dùng **zero conditional**. Cặp mẫu đúng là **if + present simple** (miss) và **present simple** (attend), vì vậy chọn **attend**.',
     },
     {
       id: 'gram-08-ex02',
-      question: 'If the client _______ by noon, we will start the meeting without them.',
-      options: ['will not arrive', 'did not arrive', 'does not arrive', 'had not arrived'],
-      correctAnswer: 2,
-      explanation: 'Mệnh đề kết quả dùng "will start" → First Conditional. Mệnh đề "if" phải dùng Present Simple (phủ định): **does not arrive**. (Nếu khách hàng không đến vào buổi trưa, chúng ta sẽ bắt đầu cuộc họp mà không có họ.)',
+      question: 'If the shipment arrives today, we _______ the replacement units immediately.',
+      options: ['ship', 'will ship', 'would ship', 'would have shipped'],
+      correctAnswer: 1,
+      explanation:
+        'Đây là **first conditional** vì câu nói về khả năng thực tế ở tương lai. Vế điều kiện đã dùng **if + present simple** (arrives), nên vế kết quả phải theo cặp **will + base verb** -> **will ship**.',
     },
     {
       id: 'gram-08-ex03',
-      question: 'If our company _______ more resources, we would expand to new markets.',
-      options: ['has', 'will have', 'had', 'had had'],
+      question: 'If I _______ in charge of recruitment, I would shorten the interview process.',
+      options: ['am', 'will be', 'were', 'had been'],
       correctAnswer: 2,
-      explanation: 'Mệnh đề kết quả dùng "would expand" → Second Conditional (giả định không có thực ở hiện tại). Mệnh đề "if" phải dùng Past Simple: **had**. (Nếu công ty chúng tôi có thêm nguồn lực, chúng tôi sẽ mở rộng sang thị trường mới.)',
+      explanation:
+        'Đây là **second conditional** vì vế kết quả có **would shorten**, báo hiệu tình huống giả định ở hiện tại. Cặp mẫu cần là **if + past simple** và **would + base verb**; với \`to be\`, dạng chuẩn là **were**.',
     },
     {
       id: 'gram-08-ex04',
-      question: 'If the team had submitted the proposal on time, they _______ the contract.',
-      options: ['win', 'will win', 'would win', 'would have won'],
+      question: 'If the team had checked the figures, they _______ the reporting error.',
+      options: ['avoid', 'will avoid', 'would avoid', 'would have avoided'],
       correctAnswer: 3,
-      explanation: 'Mệnh đề "if" dùng "had submitted" (Past Perfect) → Third Conditional (quá khứ không có thực). Mệnh đề kết quả phải dùng would have + V3: **would have won**. (Nếu nhóm đã nộp đề xuất đúng hạn, họ đã giành được hợp đồng đó rồi.)',
+      explanation:
+        'Đây là **third conditional** vì vế if đã có **had checked**, tức **if + past perfect**. Theo cặp mẫu của third conditional, vế kết quả phải là **would have + past participle**, nên đáp án đúng là **would have avoided**.',
     },
     {
       id: 'gram-08-ex05',
-      question: '_______ you practice regularly, your TOEIC score will improve significantly.',
-      options: ['If', 'Unless', 'Although', 'Whether'],
+      question: 'Unless the vendor _______ the contract today, we will postpone the launch.',
+      options: ['signs', 'will sign', 'signed', 'had signed'],
       correctAnswer: 0,
-      explanation: 'Câu này diễn tả điều kiện có thể xảy ra (First Conditional): nếu luyện tập thường xuyên thì điểm sẽ tăng. Dùng **If** để bắt đầu mệnh đề điều kiện. "Unless" sẽ có nghĩa ngược lại (= if you do not practice). (Nếu bạn luyện tập thường xuyên, điểm TOEIC của bạn sẽ cải thiện đáng kể.)',
+      explanation:
+        'Từ khóa **unless** có nghĩa là **if ... not**, nên câu này vẫn là **first conditional**. Cặp mẫu đúng là **unless + present simple** và **will + base verb**, vì vậy chọn **signs**.',
     },
     {
       id: 'gram-08-ex06',

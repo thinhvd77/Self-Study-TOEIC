@@ -5,74 +5,54 @@ export const passiveVoiceLesson: GrammarLesson = {
   title: 'Câu bị động (Passive Voice)',
   order: 3,
   content: `
-## Câu bị động (Passive Voice)
+## Mục tiêu bài học
+- Nhận ra khi nào câu cần bị động thay vì chủ động.
+- Chọn đúng dạng \`be + V3/ed\` theo thì của câu.
 
-Câu bị động được dùng rất phổ biến trong văn phong kinh doanh và học thuật — chính là ngữ cảnh thường gặp nhất trong TOEIC. Hiểu rõ cấu trúc này giúp bạn giải quyết nhanh nhiều câu hỏi Part 5.
+## Khái niệm cốt lõi
+Câu bị động được dùng khi người viết muốn nhấn mạnh người/vật nhận hành động hơn là người thực hiện hành động. Trong TOEIC, bị động rất hay xuất hiện trong email, thông báo, quy trình, và quy định công ty.
 
-### Cấu trúc cơ bản
+## Cách nhận diện trong câu
+- Chủ ngữ là thứ "được xử lý/được gửi/được yêu cầu" -> nghĩ đến bị động.
+- Có dạng \`be\` + past participle (\`sent\`, \`approved\`, \`completed\`) -> bị động.
+- Nếu người làm hành động không quan trọng hoặc không xuất hiện -> thường dùng bị động.
+- Kiểm tra thì của động từ \`be\` trước, sau đó mới chọn V3/ed.
 
-**Câu chủ động (Active):** Subject + verb + object
-> "The manager approved the proposal." (Người quản lý phê duyệt đề xuất.)
+## Công thức/mẫu cần nhớ
+- Present passive: \`am/is/are + V3\`
+- Past passive: \`was/were + V3\`
+- Future passive: \`will be + V3\`
+- Modal passive: \`can/must/should be + V3\`
 
-**Câu bị động (Passive):** Subject + **be** + **past participle** (+ by + agent)
-> "The proposal **was approved** (by the manager)." (Đề xuất được phê duyệt.)
+## Lỗi thường gặp
+- Chọn V-ing hoặc V nguyên mẫu sau \`is/was/will be\`.
+- Thấy một động từ quen mắt rồi chọn active dù chủ ngữ không tự thực hiện hành động.
+- Quên chia thì cho \`be\`.
 
-Quy tắc: tân ngữ của câu chủ động trở thành chủ ngữ của câu bị động. Động từ "be" được chia theo thì, sau đó là **past participle** (quá khứ phân từ).
+## Mẹo làm TOEIC Part 5
+Hỏi nhanh: chủ ngữ có tự làm hành động này không? Nếu không, gần như chắc chắn cần bị động. Sau đó chỉ còn việc chọn đúng thì của \`be\`.
 
-### Câu bị động ở các thì khác nhau
-
-| Thì | Cấu trúc bị động | Ví dụ |
-|-----|-----------------|-------|
-| **Present Simple** | am/is/are + pp | "Reports are submitted weekly." |
-| **Past Simple** | was/were + pp | "The contract was signed yesterday." |
-| **Present Perfect** | have/has been + pp | "The order has been shipped." |
-| **Future Simple** | will be + pp | "Employees will be notified soon." |
-| **Present Continuous** | am/is/are being + pp | "The system is being updated." |
-
-*(pp = past participle)*
-
-### Khi nào dùng câu bị động?
-
-**1. Không biết hoặc không cần nhắc đến chủ thể hành động**
-> "The package was delivered this morning." (Ai giao không quan trọng.)
-
-**2. Văn phong trang trọng, công sở (TOEIC hay dùng!)**
-> "All staff are required to attend the meeting."
-
-**3. Muốn nhấn mạnh đối tượng chịu tác động, không phải người làm**
-> "The budget has been reduced by 20%." (Nhấn mạnh vào ngân sách, không phải ai cắt.)
-
-### Cụm "by + agent" (tác nhân)
-
-Cụm **by + agent** là tùy chọn — chỉ thêm khi thông tin về chủ thể quan trọng:
-> "The report was written **by the finance team**."
-
-Nếu chủ thể là "someone", "people", "they" chung chung → bỏ cụm by:
-> "The results will be announced tomorrow." (không cần "by someone")
-
-### Meo TOEIC: nhận biết câu bị động nhanh
-
-Trong TOEIC Part 5, khi bạn thấy các đáp án có dạng **be + past participle**, đó là tín hiệu của câu bị động:
-- Nhìn vào chủ ngữ: có phải là vật/người chịu tác động không?
-- Nhìn vào thì của câu: chọn dạng "be" đúng thì (is/was/has been/will be...)
-- Chú ý phân biệt: **"is done"** (bị động) vs **"has done"** (chủ động, hiện tại hoàn thành)
-
-Ví dụ bẫy hay gặp:
-- "The meeting **was held**" ✓ (bị động, past simple)
-- "The meeting **held**" ✗ (thiếu "be", sai cấu trúc)
-  `.trim(),
+## Tóm tắt nhanh
+- Bị tác động -> nghĩ đến passive
+- Passive = \`be + V3\`
+- Xác định thì trước, chia \`be\` sau
+- Modal + passive = \`modal + be + V3\`
+`.trim(),
   examples: [
     {
-      english: 'All invoices must _______ before the end of the fiscal year.',
-      vietnamese: 'Chủ ngữ "invoices" là vật chịu tác động (bị xử lý). Cần câu bị động với modal verb: **be processed**. Cấu trúc: modal + be + past participle.',
+      english: 'The final report was submitted to the director yesterday.',
+      vietnamese:
+        'Báo cáo là thứ nhận hành động "submit", không phải tự nộp, nên câu này dùng bị động ở quá khứ.',
     },
     {
-      english: 'The new policy _______ to all employees last Friday.',
-      vietnamese: '"Last Friday" chỉ thời điểm cụ thể trong quá khứ. Chủ ngữ "policy" chịu hành động thông báo → Past Simple bị động: **was announced**.',
+      english: 'All visitors must be registered at the front desk.',
+      vietnamese:
+        'Sau modal "must" mà muốn diễn tả bị động thì dùng cấu trúc "must be + V3".',
     },
     {
-      english: 'Several improvements _______ to the software since the last update.',
-      vietnamese: '"Since the last update" chỉ khoảng thời gian từ quá khứ đến hiện tại → Present Perfect bị động: **have been made**. Cấu trúc: have/has been + past participle.',
+      english: 'The new policy will be announced next Monday.',
+      vietnamese:
+        'Thông báo là hành động xảy ra với "policy", nên dùng future passive: "will be announced".',
     },
   ],
   exercises: [
@@ -81,35 +61,40 @@ Ví dụ bẫy hay gặp:
       question: 'The annual report _______ by the accounting department every December.',
       options: ['prepares', 'is prepared', 'has prepared', 'preparing'],
       correctAnswer: 1,
-      explanation: 'Chủ ngữ "annual report" là vật được chuẩn bị (chịu tác động). Thói quen hàng năm (every December) → Present Simple bị động: **is prepared**. Cấu trúc: is/am/are + past participle.',
+      explanation:
+        'Chủ ngữ "The annual report" nhận hành động chứ không tự thực hiện việc chuẩn bị, nên câu cần dạng passive. Vì mốc "every December" diễn tả thói quen hiện tại, dạng đúng là Present Simple passive "is prepared"; các lựa chọn còn lại đều là active hoặc sai cấu trúc.',
     },
     {
       id: 'gram-03-ex02',
-      question: 'The new branch office _______ in Singapore last year.',
+      question: 'The new branch office _______ by the CEO in Singapore last year.',
       options: ['opened', 'was opened', 'has been opened', 'is opening'],
       correctAnswer: 1,
-      explanation: '"Last year" chỉ thời điểm xác định trong quá khứ. Chủ ngữ "branch office" chịu hành động khai trương → Past Simple bị động: **was opened**. Cấu trúc: was/were + past participle.',
+      explanation:
+        'Cụm "by the CEO" cho thấy chủ ngữ "The new branch office" là đối tượng nhận hành động, nên câu bắt buộc phải ở dạng bị động. Với mốc quá khứ rõ ràng "last year", đáp án đúng là Past Simple passive "was opened"; "opened" thiếu trợ động từ bị động, còn "has been opened" và "is opening" đều sai về thì.',
     },
     {
       id: 'gram-03-ex03',
       question: 'The project deadline _______ until the end of next month.',
       options: ['extended', 'will extend', 'will be extended', 'has extended'],
       correctAnswer: 2,
-      explanation: 'Hành động xảy ra trong tương lai ("next month"). Chủ ngữ "deadline" chịu tác động (được gia hạn) → Future Simple bị động: **will be extended**. Cấu trúc: will be + past participle.',
+      explanation:
+        'Chủ ngữ "The project deadline" nhận hành động gia hạn chứ không tự gia hạn, nên phải chọn passive form. Vì mốc thời gian hướng tới tương lai "until the end of next month", đáp án đúng là Future passive "will be extended"; các đáp án khác thiếu "be" hoặc là active.',
     },
     {
       id: 'gram-03-ex04',
       question: 'All expenses _______ by the finance team before reimbursement.',
       options: ['must review', 'must be reviewing', 'must be reviewed', 'must have reviewed'],
       correctAnswer: 2,
-      explanation: 'Chủ ngữ "expenses" là vật chịu sự xem xét. Câu có modal verb "must" → bị động với modal: **must be reviewed**. Cấu trúc: modal + be + past participle.',
+      explanation:
+        'Chủ ngữ "All expenses" là đối tượng được xem xét, nghĩa là chủ ngữ chịu tác động của hành động nên câu cần bị động. Sau modal "must", cấu trúc đúng là "must be reviewed"; ba đáp án còn lại hoặc là active, hoặc là dạng tiếp diễn/hoàn thành không phù hợp với mẫu modal passive.',
     },
     {
       id: 'gram-03-ex05',
       question: 'Three new products _______ since the company changed its strategy.',
       options: ['launched', 'were launched', 'have been launched', 'are launching'],
       correctAnswer: 2,
-      explanation: '"Since the company changed" chỉ khoảng thời gian từ quá khứ đến hiện tại. Chủ ngữ "products" chịu hành động tung ra thị trường → Present Perfect bị động: **have been launched**. Cấu trúc: have/has been + past participle.',
+      explanation:
+        'Chủ ngữ "Three new products" nhận hành động tung ra thị trường, nên câu phải ở dạng passive chứ không phải active. Vì có "since the company changed its strategy", hành động được nhìn từ quá khứ đến hiện tại, nên dạng đúng là Present Perfect passive "have been launched".',
     },
     {
       id: 'gram-03-ex06',

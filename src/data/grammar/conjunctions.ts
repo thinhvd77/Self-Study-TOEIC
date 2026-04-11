@@ -5,88 +5,61 @@ export const conjunctionsLesson: GrammarLesson = {
   title: 'Liên từ & Từ nối (Conjunctions & Connectors)',
   order: 4,
   content: `
-## Liên từ & Từ nối (Conjunctions & Connectors)
+## Mục tiêu bài học
+- Phân biệt liên từ, connector, và conjunctive adverb trong câu TOEIC.
+- Chọn từ nối dựa trên quan hệ logic giữa hai mệnh đề thay vì đoán theo nghĩa chung chung.
 
-Liên từ và từ nối là những từ dùng để kết nối các ý, câu hoặc mệnh đề với nhau. Trong TOEIC Part 5 & 6, bạn cần xác định **mối quan hệ logic** giữa các vế câu để chọn liên từ phù hợp.
+## Khái niệm cốt lõi
+- **Conjunction / liên từ** nối hai từ, hai cụm, hoặc hai mệnh đề. Ví dụ: \`and, but, so\`.
+- **Subordinating conjunction** nối mệnh đề phụ với mệnh đề chính. Ví dụ: \`although, because, if\`.
+- **Conjunctive adverb / trạng từ liên kết** nối hai mệnh đề độc lập, thường đi sau dấu chấm phẩy hoặc đứng đầu câu và có dấu phẩy. Ví dụ: \`however, therefore, moreover\`.
+- Trong TOEIC Part 5, câu hỏi thường kiểm tra xem hai vế có quan hệ **kết quả, tương phản, nhượng bộ, bổ sung, điều kiện** hay không.
 
-### 1. Liên từ kết hợp (Coordinating Conjunctions) — FANBOYS
+## Cách nhận diện trong câu
+- Nếu câu có hai mệnh đề và vế sau là **kết quả** của vế trước, nghĩ đến \`so\`, \`therefore\`, \`consequently\`.
+- Nếu hai vế **trái ngược** nhau, nghĩ đến \`but\`, \`although\`, \`however\`, \`nevertheless\`.
+- Nếu sau chỗ trống là **một mệnh đề đầy đủ** nhưng vế đầu là mệnh đề phụ, liên từ như \`although\`, \`because\`, \`if\` thường phù hợp.
+- Nếu trước chỗ trống có **dấu chấm phẩy** hoặc câu tách làm hai mệnh đề độc lập, ưu tiên conjunctive adverb như \`however\`.
+- Nếu đề cho một **cặp từ**, hãy kiểm tra mẫu song song như \`both...and\`, \`either...or\`, \`not only...but also\`.
 
-Dùng để nối hai mệnh đề độc lập (independent clauses) có cùng cấu trúc ngữ pháp:
+## Công thức/mẫu cần nhớ
+- Kết quả: \`S + V, so + S + V\`
+- Nhượng bộ: \`Although + S + V, S + V\`
+- Trạng từ liên kết: \`S + V; however, S + V\`
+- Điều kiện phủ định: \`S + V not ... unless + S + V\`
+- Tương quan: \`both A and B\`, \`either A or B\`, \`not only A but also B\`
 
-| Liên từ | Ý nghĩa | Ví dụ |
-|---------|---------|-------|
-| **For** | vì (lý do) | She stayed late, for she had more work to finish. |
-| **And** | và (thêm vào) | The report is clear and concise. |
-| **Nor** | cũng không | He didn't call, nor did he email. |
-| **But** | nhưng (tương phản) | The price is high, but the quality is excellent. |
-| **Or** | hoặc (lựa chọn) | You can pay by cash or credit card. |
-| **Yet** | tuy nhiên (tương phản) | It was difficult, yet we succeeded. |
-| **So** | vì vậy (kết quả) | We ran out of stock, so we reordered. |
+## Lỗi thường gặp
+- Nhầm \`although\` với \`however\`: \`although\` đứng trước mệnh đề phụ, còn \`however\` thường đi sau dấu chấm phẩy hoặc đầu câu và có dấu phẩy.
+- Thấy nghĩa "vì vậy" rồi chọn \`so\` dù câu đã có dấu chấm phẩy; khi đó \`therefore\` hoặc \`however\` mới đúng mẫu dấu câu.
+- Quên kiểm tra quan hệ logic giữa hai vế nên chọn từ nối chỉ vì quen mặt.
+- Dùng sai cặp tương quan, ví dụ viết \`both...or\` hoặc \`not only...and\`.
 
-### 2. Liên từ phụ thuộc (Subordinating Conjunctions)
+## Mẹo làm TOEIC Part 5
+Đọc nhanh hai vế và tự hỏi: **vế sau là kết quả, sự nhượng bộ, hay sự đối lập?** Sau đó nhìn dấu câu. Quan hệ logic chọn nhóm từ; dấu câu chọn đúng mẫu trong nhóm đó.
 
-Dùng để nối mệnh đề phụ (dependent clause) với mệnh đề chính (main clause):
-
-- **Because / Since / As** (vì): chỉ nguyên nhân
-  - "Because the client cancelled, we rescheduled the meeting."
-- **Although / Even though / Though** (mặc dù): chỉ sự tương phản
-  - "Although sales dropped, profits remained stable."
-- **While / Whereas** (trong khi / trong khi đó): so sánh tương phản hoặc đồng thời
-  - "While he handles marketing, she focuses on operations."
-- **When / As soon as** (khi / ngay khi): chỉ thời điểm
-  - "Please call us when you arrive."
-- **If** (nếu): điều kiện
-  - "If you have questions, please contact HR."
-- **Unless** (trừ khi): điều kiện phủ định
-  - "Unless you register early, you may not get a seat."
-- **As long as** (miễn là / chừng nào mà): điều kiện liên tục
-  - "As long as the budget allows, we will proceed."
-
-### 3. Trạng từ liên kết (Conjunctive Adverbs)
-
-Dùng sau dấu chấm phẩy (;) hoặc đứng đầu câu để nối hai câu độc lập. Thường đi kèm dấu phẩy sau:
-
-- **However** (tuy nhiên): tương phản
-- **Therefore / Consequently** (vì vậy): kết quả / hệ quả
-- **Moreover / Furthermore / In addition** (hơn nữa): bổ sung
-- **Nevertheless / Nonetheless** (dù vậy): tương phản dù có trở ngại
-- **For example / For instance** (ví dụ): minh họa
-
-Ví dụ: "Sales were low; **however**, customer satisfaction improved."
-
-### 4. Liên từ tương quan (Correlative Conjunctions)
-
-Luôn dùng theo cặp, hai vế phải có cấu trúc song song (parallel structure):
-
-- **Both...and** (cả...lẫn): "Both the manager and the team agreed."
-- **Either...or** (hoặc...hoặc): "Either you confirm today, or we cancel the order."
-- **Neither...nor** (không...cũng không): "Neither the price nor the deadline has changed."
-- **Not only...but also** (không chỉ...mà còn): "Not only did she finish on time, but she also exceeded targets."
-
-### ⚠️ Mẹo TOEIC quan trọng
-
-Khi gặp câu điền liên từ, hãy tự hỏi: **"Mối quan hệ giữa hai vế là gì?"**
-
-- Đối lập / tương phản → **but, however, although, yet, nevertheless**
-- Nguyên nhân – kết quả → **because, since, therefore, consequently, so**
-- Bổ sung thêm → **and, moreover, furthermore, in addition**
-- Điều kiện → **if, unless, as long as**
-- Lựa chọn → **or, either...or, neither...nor**
-
-Lỗi phổ biến: nhầm **although** (mệnh đề phụ) với **however** (trạng từ liên kết). "Although it rained, we continued." ✓ — "However it rained, we continued." ✗
-  `.trim(),
+## Tóm tắt nhanh
+- Kết quả trực tiếp -> \`so\`
+- Nhượng bộ -> \`although\`
+- Hai mệnh đề độc lập + dấu chấm phẩy -> \`however\` / \`therefore\`
+- Điều kiện phủ định -> \`unless\`
+- Hai ý song song -> cặp \`both...and\`, \`either...or\`, \`not only...but also\`
+`.trim(),
   examples: [
     {
-      english: 'The company expanded aggressively; _______, profits declined due to rising costs.',
-      vietnamese: 'Hai vế có nghĩa tương phản (mở rộng nhưng lợi nhuận lại giảm) và dùng dấu chấm phẩy → cần trạng từ liên kết chỉ sự tương phản: **however**.',
+      english: 'The printer was out of ink, so the staff used the machine on the second floor.',
+      vietnamese:
+        'Hai mệnh đề có quan hệ kết quả: máy in hết mực nên nhân viên phải dùng máy khác. Mẫu phù hợp là "mệnh đề, so + mệnh đề".',
     },
     {
-      english: 'Not only did the new policy reduce costs, _______ it also improved employee satisfaction.',
-      vietnamese: 'Cặp liên từ tương quan "Not only...": vế sau phải dùng **but also**. Hai vế cần song song về cấu trúc ngữ pháp.',
+      english: 'Although the proposal was expensive, the director approved it immediately.',
+      vietnamese:
+        'Hai vế mang quan hệ nhượng bộ: đề xuất đắt nhưng vẫn được duyệt. "Although" đứng đầu mệnh đề phụ theo mẫu "Although + S + V, S + V".',
     },
     {
-      english: '_______ the project was completed on time, the client requested several last-minute changes.',
-      vietnamese: 'Dự án hoàn thành đúng hạn NHƯNG khách hàng lại yêu cầu thay đổi → quan hệ tương phản, mệnh đề phụ đứng trước → **Although**.',
+      english: 'The restaurant was crowded; however, the service remained fast and polite.',
+      vietnamese:
+        'Hai mệnh đề độc lập được nối bằng dấu chấm phẩy và có ý tương phản, nên dùng conjunctive adverb "however" theo mẫu "S + V; however, S + V".',
     },
   ],
   exercises: [
@@ -95,35 +68,40 @@ Lỗi phổ biến: nhầm **although** (mệnh đề phụ) với **however** (
       question: 'The new software is expensive _______ it saves the company significant time and resources.',
       options: ['so', 'but', 'for', 'nor'],
       correctAnswer: 1,
-      explanation: 'Hai vế có nghĩa tương phản: đắt tiền ><< tiết kiệm thời gian & tài nguyên → dùng **but** (nhưng). "So" chỉ kết quả, "for" chỉ lý do, "nor" chỉ phủ định thêm — đều không phù hợp.',
+      explanation:
+        'Quan hệ logic là tương phản: phần mềm đắt nhưng lại tiết kiệm thời gian và nguồn lực. Câu dùng mẫu nối hai mệnh đề độc lập "S + V, but + S + V", nên **but** là đáp án đúng.',
     },
     {
       id: 'gram-04-ex02',
       question: '_______ the manager approved the budget, the team began recruiting new staff.',
       options: ['Although', 'Unless', 'As soon as', 'However'],
       correctAnswer: 2,
-      explanation: 'Hai hành động có quan hệ thời gian "ngay khi...thì..." → dùng **As soon as** (ngay khi). "Although" chỉ tương phản, "Unless" chỉ điều kiện phủ định, "However" là trạng từ liên kết không dùng ở đầu mệnh đề phụ.',
+      explanation:
+        'Quan hệ logic là thời gian-kết quả ngay sau đó: vừa được phê duyệt ngân sách thì đội tuyển dụng bắt đầu hành động. Câu cần mẫu mệnh đề phụ thời gian "As soon as + S + V, S + V", nên chọn **As soon as**.',
     },
     {
       id: 'gram-04-ex03',
       question: 'We cannot process your application _______ you submit all the required documents.',
       options: ['unless', 'although', 'moreover', 'so'],
       correctAnswer: 0,
-      explanation: 'Nghĩa: "Chúng tôi không thể xử lý đơn của bạn TRỪ KHI bạn nộp đủ tài liệu" → điều kiện phủ định → **unless** (trừ khi). "Unless" = "if...not", dùng khi đưa ra điều kiện bắt buộc.',
+      explanation:
+        'Quan hệ logic là điều kiện phủ định: không thể xử lý đơn trừ khi bạn nộp đủ giấy tờ. Mẫu phù hợp là "not ... unless + mệnh đề", nên connector đúng là **unless**.',
     },
     {
       id: 'gram-04-ex04',
       question: 'The report was thorough; _______, the board still had several unanswered questions.',
       options: ['therefore', 'furthermore', 'nevertheless', 'consequently'],
       correctAnswer: 2,
-      explanation: 'Báo cáo đầy đủ (tốt), nhưng BAN VẪN CÒN câu hỏi (dù vậy) → tương phản dù có sự tốt đẹp → **nevertheless** (dù vậy). "Therefore/Consequently" chỉ kết quả thuận chiều, "furthermore" bổ sung thêm.',
+      explanation:
+        'Quan hệ logic là nhượng bộ/tương phản: báo cáo rất kỹ nhưng hội đồng vẫn còn thắc mắc. Vì câu có hai mệnh đề độc lập với dấu chấm phẩy, mẫu cần là conjunctive adverb "S + V; nevertheless, S + V", nên chọn **nevertheless**.',
     },
     {
       id: 'gram-04-ex05',
-      question: '_______ the headquarters is in Tokyo, _______ the regional office is in Singapore.',
+      question: '_______ the headquarters _______ the regional office are located in Asia.',
       options: ['Both / and', 'Neither / nor', 'Either / or', 'Not only / but also'],
       correctAnswer: 0,
-      explanation: 'Cả trụ sở chính VÀ văn phòng khu vực đều được đề cập như hai thực tế cùng tồn tại → **Both...and** (cả...lẫn). "Neither...nor" phủ định cả hai, "Either...or" chỉ lựa chọn một trong hai, "Not only...but also" nhấn mạnh bổ sung.',
+      explanation:
+        'Câu diễn tả hai chủ ngữ cùng đúng và cùng chia sẻ một động từ, nên cần cấu trúc song song "Both A and B + plural verb". Vì vậy đáp án đúng là **Both / and**.',
     },
     {
       id: 'gram-04-ex06',

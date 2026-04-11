@@ -5,6 +5,41 @@ export const partsOfSpeechLesson: GrammarLesson = {
   title: 'Loại từ & Vị trí trong câu',
   order: 1,
   content: `
+## Mục tiêu bài học
+- Nhận ra chỗ trống đang cần noun, verb, adjective hay adverb.
+- Loại đáp án nhanh bằng vị trí và hậu tố trong TOEIC Part 5.
+
+## Khái niệm cốt lõi
+Loại từ là vai trò của một từ trong câu. Trong Part 5, đề thường không hỏi nghĩa khó mà hỏi xem chỗ trống đang cần "danh từ, động từ, tính từ hay trạng từ".
+
+## Cách nhận diện trong câu
+- Sau mạo từ (\`a/an/the\`) thường cần noun.
+- Trước noun thường cần adjective.
+- Bổ nghĩa cho verb thường cần adverb.
+- Sau trợ động từ, \`to\`, hoặc sau chủ ngữ thường cần verb.
+- Hậu tố hay gặp: \`-tion/-ment\` (noun), \`-ive/-ous/-al\` (adjective), \`-ly\` (adverb), \`-ize/-ate\` (verb).
+
+## Công thức/mẫu cần nhớ
+- \`the + noun\`
+- \`be + adjective\`
+- \`verb + adverb\`
+- \`to + verb\`
+- \`adjective + noun\`
+
+## Lỗi thường gặp
+- Thấy từ có nghĩa quen nhưng quên kiểm tra vị trí trong câu.
+- Chọn adjective thay vì adverb vì hai từ cùng họ từ.
+- Chọn noun sau \`to\` dù sau \`to\` phải là verb nguyên mẫu.
+
+## Mẹo làm TOEIC Part 5
+Nhìn ngay từ đứng trước và sau chỗ trống trước khi đọc nghĩa. Nếu xác định đúng vị trí ngữ pháp, bạn thường loại được 2-3 đáp án trong vài giây.
+
+## Tóm tắt nhanh
+- Trước noun -> adjective
+- Sau mạo từ -> noun
+- Bổ nghĩa verb -> adverb
+- Sau \`to\` / trợ động từ -> verb
+`.trim(),
 ## Loại từ trong TOEIC Part 5
 
 Trong Part 5, câu hỏi về **loại từ** (part of speech) thường kiểm tra xem bạn có nhận ra vai trò của từ trong câu hay không. Mấu chốt không chỉ là nhìn đuôi từ, mà là đọc **vị trí xung quanh chỗ trống**.
@@ -114,16 +149,19 @@ Nếu còn phân vân, hãy quay lại **vị trí của blank** và đọc cả
   `.trim(),
   examples: [
     {
-      english: 'The _______ of the project was completed on time. (completion)',
-      vietnamese: 'Sau "The" và trước "of" → cần NOUN → completion',
+      english: 'The ___ report was sent to the client this morning.',
+      vietnamese:
+        'Sau "The" và trước "report" cần một tính từ bổ nghĩa cho danh từ, nên phải chọn dạng adjective.',
     },
     {
-      english: 'She works _______. (efficiently)',
-      vietnamese: 'Bổ nghĩa cho động từ "works" → cần ADVERB → efficiently',
+      english: 'Our team responded ___ to the customer complaint.',
+      vietnamese:
+        'Từ cần điền bổ nghĩa cho động từ "responded", nên phải tìm trạng từ chứ không phải tính từ hay danh từ.',
     },
     {
-      english: 'This is a _______ solution. (practical)',
-      vietnamese: 'Trước danh từ "solution" → cần ADJECTIVE → practical',
+      english: 'The manager decided to ___ the policy immediately.',
+      vietnamese:
+        'Sau "to" luôn cần động từ nguyên mẫu, đây là cách loại đáp án rất nhanh trong Part 5.',
     },
   ],
   exercises: [
@@ -132,70 +170,40 @@ Nếu còn phân vân, hãy quay lại **vị trí của blank** và đọc cả
       question: 'The _______ of the new software took several months.',
       options: ['develop', 'development', 'developing', 'developer'],
       correctAnswer: 1,
-      explanation: 'Gợi ý: sau "The" và trước "of" thường cần một danh từ. Đáp án đúng là "development" vì đây là noun, nghĩa là "sự phát triển". Các đáp án còn lại sai vì "develop" là động từ, "developing" không tự nhiên trong cấu trúc này, còn "developer" chỉ người phát triển chứ không phải quá trình phát triển.',
+      explanation:
+        'Dấu hiệu trong câu là sau "The" và trước "of" nên chỗ trống cần noun. "development" đúng vì là danh từ chỉ quá trình phát triển; "develop" là verb, "developing" là V-ing, còn "developer" chỉ người phát triển nên sai nghĩa vị trí.',
     },
     {
       id: 'gram-01-ex02',
       question: 'Our team worked _______ to meet the deadline.',
       options: ['diligent', 'diligence', 'diligently', 'diligentness'],
       correctAnswer: 2,
-      explanation: 'Gợi ý: blank bổ nghĩa cho động từ "worked", nên cần một trạng từ. Đáp án đúng là "diligently" (adverb), mang nghĩa "một cách chăm chỉ". Các đáp án khác sai vì "diligent" là tính từ, "diligence" là danh từ, còn "diligentness" không phải cách dùng tự nhiên trong TOEIC.',
+      explanation:
+        'Dấu hiệu trong câu là từ đứng sau động từ "worked", nên cần một adverb để bổ nghĩa cho verb. "diligently" đúng vì là trạng từ; "diligent" là adjective, "diligence" là noun, còn "diligentness" không phải dạng từ chuẩn trong tiếng Anh nên cũng không thể là đáp án đúng.',
     },
     {
       id: 'gram-01-ex03',
-      question: 'The manager gave a _______ answer to the client.',
-      options: ['quick', 'quickly', 'quicken', 'quickness'],
-      correctAnswer: 0,
-      explanation: 'Gợi ý: blank đứng trước danh từ "answer", nên cần một tính từ. Đáp án đúng là "quick" vì nó mô tả danh từ phía sau. Các đáp án còn lại sai vì "quickly" là trạng từ, "quicken" là động từ, còn "quickness" là danh từ nên không thể đứng trước "answer" theo cách này.',
+      question: 'The report contains _______ information about the market.',
+      options: ['value', 'valuable', 'valuably', 'valuation'],
+      correctAnswer: 1,
+      explanation:
+        'Dấu hiệu trong câu là chỗ trống đứng ngay trước noun "information", nên phải chọn adjective. "valuable" đúng vì là tính từ bổ nghĩa cho danh từ; "value" và "valuation" là noun, còn "valuably" là adverb nên không thể đứng trước noun ở đây.',
     },
     {
       id: 'gram-01-ex04',
-      question: 'The policy was _______ updated after the meeting.',
-      options: ['recent', 'recently', 'recentness', 'recenter'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: blank bổ nghĩa cho cụm động từ "was updated", vì vậy cần trạng từ. Đáp án đúng là "recently", nghĩa là "gần đây". Các đáp án khác sai vì "recent" là tính từ, "recentness" là danh từ, còn "recenter" là động từ không phù hợp với cấu trúc câu.',
+      question: 'We need to _______ the process to save time.',
+      options: ['simplification', 'simple', 'simplify', 'simply'],
+      correctAnswer: 2,
+      explanation:
+        'Dấu hiệu trong câu là sau "to", nên chỗ trống phải là verb nguyên mẫu. "simplify" đúng vì là động từ; "simplification" là noun, "simple" là adjective, còn "simply" là adverb nên ba lựa chọn này đều sai sau "to".',
     },
     {
       id: 'gram-01-ex05',
-      question: 'The team adopted an _______ approach to reduce operating costs.',
-      options: ['economic', 'economical', 'economically', 'economy'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: blank đứng trước danh từ "approach", nên cần một tính từ. Đáp án đúng là "economical" vì nó mang nghĩa "tiết kiệm, không tốn kém", rất hợp với cụm "reduce operating costs". "Economic" chỉ nghĩa "thuộc về kinh tế", "economically" là trạng từ, còn "economy" là danh từ nên đều không phù hợp ở vị trí này.',
-    },
-    {
-      id: 'gram-01-ex06',
-      question: 'The _______ of the company improved after implementing new strategies.',
-      options: ['perform', 'performance', 'performant', 'performing'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: sau "The" và trước "of" thường cần một danh từ. Đáp án đúng là "performance" vì nó là noun mang nghĩa "hiệu suất, kết quả hoạt động". Các đáp án khác sai vì "perform" là động từ, "performant" không phải từ tiếng Anh chuẩn, còn "performing" là dạng gerund/present participle không phù hợp ngữ pháp sau "The".',
-    },
-    {
-      id: 'gram-01-ex07',
-      question: 'The proposal was rejected _______, so the team had to revise it completely.',
-      options: ['quick', 'quickly', 'quickness', 'quicken'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: blank bổ nghĩa cho động từ bị động "was rejected", nên cần một trạng từ. Đáp án đúng là "quickly" (adverb) mang nghĩa "nhanh chóng". Các đáp án khác sai vì "quick" là tính từ, "quickness" là danh từ, còn "quicken" là động từ, không thể đứng sau "was" trong cấu trúc passive voice này.',
-    },
-    {
-      id: 'gram-01-ex08',
-      question: 'Our department hired three _______ professionals last quarter.',
-      options: ['experience', 'experienced', 'experiencing', 'experience'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: blank đứng trước danh từ "professionals", nên cần một tính từ. Đáp án đúng là "experienced" (adjective) mang nghĩa "có kinh nghiệm". Các đáp án khác sai vì "experience" là danh từ, "experiencing" là dạng gerund/present participle không dùng để bổ nghĩa danh từ theo cách này.',
-    },
-    {
-      id: 'gram-01-ex09',
-      question: 'The _______ of our manufacturing process resulted in significant cost savings.',
-      options: ['optimize', 'optimization', 'optimizing', 'optimizer'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: sau "The" và trước "of" cần một danh từ. Đáp án đúng là "optimization" (noun) mang nghĩa "sự tối ưu hóa". Các đáp án khác sai vì "optimize" là động từ, "optimizing" là dạng gerund, còn "optimizer" là danh từ chỉ người/công cụ, không phù hợp với "of our manufacturing process".',
-    },
-    {
-      id: 'gram-01-ex10',
-      question: 'She communicates very _______ with clients from different countries.',
-      options: ['effective', 'effectively', 'effectiveness', 'effect'],
-      correctAnswer: 1,
-      explanation: 'Gợi ý: blank bổ nghĩa cho động từ "communicates", nên cần một trạng từ. Đáp án đúng là "effectively" (adverb) mang nghĩa "một cách hiệu quả". Các đáp án khác sai vì "effective" là tính từ, "effectiveness" là danh từ, còn "effect" cũng là danh từ, không thể bổ nghĩa động từ được.',
+      question: 'Customer _______ is our top priority.',
+      options: ['satisfy', 'satisfactory', 'satisfaction', 'satisfactorily'],
+      correctAnswer: 2,
+      explanation:
+        'Dấu hiệu trong câu là cụm "Customer ___" đứng làm chủ ngữ trước "is", nên cần noun. "satisfaction" đúng vì là danh từ; "satisfy" là verb, "satisfactory" là adjective, còn "satisfactorily" là adverb nên không thể làm trung tâm của cụm chủ ngữ.',
     },
   ],
 }

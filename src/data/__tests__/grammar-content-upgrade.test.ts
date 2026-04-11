@@ -1,0 +1,286 @@
+import { describe, expect, it } from 'vitest'
+import { GrammarLesson } from '../../types'
+import { partsOfSpeechLesson } from '../grammar/parts-of-speech'
+import { verbTensesLesson } from '../grammar/verb-tenses'
+import { passiveVoiceLesson } from '../grammar/passive-voice'
+import { conjunctionsLesson } from '../grammar/conjunctions'
+import { prepositionsLesson } from '../grammar/prepositions'
+import { relativePronounsLesson } from '../grammar/relative-pronouns'
+import { comparativesLesson } from '../grammar/comparatives'
+import { conditionalsLesson } from '../grammar/conditionals'
+
+const requiredHeadings = [
+  '## Mục tiêu bài học',
+  '## Khái niệm cốt lõi',
+  '## Cách nhận diện trong câu',
+  '## Công thức/mẫu cần nhớ',
+  '## Lỗi thường gặp',
+  '## Mẹo làm TOEIC Part 5',
+  '## Tóm tắt nhanh',
+]
+
+const expectedLessonIds = [
+  'gram-01',
+  'gram-02',
+  'gram-03',
+  'gram-04',
+  'gram-05',
+  'gram-06',
+  'gram-07',
+  'gram-08',
+]
+
+const expectedExerciseIdsByLesson = {
+  'gram-01': ['gram-01-ex01', 'gram-01-ex02', 'gram-01-ex03', 'gram-01-ex04', 'gram-01-ex05'],
+  'gram-02': ['gram-02-ex01', 'gram-02-ex02', 'gram-02-ex03', 'gram-02-ex04', 'gram-02-ex05'],
+  'gram-03': ['gram-03-ex01', 'gram-03-ex02', 'gram-03-ex03', 'gram-03-ex04', 'gram-03-ex05'],
+  'gram-04': ['gram-04-ex01', 'gram-04-ex02', 'gram-04-ex03', 'gram-04-ex04', 'gram-04-ex05'],
+  'gram-05': ['gram-05-ex01', 'gram-05-ex02', 'gram-05-ex03', 'gram-05-ex04', 'gram-05-ex05'],
+  'gram-06': ['gram-06-ex01', 'gram-06-ex02', 'gram-06-ex03', 'gram-06-ex04', 'gram-06-ex05'],
+  'gram-07': ['gram-07-ex01', 'gram-07-ex02', 'gram-07-ex03', 'gram-07-ex04', 'gram-07-ex05'],
+  'gram-08': ['gram-08-ex01', 'gram-08-ex02', 'gram-08-ex03', 'gram-08-ex04', 'gram-08-ex05'],
+} as const
+
+const expectedCorrectAnswersByLesson = {
+  'gram-01': {
+    'gram-01-ex01': 1,
+    'gram-01-ex02': 2,
+    'gram-01-ex03': 1,
+    'gram-01-ex04': 2,
+    'gram-01-ex05': 2,
+  },
+  'gram-02': {
+    'gram-02-ex01': 1,
+    'gram-02-ex02': 1,
+    'gram-02-ex03': 2,
+    'gram-02-ex04': 0,
+    'gram-02-ex05': 2,
+  },
+  'gram-03': {
+    'gram-03-ex01': 1,
+    'gram-03-ex02': 1,
+    'gram-03-ex03': 2,
+    'gram-03-ex04': 2,
+    'gram-03-ex05': 2,
+  },
+  'gram-04': {
+    'gram-04-ex01': 1,
+    'gram-04-ex02': 2,
+    'gram-04-ex03': 0,
+    'gram-04-ex04': 2,
+    'gram-04-ex05': 0,
+  },
+  'gram-05': {
+    'gram-05-ex01': 2,
+    'gram-05-ex02': 2,
+    'gram-05-ex03': 3,
+    'gram-05-ex04': 0,
+    'gram-05-ex05': 1,
+  },
+  'gram-06': {
+    'gram-06-ex01': 2,
+    'gram-06-ex02': 3,
+    'gram-06-ex03': 2,
+    'gram-06-ex04': 3,
+    'gram-06-ex05': 3,
+  },
+  'gram-07': {
+    'gram-07-ex01': 0,
+    'gram-07-ex02': 1,
+    'gram-07-ex03': 1,
+    'gram-07-ex04': 2,
+    'gram-07-ex05': 0,
+  },
+  'gram-08': {
+    'gram-08-ex01': 0,
+    'gram-08-ex02': 1,
+    'gram-08-ex03': 2,
+    'gram-08-ex04': 3,
+    'gram-08-ex05': 0,
+  },
+} as const
+
+function assertStructuredLesson(lesson: GrammarLesson) {
+  expect(lesson.content).toBe(lesson.content.trim())
+
+  for (const heading of requiredHeadings) {
+    expect(lesson.content).toContain(heading)
+  }
+
+  expect(lesson.examples.length).toBeGreaterThanOrEqual(3)
+  expect(lesson.exercises).toHaveLength(5)
+
+  for (const example of lesson.examples) {
+    expect(example.english.length).toBeGreaterThanOrEqual(20)
+    expect(example.vietnamese.length).toBeGreaterThanOrEqual(30)
+  }
+
+  for (const exercise of lesson.exercises) {
+    expect(exercise.options).toHaveLength(4)
+    expect(exercise.correctAnswer).toBeGreaterThanOrEqual(0)
+    expect(exercise.correctAnswer).toBeLessThan(exercise.options.length)
+    expect(exercise.explanation.length).toBeGreaterThanOrEqual(60)
+  }
+}
+
+describe('Grammar content upgrade contract', () => {
+  it('preserves required lesson IDs and exercise IDs', () => {
+    const lessons = [
+      partsOfSpeechLesson,
+      verbTensesLesson,
+      passiveVoiceLesson,
+        conjunctionsLesson,
+        prepositionsLesson,
+        relativePronounsLesson,
+        comparativesLesson,
+        conditionalsLesson,
+      ]
+
+    expect(lessons.map((lesson) => lesson.id)).toEqual(expectedLessonIds)
+
+    for (const lesson of lessons) {
+      expect(lesson.exercises.map((exercise) => exercise.id)).toEqual(
+        expectedExerciseIdsByLesson[lesson.id as keyof typeof expectedExerciseIdsByLesson],
+      )
+    }
+  })
+
+  it('locks exact answer keys for gram-01 to gram-08 exercises', () => {
+    const lessons = [
+      partsOfSpeechLesson,
+      verbTensesLesson,
+      passiveVoiceLesson,
+      conjunctionsLesson,
+      prepositionsLesson,
+      relativePronounsLesson,
+      comparativesLesson,
+      conditionalsLesson,
+    ]
+
+    for (const lesson of lessons) {
+      expect(
+        Object.fromEntries(
+          lesson.exercises.map((exercise) => [exercise.id, exercise.correctAnswer]),
+        ),
+      ).toEqual(expectedCorrectAnswersByLesson[lesson.id as keyof typeof expectedCorrectAnswersByLesson])
+    }
+  })
+
+  it('keeps ambiguity-sensitive questions unchanged', () => {
+    const verbTensesAmbiguousItem = verbTensesLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-02-ex04',
+    )
+    const passiveVoiceAmbiguousItem = passiveVoiceLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-03-ex02',
+    )
+
+    expect(verbTensesAmbiguousItem).toMatchObject({
+      question: 'If the venue is available, the conference _______ place next month.',
+      options: ['will take', 'takes', 'is taking', 'has taken'],
+    })
+
+    expect(passiveVoiceAmbiguousItem).toMatchObject({
+      question: 'The new branch office _______ by the CEO in Singapore last year.',
+      options: ['opened', 'was opened', 'has been opened', 'is opening'],
+    })
+  })
+
+  it('locks representative beginner-friendly wording for gram-04 to gram-08', () => {
+    const conjunctionsItem = conjunctionsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-04-ex05',
+    )
+    const prepositionsItem = prepositionsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-05-ex04',
+    )
+    const relativePronounsItem = relativePronounsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-06-ex04',
+    )
+    const comparativesItem = comparativesLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-07-ex03',
+    )
+    const conditionalsItem = conditionalsLesson.exercises.find(
+      (exercise) => exercise.id === 'gram-08-ex04',
+    )
+
+    expect(conjunctionsItem).toMatchObject({
+      question: '_______ the headquarters _______ the regional office are located in Asia.',
+      options: ['Both / and', 'Neither / nor', 'Either / or', 'Not only / but also'],
+    })
+
+    expect(prepositionsItem).toMatchObject({
+      question:
+        'The management team is _______ to improving employee satisfaction through monthly feedback reviews.',
+      options: ['committed', 'familiar', 'aware', 'similar'],
+    })
+
+    expect(relativePronounsItem).toMatchObject({
+      question: 'The conference room _______ we hold our meetings needs renovation.',
+      options: ['when', 'who', 'which', 'where'],
+    })
+
+    expect(comparativesItem).toMatchObject({
+      question: 'The backup system is as _______ as the main server during peak hours.',
+      options: ['more reliable', 'reliable', 'the most reliable', 'reliably'],
+    })
+
+    expect(conditionalsItem).toMatchObject({
+      question: 'If the team had checked the figures, they _______ the reporting error.',
+      options: ['avoid', 'will avoid', 'would avoid', 'would have avoided'],
+    })
+  })
+
+  it('keeps visible comparison markers in the most sensitive gram-07 items', () => {
+    expect(comparativesLesson.exercises.find((exercise) => exercise.id === 'gram-07-ex01')).toMatchObject({
+      question: 'The new logistics software is _______ than the old system for tracking deliveries.',
+      options: ['more efficient', 'most efficient', 'as efficient', 'efficiently'],
+      correctAnswer: 0,
+    })
+
+    expect(comparativesLesson.exercises.find((exercise) => exercise.id === 'gram-07-ex04')).toMatchObject({
+      question: "This quarter's sales were _______ than last quarter's results.",
+      options: ['gooder', 'best', 'better', 'more best'],
+      correctAnswer: 2,
+    })
+  })
+
+  it('keeps gram-08-ex01 clearly framed as a zero conditional rule', () => {
+    expect(conditionalsLesson.exercises.find((exercise) => exercise.id === 'gram-08-ex01')).toMatchObject({
+      question:
+        'If employees miss the safety drill, they always _______ a follow-up session under company policy.',
+      options: ['attend', 'will attend', 'would attend', 'would have attended'],
+      correctAnswer: 0,
+    })
+  })
+
+  it('keeps gram-01 beginner-friendly and structured', () => {
+    assertStructuredLesson(partsOfSpeechLesson)
+  })
+
+  it('keeps gram-02 beginner-friendly and structured', () => {
+    assertStructuredLesson(verbTensesLesson)
+  })
+
+  it('keeps gram-03 beginner-friendly and structured', () => {
+    assertStructuredLesson(passiveVoiceLesson)
+  })
+
+  it('keeps gram-04 beginner-friendly and structured', () => {
+    assertStructuredLesson(conjunctionsLesson)
+  })
+
+  it('keeps gram-05 beginner-friendly and structured', () => {
+    assertStructuredLesson(prepositionsLesson)
+  })
+
+  it('keeps gram-06 beginner-friendly and structured', () => {
+    assertStructuredLesson(relativePronounsLesson)
+  })
+
+  it('keeps gram-07 beginner-friendly and structured', () => {
+    assertStructuredLesson(comparativesLesson)
+  })
+
+  it('keeps gram-08 beginner-friendly and structured', () => {
+    assertStructuredLesson(conditionalsLesson)
+  })
+})
