@@ -198,4 +198,65 @@ describe('useLeitnerBoxes utilities', () => {
 
     expect(result).toEqual([0, 0, 0, 0, 0])
   })
+
+  it('getBoxDistribution clamps out-of-range box values to valid range', () => {
+    const words: VocabularyProgress[] = [
+      {
+        wordId: 'w1',
+        box: 0 as any,
+        nextReview: '2025-01-15',
+        lastReviewed: '2025-01-10T00:00:00.000Z',
+        correctCount: 1,
+        incorrectCount: 0,
+      },
+      {
+        wordId: 'w2',
+        box: 6 as any,
+        nextReview: '2025-01-15',
+        lastReviewed: '2025-01-10T00:00:00.000Z',
+        correctCount: 2,
+        incorrectCount: 0,
+      },
+      {
+        wordId: 'w3',
+        box: 3,
+        nextReview: '2025-01-15',
+        lastReviewed: '2025-01-10T00:00:00.000Z',
+        correctCount: 3,
+        incorrectCount: 1,
+      },
+    ]
+
+    const result = getBoxDistribution(words)
+
+    expect(result).toEqual([1, 0, 1, 0, 1])
+  })
+
+  // === isDueForReview edge cases (2 tests) ===
+
+  it('isDueForReview returns false when nextReview is empty string', () => {
+    const word: VocabularyProgress = {
+      wordId: 'w1',
+      box: 2,
+      nextReview: '',
+      lastReviewed: '2025-01-10T00:00:00.000Z',
+      correctCount: 2,
+      incorrectCount: 1,
+    }
+
+    expect(isDueForReview(word)).toBe(false)
+  })
+
+  it('isDueForReview correctly parses and evaluates full ISO timestamp', () => {
+    const dueWord: VocabularyProgress = {
+      wordId: 'w1',
+      box: 2,
+      nextReview: '2025-01-14T12:00:00.000Z',
+      lastReviewed: '2025-01-10T00:00:00.000Z',
+      correctCount: 2,
+      incorrectCount: 1,
+    }
+
+    expect(isDueForReview(dueWord)).toBe(true)
+  })
 })

@@ -61,7 +61,7 @@ export function getBoxDistribution(allProgress: VocabularyProgress[]): number[] 
   const distribution: number[] = [0, 0, 0, 0, 0]
 
   for (const progress of allProgress) {
-    const boxIndex = progress.box - 1
+    const boxIndex = Math.min(MAX_BOX - 1, Math.max(MIN_BOX - 1, progress.box - 1))
     distribution[boxIndex]++
   }
 
