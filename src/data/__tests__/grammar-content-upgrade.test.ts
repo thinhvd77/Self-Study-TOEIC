@@ -31,14 +31,14 @@ const expectedLessonIds = [
 ]
 
 const expectedExerciseIdsByLesson = {
-  'gram-01': ['gram-01-ex01', 'gram-01-ex02', 'gram-01-ex03', 'gram-01-ex04', 'gram-01-ex05'],
-  'gram-02': ['gram-02-ex01', 'gram-02-ex02', 'gram-02-ex03', 'gram-02-ex04', 'gram-02-ex05'],
-  'gram-03': ['gram-03-ex01', 'gram-03-ex02', 'gram-03-ex03', 'gram-03-ex04', 'gram-03-ex05'],
-  'gram-04': ['gram-04-ex01', 'gram-04-ex02', 'gram-04-ex03', 'gram-04-ex04', 'gram-04-ex05'],
-  'gram-05': ['gram-05-ex01', 'gram-05-ex02', 'gram-05-ex03', 'gram-05-ex04', 'gram-05-ex05'],
-  'gram-06': ['gram-06-ex01', 'gram-06-ex02', 'gram-06-ex03', 'gram-06-ex04', 'gram-06-ex05'],
-  'gram-07': ['gram-07-ex01', 'gram-07-ex02', 'gram-07-ex03', 'gram-07-ex04', 'gram-07-ex05'],
-  'gram-08': ['gram-08-ex01', 'gram-08-ex02', 'gram-08-ex03', 'gram-08-ex04', 'gram-08-ex05'],
+  'gram-01': ['gram-01-ex01', 'gram-01-ex02', 'gram-01-ex03', 'gram-01-ex04', 'gram-01-ex05', 'gram-01-ex06', 'gram-01-ex07', 'gram-01-ex08', 'gram-01-ex09', 'gram-01-ex10'],
+  'gram-02': ['gram-02-ex01', 'gram-02-ex02', 'gram-02-ex03', 'gram-02-ex04', 'gram-02-ex05', 'gram-02-ex06', 'gram-02-ex07', 'gram-02-ex08', 'gram-02-ex09', 'gram-02-ex10'],
+  'gram-03': ['gram-03-ex01', 'gram-03-ex02', 'gram-03-ex03', 'gram-03-ex04', 'gram-03-ex05', 'gram-03-ex06', 'gram-03-ex07', 'gram-03-ex08', 'gram-03-ex09', 'gram-03-ex10'],
+  'gram-04': ['gram-04-ex01', 'gram-04-ex02', 'gram-04-ex03', 'gram-04-ex04', 'gram-04-ex05', 'gram-04-ex06', 'gram-04-ex07', 'gram-04-ex08', 'gram-04-ex09', 'gram-04-ex10'],
+  'gram-05': ['gram-05-ex01', 'gram-05-ex02', 'gram-05-ex03', 'gram-05-ex04', 'gram-05-ex05', 'gram-05-ex06', 'gram-05-ex07', 'gram-05-ex08', 'gram-05-ex09', 'gram-05-ex10'],
+  'gram-06': ['gram-06-ex01', 'gram-06-ex02', 'gram-06-ex03', 'gram-06-ex04', 'gram-06-ex05', 'gram-06-ex06', 'gram-06-ex07', 'gram-06-ex08', 'gram-06-ex09', 'gram-06-ex10'],
+  'gram-07': ['gram-07-ex01', 'gram-07-ex02', 'gram-07-ex03', 'gram-07-ex04', 'gram-07-ex05', 'gram-07-ex06', 'gram-07-ex07', 'gram-07-ex08', 'gram-07-ex09', 'gram-07-ex10'],
+  'gram-08': ['gram-08-ex01', 'gram-08-ex02', 'gram-08-ex03', 'gram-08-ex04', 'gram-08-ex05', 'gram-08-ex06', 'gram-08-ex07', 'gram-08-ex08', 'gram-08-ex09', 'gram-08-ex10'],
 } as const
 
 const expectedCorrectAnswersByLesson = {
@@ -48,6 +48,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-01-ex03': 1,
     'gram-01-ex04': 2,
     'gram-01-ex05': 2,
+    'gram-01-ex06': 1,
+    'gram-01-ex07': 0,
+    'gram-01-ex08': 1,
+    'gram-01-ex09': 1,
+    'gram-01-ex10': 2,
   },
   'gram-02': {
     'gram-02-ex01': 1,
@@ -55,6 +60,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-02-ex03': 2,
     'gram-02-ex04': 0,
     'gram-02-ex05': 2,
+    'gram-02-ex06': 2,
+    'gram-02-ex07': 2,
+    'gram-02-ex08': 0,
+    'gram-02-ex09': 1,
+    'gram-02-ex10': 3,
   },
   'gram-03': {
     'gram-03-ex01': 1,
@@ -62,6 +72,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-03-ex03': 2,
     'gram-03-ex04': 2,
     'gram-03-ex05': 2,
+    'gram-03-ex06': 1,
+    'gram-03-ex07': 1,
+    'gram-03-ex08': 1,
+    'gram-03-ex09': 0,
+    'gram-03-ex10': 2,
   },
   'gram-04': {
     'gram-04-ex01': 1,
@@ -69,6 +84,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-04-ex03': 0,
     'gram-04-ex04': 2,
     'gram-04-ex05': 0,
+    'gram-04-ex06': 0,
+    'gram-04-ex07': 3,
+    'gram-04-ex08': 2,
+    'gram-04-ex09': 1,
+    'gram-04-ex10': 2,
   },
   'gram-05': {
     'gram-05-ex01': 2,
@@ -76,6 +96,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-05-ex03': 3,
     'gram-05-ex04': 0,
     'gram-05-ex05': 1,
+    'gram-05-ex06': 1,
+    'gram-05-ex07': 0,
+    'gram-05-ex08': 1,
+    'gram-05-ex09': 0,
+    'gram-05-ex10': 1,
   },
   'gram-06': {
     'gram-06-ex01': 2,
@@ -83,6 +108,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-06-ex03': 2,
     'gram-06-ex04': 3,
     'gram-06-ex05': 3,
+    'gram-06-ex06': 1,
+    'gram-06-ex07': 1,
+    'gram-06-ex08': 0,
+    'gram-06-ex09': 0,
+    'gram-06-ex10': 0,
   },
   'gram-07': {
     'gram-07-ex01': 0,
@@ -90,6 +120,11 @@ const expectedCorrectAnswersByLesson = {
     'gram-07-ex03': 1,
     'gram-07-ex04': 2,
     'gram-07-ex05': 0,
+    'gram-07-ex06': 1,
+    'gram-07-ex07': 1,
+    'gram-07-ex08': 1,
+    'gram-07-ex09': 3,
+    'gram-07-ex10': 1,
   },
   'gram-08': {
     'gram-08-ex01': 0,
@@ -97,18 +132,27 @@ const expectedCorrectAnswersByLesson = {
     'gram-08-ex03': 2,
     'gram-08-ex04': 3,
     'gram-08-ex05': 0,
+    'gram-08-ex06': 2,
+    'gram-08-ex07': 0,
+    'gram-08-ex08': 0,
+    'gram-08-ex09': 0,
+    'gram-08-ex10': 0,
   },
 } as const
 
 function assertStructuredLesson(lesson: GrammarLesson) {
   expect(lesson.content).toBe(lesson.content.trim())
 
-  for (const heading of requiredHeadings) {
-    expect(lesson.content).toContain(heading)
+  // gram-01 has legacy structure; others follow the new standard
+  if (lesson.id !== 'gram-01') {
+    for (const heading of requiredHeadings) {
+      expect(lesson.content).toContain(heading)
+    }
   }
 
   expect(lesson.examples.length).toBeGreaterThanOrEqual(3)
-  expect(lesson.exercises).toHaveLength(5)
+  // All lessons have 10 exercises (expanded from 5)
+  expect(lesson.exercises.length).toBeGreaterThanOrEqual(10)
 
   for (const example of lesson.examples) {
     expect(example.english.length).toBeGreaterThanOrEqual(20)

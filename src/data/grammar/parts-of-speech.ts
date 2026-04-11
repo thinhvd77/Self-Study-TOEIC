@@ -170,5 +170,45 @@ Nếu còn phân vân, hãy quay lại **vị trí của blank** và đọc cả
       explanation:
         'Dấu hiệu trong câu là cụm "Customer ___" đứng làm chủ ngữ trước "is", nên cần noun. "satisfaction" đúng vì là danh từ; "satisfy" là verb, "satisfactory" là adjective, còn "satisfactorily" là adverb nên không thể làm trung tâm của cụm chủ ngữ.',
     },
+    {
+      id: 'gram-01-ex06',
+      question: 'The _______ of our employees has increased this year.',
+      options: ['efficient', 'efficiency', 'efficiently', 'efficacy'],
+      correctAnswer: 1,
+      explanation:
+        'Dấu hiệu trong câu là mẫu "The ___ of" luôn yêu cầu noun để làm chủ ngữ. "efficiency" đúng vì là danh từ chỉ tính chất; "efficient" là adjective, "efficiently" là adverb, còn "efficacy" không phù hợp với ngữ cảnh công ty nên không thể dùng đây.',
+    },
+    {
+      id: 'gram-01-ex07',
+      question: 'The new software will help managers make _______ decisions.',
+      options: ['effective', 'effectively', 'effect', 'effectiveness'],
+      correctAnswer: 0,
+      explanation:
+        'Dấu hiệu trong câu là chỗ trống đứng ngay trước noun "decisions", nên cần adjective bổ nghĩa cho danh từ. "effective" đúng vì là tính từ; "effectively" là adverb không thể đứng trước noun, "effect" là noun, còn "effectiveness" là noun nên cũng không phù hợp ở vị trí này.',
+    },
+    {
+      id: 'gram-01-ex08',
+      question: 'We must _______ our current budget to cover additional expenses.',
+      options: ['adjustment', 'adjust', 'adjustable', 'adjusted'],
+      correctAnswer: 1,
+      explanation:
+        'Dấu hiệu trong câu là sau modal verb "must", nên chỗ trống phải là verb nguyên mẫu. "adjust" đúng vì là động từ; "adjustment" là noun, "adjustable" là adjective, còn "adjusted" là quá khứ phân từ nên cả ba lựa chọn này đều sai sau "must".',
+    },
+    {
+      id: 'gram-01-ex09',
+      question: 'The company implemented a _______ plan to reduce costs.',
+      options: ['comprehensively', 'comprehensive', 'comprehension', 'comprehend'],
+      correctAnswer: 1,
+      explanation:
+        'Dấu hiệu trong câu là chỗ trống đứng trước noun "plan", nên cần adjective để bổ nghĩa cho danh từ. "comprehensive" đúng vì là tính từ; "comprehensively" là adverb không thể đứng trước noun, "comprehension" là noun, còn "comprehend" là verb nên không phù hợp ở vị trí này.',
+    },
+    {
+      id: 'gram-01-ex10',
+      question: 'The _______ between the two proposals was clearly analyzed.',
+      options: ['distinguish', 'distinct', 'distinction', 'distinctly'],
+      correctAnswer: 2,
+      explanation:
+        'Dấu hiệu trong câu là mẫu "The ___ between" luôn cần noun để làm chủ ngữ của mệnh đề. "distinction" đúng vì là danh từ chỉ sự khác biệt; "distinguish" là verb, "distinct" là adjective, còn "distinctly" là adverb nên ba lựa chọn này không thể đứng sau "The" và trước "between".',
+    },
   ],
 }

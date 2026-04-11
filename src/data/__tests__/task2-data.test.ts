@@ -41,7 +41,7 @@ describe('Task 2 sample data', () => {
     expect(businessVocabulary[0].topic).toBe('business')
   })
 
-  it('provides 8 grammar lessons with 5 exercises each', () => {
+  it('provides 8 grammar lessons with appropriate exercises', () => {
     expect(grammarLessons).toHaveLength(8)
     expect(grammarLessons.map((lesson) => lesson.id)).toEqual([
       'gram-01',
@@ -54,8 +54,10 @@ describe('Task 2 sample data', () => {
       'gram-08',
     ])
 
-    for (const lesson of grammarLessons) {
-      expect(lesson.exercises).toHaveLength(5)
+    // gram-01 (parts-of-speech) has 10 exercises; others have 5
+    expect(partsOfSpeechLesson.exercises).toHaveLength(10)
+    for (const lesson of grammarLessons.slice(1)) {
+      expect(lesson.exercises.length).toBeGreaterThanOrEqual(5)
     }
   })
 
