@@ -4,7 +4,6 @@ import { Flashcard } from '../../components/Flashcard'
 import { useAppContext } from '../../context/AppContext'
 import { calculateNextBox, getNextReviewDate, getWordsToReview } from '../../hooks/useLeitnerBoxes'
 import { VocabularyWord, VocabularyProgress } from '../../types'
-import { businessVocabulary } from '../../data/vocabulary/business'
 
 interface FlashcardSessionProps {
   getWords: (topicId: string) => VocabularyWord[]
@@ -22,7 +21,7 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
   let words: VocabularyWord[]
   if (isReview) {
     const dueProgress = getWordsToReview(progress.vocabularyProgress)
-    const reviewPool = allWordsProp ?? businessVocabulary
+    const reviewPool = allWordsProp || []
     words = dueProgress
       .map((p) => reviewPool.find((w) => w.id === p.wordId))
       .filter((w): w is VocabularyWord => w !== undefined)

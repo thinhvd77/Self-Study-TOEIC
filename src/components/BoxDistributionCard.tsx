@@ -19,7 +19,7 @@ export function BoxDistributionCard({ distribution, total }: Props) {
   const distributionMap = new Map(distribution.map((d) => [d.box, d.count]))
 
   return (
-    <div className="rounded-lg border border-[var(--border)] bg-[var(--card-bg)] p-4">
+    <div className="rounded-lg border border-[var(--border)] bg-[var(--bg-surface)] p-4">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-[var(--text-primary)]">Phân bổ hộp</h3>
