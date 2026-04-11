@@ -24,6 +24,7 @@ npm test             # Run all tests (verified ✓)
 npx vitest run src/path/to/test.ts  # Run specific test
 npx vitest run --exclude '.worktrees/**'  # Run main src tests only (clean output during feature branches)
 npx vitest run .worktrees/<branch>/src/  # Test specific worktree
+npm test --prefix ".worktrees/<branch>"  # Run full suite in a specific worktree without cd
 ```
 
 Commits: Use `feat: ` for features, `fix: ` for bug fixes, `chore: ` for setup/tooling
@@ -103,6 +104,7 @@ Every vocabulary file exports `const topicVocabulary: VocabularyWord[] = [...]` 
 ## IPA Standardization (American English)
 
 All IPA must use General American English. Key fixes: `/ɒ/` → `/ɑː/` (contract, policy, toxic); `/ɒ/` → `/ɔː/` when before r (deforestation); `/tj/` cluster (British yod-forming) → yod-dropped (stewardship `/ˈstuːərdʒɪp/` not `/ˈstjuːərdʒɪp/`); `/njuː/` → `/nuː/` in General American (renewable, neutral).
+- IPA rule applies to grammar lesson prose/examples too: use General American forms (e.g., "honor" `/ˈɑnər/`, not `/ɒ/`).
 
 ## Practice Modes
 
@@ -136,6 +138,7 @@ Features during practice: countdown timer, bookmark uncertain questions, questio
 - Office + finance: meanings ≤ 70 chars
 - Cross-topic duplicates (business/hr/manufacturing/office/finance): ≤ 20 total
 - Grammar lesson content: ≥ 1800 characters (depth gate for consistency with gram-01)
+- Grammar expansion gotcha: when increasing lesson exercise counts, update matching expectations in `src/data/__tests__/task2-data.test.ts`.
 
 ## Verification Criteria
 
