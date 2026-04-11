@@ -74,7 +74,15 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const [progress, dispatch] = useReducer(reducer, null, () => {
     try {
       const stored = localStorage.getItem(STORAGE_KEY)
-      return stored ? (JSON.parse(stored) as UserProgress) : makeInitialProgress()
+      if (stored) {
+        const parsed = JSON.parse(stored) as UserProgress
+        // Backfill version for existing sessions without it
+        if (parsed.version === undefined) {
+          parsed.version = 1 // Legacy sessions start at v1
+        }
+        return parsed
+      }
+      return makeInitialProgress()
     } catch {
       return makeInitialProgress()
     }

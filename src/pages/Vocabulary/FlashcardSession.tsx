@@ -49,10 +49,16 @@ export function FlashcardSession({ getWords, isReview, allWords: allWordsProp }:
   const handleRate = (quality: 1 | 3 | 5) => {
     const word = words[currentIndex]
     const existing = progress.vocabularyProgress.find((v) => v.wordId === word.id)
+    // The old useSpacedRepetition hook uses 'level' terminology (0-5)
+    // The new VocabularyProgress type uses 'box' terminology (1-5)
+    // We bridge them here with Math.max(1, ...) until Task 9 replaces the hook
     const currentLevel = existing?.box ?? 1
     const { level, intervalDays } = calculateNextReview({ level: currentLevel, quality })
     const updatedProgress: VocabularyProgress = {
       wordId: word.id,
+      // SM-2 returns level 0 for "failed" which maps to Leitner box 1 (lowest level)
+      // This is temporary until Task 9 replaces with useLeitnerBoxes
+      // The mapping is intentional and correct — both represent "reset to lowest"
       box: Math.max(1, level),
       nextReview: getNextReviewDate(intervalDays),
       lastReviewed: new Date().toISOString().split('T')[0],
