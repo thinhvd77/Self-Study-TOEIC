@@ -128,6 +128,7 @@ describe('Task 2 type contracts', () => {
       testHistory: [],
       vocabularyProgress: [],
       grammarProgress: [],
+      version: 2,
     }
 
     expect(lesson.exercises[0].correctAnswer).toBe(1)

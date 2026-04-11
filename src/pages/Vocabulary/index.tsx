@@ -1,4 +1,5 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
+import { useMemo } from 'react'
 import { FlashcardSession } from './FlashcardSession'
 import { VocabQuiz } from './VocabQuiz'
 import { businessVocabulary } from '../../data/vocabulary/business'
@@ -14,7 +15,8 @@ import { legalVocabulary } from '../../data/vocabulary/legal'
 import { realEstateVocabulary } from '../../data/vocabulary/real-estate'
 import { environmentVocabulary } from '../../data/vocabulary/environment'
 import { useAppContext } from '../../context/AppContext'
-import { getWordsToReview } from '../../hooks/useSpacedRepetition'
+import { getWordsToReview, getBoxDistribution } from '../../hooks/useLeitnerBoxes'
+import { BoxDistributionCard } from '../../components/BoxDistributionCard'
 import { VocabularyWord } from '../../types'
 import { ProgressBar } from '../../components/ProgressBar'
 
@@ -41,6 +43,17 @@ function TopicSelection() {
 
   const learnedCount = progress.vocabularyProgress.filter((v) => v.correctCount > 0).length
   const dueForReview = getWordsToReview(progress.vocabularyProgress)
+
+  const boxDistribution = useMemo(
+    () => {
+      const distribution = getBoxDistribution(progress.vocabularyProgress)
+      return distribution.map((count, index) => ({
+        box: (index + 1) as 1 | 2 | 3 | 4 | 5,
+        count,
+      }))
+    },
+    [progress.vocabularyProgress]
+  )
 
   return (
     <div className="animate-fade-in">
@@ -72,6 +85,11 @@ function TopicSelection() {
           />
         </div>
       </div>
+
+      <BoxDistributionCard
+        distribution={boxDistribution}
+        total={learnedCount}
+      />
 
       {dueForReview.length > 0 && (
         <button
