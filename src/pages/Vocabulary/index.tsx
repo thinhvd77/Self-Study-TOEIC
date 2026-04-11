@@ -9,6 +9,10 @@ import { healthVocabulary } from '../../data/vocabulary/health'
 import { technologyVocabulary } from '../../data/vocabulary/technology'
 import { hrVocabulary } from '../../data/vocabulary/hr'
 import { manufacturingVocabulary } from '../../data/vocabulary/manufacturing'
+import { marketingVocabulary } from '../../data/vocabulary/marketing'
+import { legalVocabulary } from '../../data/vocabulary/legal'
+import { realEstateVocabulary } from '../../data/vocabulary/real-estate'
+import { environmentVocabulary } from '../../data/vocabulary/environment'
 import { useAppContext } from '../../context/AppContext'
 import { getWordsToReview } from '../../hooks/useSpacedRepetition'
 import { VocabularyWord } from '../../types'
@@ -23,6 +27,10 @@ const allTopics = [
   { id: 'technology', label: 'Công nghệ', words: technologyVocabulary },
   { id: 'hr', label: 'Nhân sự', words: hrVocabulary },
   { id: 'manufacturing', label: 'Sản xuất', words: manufacturingVocabulary },
+  { id: 'marketing', label: 'Marketing', words: marketingVocabulary },
+  { id: 'legal', label: 'Pháp lý', words: legalVocabulary },
+  { id: 'real-estate', label: 'Bất động sản', words: realEstateVocabulary },
+  { id: 'environment', label: 'Môi trường', words: environmentVocabulary },
 ]
 
 const allWords = allTopics.flatMap((t) => t.words)

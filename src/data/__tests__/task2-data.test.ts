@@ -12,14 +12,14 @@ import {
 } from '../../types'
 
 describe('Task 2 sample data', () => {
-  it('provides at least 20 sample Part 5 questions', () => {
-    expect(part5Questions.length).toBeGreaterThanOrEqual(20)
+  it('provides at least 30 sample Part 5 questions', () => {
+    expect(part5Questions.length).toBeGreaterThanOrEqual(30)
     expect(part5Questions[0].id).toBe('p5-001')
-    expect(part5Questions[19].id).toBe('p5-020')
+    expect(part5Questions[29].id).toBe('p5-030')
   })
 
-  it('provides 100 business vocabulary words', () => {
-    expect(businessVocabulary).toHaveLength(100)
+  it('provides 150 business vocabulary words', () => {
+    expect(businessVocabulary).toHaveLength(150)
     expect(businessVocabulary[0].topic).toBe('business')
   })
 
@@ -100,5 +100,20 @@ describe('Task 2 type contracts', () => {
     expect(lesson.exercises[0].correctAnswer).toBe(1)
     expect(weeks[0].phase).toBe(1)
     expect(progress.currentWeek).toBe(1)
+  })
+
+  it('supports double-passage Question type', () => {
+    const doublePassageQuestion: Question = {
+      id: 'p7-test',
+      part: 7,
+      type: 'reading',
+      passage: 'First passage text',
+      passage2: 'Second passage text',
+      question: 'What is the topic?',
+      options: ['A', 'B', 'C', 'D'],
+      correctAnswer: 0,
+      explanation: 'Test explanation',
+    }
+    expect(doublePassageQuestion.passage2).toBeDefined()
   })
 })
