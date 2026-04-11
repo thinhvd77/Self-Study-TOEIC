@@ -138,7 +138,7 @@ git commit -m "test(data): add quality gate tests for vocabulary and grammar" -m
 ```typescript
 const replacementMap: Record<string, string> = {
   // office.ts
-  'v-off-003': 'milestone',     // replace duplicate "deadline"
+  'v-off-003': 'timeline',      // replace duplicate "deadline"
   'v-off-028': 'briefing',      // replace duplicate "meeting"-like overlap
   'v-off-061': 'workstation',   // replace duplicate "office"
   // finance.ts

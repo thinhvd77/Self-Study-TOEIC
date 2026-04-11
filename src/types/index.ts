@@ -7,6 +7,7 @@ export interface Question {
   audioUrl?: string
   imageUrl?: string
   passage?: string
+  passage2?: string
   question: string
   options: string[]
   correctAnswer: number // index 0-3

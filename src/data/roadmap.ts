@@ -29,7 +29,7 @@ export const roadmap: RoadmapWeek[] = [
     tasks: [
       { id: 'w3-1', type: 'vocabulary', description: 'Học 50 từ vựng chủ đề Finance', target: 'topic:finance', quantity: 50 },
       { id: 'w3-2', type: 'grammar', description: 'Bài 3: Câu bị động', target: 'lesson:gram-03' },
-      { id: 'w3-3', type: 'practice', description: 'Làm quen Part 1 & Part 2', target: 'part:1', quantity: 5 },
+      { id: 'w3-3', type: 'practice', description: 'Làm quen Part 6 cơ bản', target: 'part:6', quantity: 5 },
     ],
   },
   {
@@ -49,7 +49,7 @@ export const roadmap: RoadmapWeek[] = [
     tasks: [
       { id: 'w5-1', type: 'vocabulary', description: 'Học 50 từ chủ đề Travel', target: 'topic:travel', quantity: 50 },
       { id: 'w5-2', type: 'grammar', description: 'Bài 4: Liên từ & từ nối', target: 'lesson:gram-04' },
-      { id: 'w5-3', type: 'practice', description: 'Luyện Part 3', target: 'part:3', quantity: 12 },
+      { id: 'w5-3', type: 'practice', description: 'Luyện Part 7 single passage', target: 'part:7', quantity: 12 },
     ],
   },
   {
@@ -59,7 +59,7 @@ export const roadmap: RoadmapWeek[] = [
     tasks: [
       { id: 'w6-1', type: 'vocabulary', description: 'Học 50 từ chủ đề Health', target: 'topic:health', quantity: 50 },
       { id: 'w6-2', type: 'grammar', description: 'Bài 5: Giới từ', target: 'lesson:gram-05' },
-      { id: 'w6-3', type: 'practice', description: 'Luyện Part 4 & Part 6', target: 'part:4', quantity: 12 },
+      { id: 'w6-3', type: 'practice', description: 'Luyện Part 7 double passage', target: 'part:7', quantity: 12 },
     ],
   },
   {

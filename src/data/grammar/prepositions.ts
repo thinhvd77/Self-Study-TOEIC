@@ -104,5 +104,40 @@ Hãy tìm "tín hiệu điều khiển" trước: đây là **giờ/ngày/tháng
       explanation:
         'Danh từ "desk" gợi quy tắc vị trí trên bề mặt, nên cụm đúng là "on the desk". Đây là spatial pattern chỉ vị trí bề mặt, vì vậy chọn **on** thay vì **into** hay **behind**.',
     },
+    {
+      id: 'gram-05-ex06',
+      question: 'The company is known _______ producing high-quality products at affordable prices.',
+      options: ['to', 'for', 'with', 'about'],
+      correctAnswer: 1,
+      explanation: '"be known for" = nổi tiếng vì/về. "Be known to" có nghĩa khác (được biết đến bởi người nào đó).',
+    },
+    {
+      id: 'gram-05-ex07',
+      question: 'The meeting is scheduled _______ June 15th _______ 2 p.m.',
+      options: ['on / at', 'in / at', 'on / in', 'at / on'],
+      correctAnswer: 0,
+      explanation: '"on" trước ngày cụ thể (June 15th); "at" trước thời điểm cụ thể (2 p.m.). Cách dùng tổng hợp: on June 15th at 2 p.m.',
+    },
+    {
+      id: 'gram-05-ex08',
+      question: 'The company was divided _______ several departments based _______ their functions.',
+      options: ['on / on', 'into / on', 'by / in', 'into / in'],
+      correctAnswer: 1,
+      explanation: '"divide into" = chia thành các phần; "based on" = dựa trên cơ sở. Hai cụm giới từ cố định khác nhau cùng xuất hiện.',
+    },
+    {
+      id: 'gram-05-ex09',
+      question: 'The production facility is located _______ an industrial area, far _______ the city center.',
+      options: ['in / from', 'on / of', 'at / to', 'within / away'],
+      correctAnswer: 0,
+      explanation: '"in" dùng cho một vùng/khu vực; "far from" chỉ khoảng cách (xa từ).',
+    },
+    {
+      id: 'gram-05-ex10',
+      question: 'The employees are responsible _______ completing their tasks _______ the deadline.',
+      options: ['of / before', 'for / by', 'to / until', 'in / on'],
+      correctAnswer: 1,
+      explanation: '"responsible for" = chịu trách nhiệm về; "by" = trước (deadline/hạn chót). Hai cụm giới từ thường gặp trong bối cảnh công sở.',
+    },
   ],
 }

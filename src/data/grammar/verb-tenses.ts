@@ -99,5 +99,40 @@ Thì động từ cho biết hành động xảy ra khi nào. Trong TOEIC, bạn
       explanation:
         'Time signal là "since we introduced the new product", nên mức tăng doanh số bắt đầu từ quá khứ và còn được nhìn từ hiện tại. Vì thế chọn Present Perfect "have increased"; ba đáp án còn lại lần lượt là hiện tại đơn, quá khứ đơn và quá khứ tiếp diễn nên không đúng logic thời gian.',
     },
+    {
+      id: 'gram-02-ex06',
+      question: 'The manager _______ the budget report when the CEO called the meeting.',
+      options: ['reviews', 'has reviewed', 'was reviewing', 'will review'],
+      correctAnswer: 2,
+      explanation: '"When the CEO called" (quá khứ) → hành động khác đang xảy ra vào lúc đó → Past Continuous: **was reviewing**. Chỉ ra hoạt động đang diễn ra tại một thời điểm trong quá khứ.',
+    },
+    {
+      id: 'gram-02-ex07',
+      question: 'After the project _______, the team took a one-week break.',
+      options: ['completes', 'has completed', 'had been completed', 'is completing'],
+      correctAnswer: 2,
+      explanation: '"After the project..." (quá khứ) → hành động hoàn thành trước khi "took a break" (hành động quá khứ khác) → Past Perfect: **had been completed**. Cách khác là "had completed" (active voice) cũng có thể dùng tùy ngữ cảnh, nhưng dạng bị động phổ biến hơn.',
+    },
+    {
+      id: 'gram-02-ex08',
+      question: 'We _______ the new office building every day as we drive past.',
+      options: ['see', 'have seen', 'are seeing', 'will see'],
+      correctAnswer: 0,
+      explanation: '"Every day" (thói quen) → Present Simple: **see**. Dùng để chỉ hành động lặp lại hàng ngày, thói quen.',
+    },
+    {
+      id: 'gram-02-ex09',
+      question: 'Once the contract _______, we can begin negotiations with the client.',
+      options: ['signs', 'is signed', 'will be signed', 'is signing'],
+      correctAnswer: 1,
+      explanation: '"Once the contract..." (điều kiện) → hành động phải hoàn thành trước khi "can begin" → Present Simple hoặc Passive để chỉ quá trình hoàn thành: **is signed**. Hành động bị động ở hiện tại đơn.',
+    },
+    {
+      id: 'gram-02-ex10',
+      question: 'By the end of this month, our company _______ all outstanding invoices.',
+      options: ['will collect', 'collects', 'is collecting', 'will have collected'],
+      correctAnswer: 3,
+      explanation: '"By the end of this month" (thời điểm tương lai) → hành động sẽ hoàn thành trước thời điểm đó → Future Perfect: **will have collected**. Chỉ ra điều gì sẽ xong vào thời điểm cụ thể trong tương lai.',
+    },
   ],
 }

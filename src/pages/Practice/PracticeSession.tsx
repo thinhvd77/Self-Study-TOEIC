@@ -18,7 +18,9 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
   const { dispatch } = useAppContext()
 
   const part = Number(searchParams.get('part') || 5)
-  const questions = getQuestions(part)
+  const mode = searchParams.get('mode') ?? 'part'
+  // For mini mode, pass part=0 to signal the mini pool branch in getQuestions.
+  const questions = getQuestions(mode === 'mini' ? 0 : part)
 
   const [currentIndex, setCurrentIndex] = useState(0)
   const [answers, setAnswers] = useState<(number | null)[]>(new Array(questions.length).fill(null))
@@ -29,7 +31,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
   useEffect(() => { answersRef.current = answers }, [answers])
   const submittedRef = useRef(false)
 
-  const timeLimit = questions.length * 30
+  const timeLimit = mode === 'mini' ? 2700 : questions.length * 30
 
   const handleSubmit = useCallback(() => {
     if (submittedRef.current) return
@@ -48,7 +50,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
     const result: TestResult = {
       id: `test-${Date.now()}`,
       date: new Date().toISOString(),
-      mode: 'part',
+      mode: mode === 'mini' ? 'mini' : 'part',
       part,
       totalQuestions: questions.length,
       correctAnswers: correctCount,
@@ -58,7 +60,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
 
     dispatch({ type: 'ADD_TEST_RESULT', payload: result })
     onComplete(result)
-  }, [questions, part, dispatch, onComplete])
+  }, [questions, part, mode, dispatch, onComplete])
 
   const handleTimeUp = useCallback(() => {
     if (!submittedRef.current) handleSubmit()
@@ -99,7 +101,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
     <div>
       <div className="flex items-center justify-between mb-6">
         <h2 className="text-xl font-bold text-[var(--text-primary)]">
-          Part {part} {isSubmitted && '- Kết quả'}
+          {mode === 'mini' ? 'Mini Test' : `Part ${part}`} {isSubmitted && '- Kết quả'}
         </h2>
         {!isSubmitted && (
           <Timer
@@ -116,6 +118,7 @@ export function PracticeSession({ getQuestions, onComplete }: PracticeSessionPro
             questionNumber={currentIndex + 1}
             question={current.question}
             passage={current.passage}
+            passage2={current.passage2}
             options={current.options}
             selectedAnswer={answers[currentIndex]}
             correctAnswer={isSubmitted ? current.correctAnswer : undefined}

@@ -40,6 +40,113 @@ Nhìn ngay từ đứng trước và sau chỗ trống trước khi đọc nghĩ
 - Bổ nghĩa verb -> adverb
 - Sau \`to\` / trợ động từ -> verb
 `.trim(),
+## Loại từ trong TOEIC Part 5
+
+Trong Part 5, câu hỏi về **loại từ** (part of speech) thường kiểm tra xem bạn có nhận ra vai trò của từ trong câu hay không. Mấu chốt không chỉ là nhìn đuôi từ, mà là đọc **vị trí xung quanh chỗ trống**.
+
+### 1) Noun (danh từ)
+Danh từ chỉ người, vật, sự việc, ý tưởng.
+
+**Dấu hiệu nhận biết**
+- Đứng sau **a / an / the / this / that / these / those / my / our / their**
+- Đứng sau **tính từ**: a successful ___, an important ___
+- Đứng sau **giới từ**: in the ___, of the ___, for the ___
+- Đứng trước **of + noun**: the ___ of the company
+
+**Đuôi thường gặp**
+- -tion / -sion, -ment, -ness, -ity, -ance / -ence, -ship, -hood
+
+**Lưu ý**
+Nếu thấy mẫu **article + blank + of**, khả năng rất cao blank cần danh từ.
+
+### 2) Verb (động từ)
+Động từ diễn tả hành động hoặc trạng thái.
+
+**Dấu hiệu nhận biết**
+- Đứng sau **chủ ngữ**: The manager ___
+- Đứng sau **modal verbs**: can, should, must, will, may
+- Đứng sau **to**: to ___, nhưng phải phân biệt với danh từ đuôi -tion
+- Đứng sau **have / has / had / be** để tạo thì hoặc thể bị động
+
+**Đuôi thường gặp**
+- -ize, -ify, -ate, -en
+
+**Lưu ý**
+Đôi khi một từ vừa là danh từ vừa là động từ. Hãy đọc cấu trúc quanh chỗ trống thay vì đoán theo nghĩa quen thuộc.
+
+### 3) Adjective (tính từ)
+Tính từ mô tả danh từ.
+
+**Dấu hiệu nhận biết**
+- Đứng **trước danh từ**: a practical solution
+- Đứng sau **linking verbs**: be, become, seem, look, feel, sound
+- Đứng sau **too / very / quite / rather / extremely**
+
+**Đuôi thường gặp**
+- -ful, -ive, -ous, -able / -ible, -al, -ic, -ary, -ent
+
+**Lưu ý**
+Nhiều câu Part 5 kiểm tra cặp **adjective vs adverb**. Nếu từ cần bổ nghĩa cho danh từ thì chọn adjective; nếu bổ nghĩa cho động từ thì chọn adverb.
+
+### 4) Adverb (trạng từ)
+Trạng từ bổ nghĩa cho động từ, tính từ hoặc trạng từ khác.
+
+**Dấu hiệu nhận biết**
+- Đứng gần động từ: work efficiently
+- Đứng trước tính từ: highly effective
+- Đứng trước một trạng từ khác: very carefully
+- Đôi khi đứng đầu câu để bổ nghĩa cả mệnh đề: Fortunately, ...
+
+**Đuôi thường gặp**
+- -ly là dấu hiệu mạnh nhất, nhưng không phải 100%.
+
+**Lưu ý**
+Một số từ có đuôi -ly nhưng không phải adverb (friendly, likely khi dùng như adjective). Vì vậy phải kiểm tra ngữ cảnh.
+
+### TOEIC word-family traps
+TOEIC rất thích bẫy theo **word family**: các từ cùng gốc nhưng khác loại từ.
+
+- **success / succeed / successful / successfully**
+  - success = noun
+  - succeed = verb
+  - successful = adjective
+  - successfully = adverb
+- **confidence / confident / confidently**
+  - confidence = noun
+  - confident = adjective
+  - confidently = adverb
+- **responsibility / responsible / responsibly**
+  - responsibility = noun
+  - responsible = adjective
+  - responsibly = adverb
+- **simplicity / simple / simplify / simply**
+  - simplicity = noun
+  - simple = adjective
+  - simplify = verb
+  - simply = adverb
+- **economic / economical / economy / economically**
+  - economy = noun
+  - economic = adjective liên quan kinh tế
+  - economical = adjective tiết kiệm
+  - economically = adverb
+
+Khi gặp bẫy này, đừng chỉ dịch nghĩa. Hãy hỏi: **từ đó đang đóng vai trò gì trong câu?**
+
+### Quick checklist cho Part 5
+Trước khi chọn đáp án, hãy tự hỏi 4 câu sau:
+1. Chỗ trống đứng **sau** từ loại nào?
+2. Chỗ trống đứng **trước** từ loại nào?
+3. Từ cần điền có đang bổ nghĩa cho **noun / verb / adjective / adverb** không?
+4. Có phải đây là **word-family trap** không?
+
+### Quy tắc chốt nhanh
+- Sau **article + adjective** → thường là **noun**
+- Trước **noun** → thường là **adjective**
+- Sau **subject / modal / to** → thường là **verb**
+- Bổ nghĩa cho **verb / adjective / adverb** → thường là **adverb**
+
+Nếu còn phân vân, hãy quay lại **vị trí của blank** và đọc cả cụm từ thay vì nhìn một từ đơn lẻ.
+  `.trim(),
   examples: [
     {
       english: 'The ___ report was sent to the client this morning.',

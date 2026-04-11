@@ -106,5 +106,40 @@ Câu so sánh không bắt bạn dịch hết câu trước. Việc quan trọng
       explanation:
         'Câu lặp lại marker **the** ở cả hai vế, nên đây là mẫu double comparative: **the + comparative, the + comparative**. Vì vậy đáp án đúng là **The larger / the greater**.',
     },
+    {
+      id: 'gram-07-ex06',
+      question: 'The new office is far _______ the old one in terms of location and amenities.',
+      options: ['superior than', 'superior to', 'more superior to', 'superior as'],
+      correctAnswer: 1,
+      explanation: '"Superior to" là cụm tính từ cố định (vượt trội hơn). Không dùng "superior than" hay "more superior". "Superior" là tính từ có sẵn so sánh, không cần "more".',
+    },
+    {
+      id: 'gram-07-ex07',
+      question: 'Her sales performance this year is _______ impressive _______ last year\'s.',
+      options: ['more / as', 'more / than', 'as / as', 'much / than'],
+      correctAnswer: 1,
+      explanation: '"More impressive than" là so sánh hơn (kém thiên vệ). "More...than" là cấu trúc so sánh, không dùng "as...as" hay "much...than".',
+    },
+    {
+      id: 'gram-07-ex08',
+      question: 'Of all the proposed solutions, this approach seems the _______ feasible.',
+      options: ['more', 'most', 'very', 'so'],
+      correctAnswer: 1,
+      explanation: '"The most feasible" = so sánh nhất (khả thi nhất). Sau "the" dùng "most" (dạng so sánh nhất), không dùng "more" (so sánh hơn).',
+    },
+    {
+      id: 'gram-07-ex09',
+      question: 'The product quality is _______ important _______ the price when making purchasing decisions.',
+      options: ['more / as', 'much / than', 'as / as', 'more / than'],
+      correctAnswer: 3,
+      explanation: '"More important than" để so sánh chất lượng sản phẩm với giá tiền. "More...than" là cấu trúc so sánh hơn.',
+    },
+    {
+      id: 'gram-07-ex10',
+      question: 'His analysis was _______ detailed and thorough _______ anyone expected.',
+      options: ['as / as', 'more / than', 'very / than', 'much / as'],
+      correctAnswer: 1,
+      explanation: '"More detailed and thorough than anyone expected" = chi tiết và kỹ lưỡng hơn mong đợi. Dùng "more...than" để so sánh, có thể nhấn mạnh hai tính từ cùng lúc.',
+    },
   ],
 }
