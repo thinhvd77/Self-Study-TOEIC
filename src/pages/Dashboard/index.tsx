@@ -23,6 +23,10 @@ export default function DashboardPage() {
     () => progress.vocabularyProgress.filter((v) => v.correctCount > 0).length,
     [progress.vocabularyProgress]
   )
+  const mastered = useMemo(
+    () => progress.vocabularyProgress.filter(v => v.box === 5).length,
+    [progress.vocabularyProgress]
+  )
   const grammarCompleted = useMemo(
     () => progress.grammarProgress.filter((g) => g.completed).length,
     [progress.grammarProgress]
@@ -119,21 +123,18 @@ export default function DashboardPage() {
           { value: totalVocabLearned, label: 'Từ vựng đã học' },
           { value: grammarCompleted, label: 'Bài ngữ pháp' },
           { value: testsCompleted, label: 'Đề đã làm' },
-          {
-            value: `${progress.vocabularyProgress.length > 0
-              ? Math.round(
-                  (progress.vocabularyProgress.filter((v) => v.box >= 3).length /
-                    progress.vocabularyProgress.length) * 100
-                )
-              : 0}%`,
-            label: 'Tỷ lệ nhớ từ',
-          },
         ].map(({ value, label }) => (
           <div key={label} className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-4 text-center hover:-translate-y-0.5 transition-all duration-200">
             <p className="text-3xl font-bold text-[var(--accent)]">{value}</p>
             <p className="text-sm text-[var(--text-secondary)]">{label}</p>
           </div>
         ))}
+        {/* Mastered words tile */}
+        <div className="bg-[var(--bg-surface)] rounded-xl border border-[var(--border)] p-4 text-center hover:-translate-y-0.5 transition-all duration-200">
+          <p className="text-3xl font-bold text-[var(--accent)]">{mastered}</p>
+          <p className="text-sm text-[var(--text-secondary)]">Từ đã thuộc (Hộp 5)</p>
+          <p className="text-xs text-gray-600 mt-1">trên {totalVocabLearned} từ đã học</p>
+        </div>
       </div>
 
       {/* Score chart */}
