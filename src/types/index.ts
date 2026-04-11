@@ -48,7 +48,7 @@ export interface VocabularyWord {
 
 export interface VocabularyProgress {
   wordId: string
-  level: number // 0-5
+  box: 1 | 2 | 3 | 4 | 5
   nextReview: string // ISO date
   lastReviewed: string
   correctCount: number
@@ -107,4 +107,5 @@ export interface UserProgress {
   testHistory: TestResult[]
   vocabularyProgress: VocabularyProgress[]
   grammarProgress: GrammarProgress[]
+  version: number
 }

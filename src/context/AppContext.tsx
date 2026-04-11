@@ -11,6 +11,7 @@ function makeInitialProgress(): UserProgress {
     testHistory: [],
     vocabularyProgress: [],
     grammarProgress: [],
+    version: 1,
   }
 }
 
