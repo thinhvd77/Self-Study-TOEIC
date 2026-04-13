@@ -6,7 +6,7 @@
 
 - **Luyện đề thi (Part 1-7)**: Luyện tập theo từng part, mini test ~30 phút, full test 120 phút với 200 câu hỏi. Hỗ trợ đếm ngược thời gian, đánh dấu câu hỏi khó, panel điều hướng câu hỏi.
 
-- **Từ vựng Flashcard**: Hơn 1200 từ vựng trong 12 chủ đề (Business, Environment, Finance, Health, HR, Legal, Manufacturing, Marketing, Office, Real Estate, Technology, Travel). Sử dụng thuật toán SM-2 spaced repetition để tối ưu hóa nhớ lâu dài.
+- **Từ vựng Flashcard**: 1600 từ vựng trong 12 chủ đề (Business, Environment, Finance, Health, HR, Legal, Manufacturing, Marketing, Office, Real Estate, Technology, Travel). Sử dụng thuật toán SM-2 spaced repetition để tối ưu hóa nhớ lâu dài.
 
 - **Ngữ pháp**: 13 bài học chi tiết (Articles, Comparatives, Conditionals, Conjunctions, Gerunds & Infinitives, Parts of Speech, Passive Voice, Prepositions, Pronouns, Relative Pronouns, Subject-Verb Agreement, Verb Tenses, Word Order) kèm theo bài tập và chấm điểm tự động.
 
