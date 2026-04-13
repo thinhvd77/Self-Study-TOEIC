@@ -6,9 +6,9 @@
 
 - **Luyện đề thi (Part 1-7)**: Luyện tập theo từng part, mini test ~30 phút, full test 120 phút với 200 câu hỏi. Hỗ trợ đếm ngược thời gian, đánh dấu câu hỏi khó, panel điều hướng câu hỏi.
 
-- **Từ vựng Flashcard**: Hơn 1000 từ vựng trong 8 chủ đề (Business, Finance, Health, HR, Manufacturing, Office, Technology, Travel). Sử dụng thuật toán SM-2 spaced repetition để tối ưu hóa nhớ lâu dài.
+- **Từ vựng Flashcard**: Hơn 1200 từ vựng trong 12 chủ đề (Business, Environment, Finance, Health, HR, Legal, Manufacturing, Marketing, Office, Real Estate, Technology, Travel). Sử dụng thuật toán SM-2 spaced repetition để tối ưu hóa nhớ lâu dài.
 
-- **Ngữ pháp**: 8 bài học chi tiết (Parts of Speech, Verb Tenses, Comparatives, Conditionals, Conjunctions, Passive Voice, Prepositions, Relative Pronouns) kèm theo bài tập và chấm điểm tự động.
+- **Ngữ pháp**: 13 bài học chi tiết (Articles, Comparatives, Conditionals, Conjunctions, Gerunds & Infinitives, Parts of Speech, Passive Voice, Prepositions, Pronouns, Relative Pronouns, Subject-Verb Agreement, Verb Tenses, Word Order) kèm theo bài tập và chấm điểm tự động.
 
 - **Dashboard lộ trình 16 tuần**: Theo dõi tiến độ học tập, xem biểu đồ điểm số, phân tích điểm yếu, quản lý mục tiêu hàng tuần.
 
@@ -60,15 +60,15 @@ npx vitest run --exclude '.worktrees/**'
 | `npm run crawl:vocab` | Thu thập từ vựng từ nguồn |
 | `npm run audit:data` | Kiểm tra chất lượng dữ liệu |
 
-## Cấu trúc thư mục
+## Cấu trúc thư mục (rút gọn)
 
 ```
 src/
 ├── types/              # TypeScript interfaces
 ├── data/
 │   ├── tests/          # Dữ liệu đề thi (Part 1-7)
-│   ├── vocabulary/     # 8 chủ đề từ vựng
-│   ├── grammar/        # 8 bài học ngữ pháp
+│   ├── vocabulary/     # 12 chủ đề từ vựng
+│   ├── grammar/        # 13 bài học ngữ pháp
 │   └── roadmap.ts      # Lộ trình 16 tuần
 ├── hooks/              # Custom hooks (useLocalStorage, useTimer, useSpacedRepetition)
 ├── context/            # Global state (AppContext)
@@ -102,7 +102,7 @@ src/
 6. LocalStorage: tiến độ giữ nguyên sau khi reload trang
 7. Responsive: hoạt động trên desktop và mobile
 
-## Roadmap ngắn hạn
+## Roadmap ngắn
 
 - Mở rộng database từ vựng
 - Thêm audio cho Part 1-4
